@@ -1,0 +1,13 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 0.8.4 ] */
+
+/* [wxMaxima: input   start ] */
+delta:0.15;
+dr2: 'diff (x(t), t, 2) + delta*2* 'diff (x(t), t)+x = 0;
+atvalue('diff (x(t), t), t=0, 3/10);
+desolve (dr2, x(t));
+plotdf([y,-(x + 2*delta*y)],[parameters,"delta=0.15"])$
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
