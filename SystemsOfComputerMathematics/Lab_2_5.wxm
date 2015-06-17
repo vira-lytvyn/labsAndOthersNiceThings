@@ -1,0 +1,17 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 0.8.4 ] */
+
+/* [wxMaxima: input   start ] */
+load("dynamics.mac");
+
+sol: rk([y,2*(1-x)*(1-x)*y-x],[x,y],[1,1],[t,0,25,0.01]);
+dovg:length(sol);
+tg:makelist(sol[k][1],k,1,dovg);
+xg:makelist(sol[k][2],k,1,dovg);
+yg:makelist(sol[k][3],k,1,dovg);
+
+plot2d([discrete,xg,yg]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
