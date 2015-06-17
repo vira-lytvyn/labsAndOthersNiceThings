@@ -1,0 +1,5 @@
+/*for i:0 while i<Ne step 1 do print(w[i], s[i]);
+//signal(w):=block([s],(if ((w>=0) and (w<=A)) then (s:koef*w) else (s:7)));
+//for i:0 while i<T step h do signal(i);
+//plot2d(signal(w), [w,0,T]);
+calc(k):=block(S:TM*w[k], G:G+s[k]*cos(S), D:D+s[k]*sin(S));*/

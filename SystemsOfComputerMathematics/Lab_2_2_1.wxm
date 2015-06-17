@@ -1,0 +1,30 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 0.8.4 ] */
+
+/* [wxMaxima: input   start ] */
+f(x):= if (x<=0.0006) then (7.00/0.0006*x) else 7.00;
+array ([a,b,xe,ye,yg],1000);
+for i:1 thru 639 do (xe[i]:(0.001/639.00)*i, ye[i]:f(xe[i]));
+ne:639;
+ng:10;
+tp:0.001;
+w:2*3.14/tp;
+for k:1 thru ng do (kom:k*w, g:0, d:0, 
+    for i:1 thru ne do (s:kom*xe[i], g:g+ye[i]*cos(s),d:d+ye[i]*sin(s)),
+    a[k]:2.00*g/ne, b[k]:2.00*d/ne);
+a0:0;
+for i:1 thru ne do a0:a0+ye[i]; 
+a0:a0/ne;
+for i:1 thru ne do (s:0, d:xe[i]*w,
+    for k:1 thru ng do (kom:k*d, s:s+b[k]*sin(kom)+a[k]*cos(kom)),
+    yg[i]:a0+s);
+xx:makelist(xe[i],i,1,639)$
+yy:makelist(ye[i],i,1,639)$
+zz:makelist(yg[i],i,1,639)$
+display(a0);
+for k:1 thru ng do display(a[k]);
+for k:1 thru ng do display(b[k]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
