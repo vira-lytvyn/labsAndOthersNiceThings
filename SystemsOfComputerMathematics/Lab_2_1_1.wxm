@@ -1,0 +1,46 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 0.8.4 ] */
+
+/* [wxMaxima: input   start ] */
+z1:(5-3*%i)*(-3-2*%i);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+z2:(5-3*%i)/(-3-2*%i);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rectform(z1);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+rectform(z2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+polarform(z1);
+polarform(z2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+realpart(z1);
+realpart(z2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+imagpart(z1);
+imagpart(z2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+abs(z1);
+abs(z2);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+carg(z1);
+carg(z2);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

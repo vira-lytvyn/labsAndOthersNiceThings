@@ -1,0 +1,17 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 0.8.4 ] */
+
+/* [wxMaxima: input   start ] */
+fmin:1;
+fmax:20000000;
+df:(fmax-fmin)/20;
+R:20000;
+L:10^-5;
+C:10^-12;
+calc(f):=block([k],W:f*2*%pi,k:abs((1/(%i*W*C))/(R+(%i*W*L)+1/(%i*W*C))));
+for f:fmin while f<fmax step df do calc(f);
+plot2d(calc(f), [f,fmin,fmax]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,0 +1,17 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 0.8.4 ] */
+
+/* [wxMaxima: input   start ] */
+z:exp^(%i*(%pi/3));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+realpart(z);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+imagpart(z);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
