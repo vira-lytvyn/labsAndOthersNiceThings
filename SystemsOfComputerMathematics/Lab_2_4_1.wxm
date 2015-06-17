@@ -1,0 +1,13 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 0.8.4 ] */
+
+/* [wxMaxima: input   start ] */
+dr2: 'diff (x, t, 2) + 0.15*2*' diff (x, t)+x = 20 * sin (5 * t);
+ode2 (dr2, x, t);
+ic2(%, t=0, x=5, diff(x,t)=0);
+diff(%,t);
+plot2d([parametric,t,%e^(-(3*t)/20)*((75685*sin((sqrt(391)*t)/20))/(771*sqrt(391))+(3895*cos((sqrt(391)*t)/20))/771)-(640*sin(5*t)+40*cos(5*t))/771,[t, 0, 25]],[nticks,200]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
