@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+      <link href="/static/custom/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <div class="well well-sm">
+            <ol class="breadcrumb">
+                <li><a href="/">Movies</a></li>
+                <li class="active">New movie</li>
+            </ol>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Please, fill next fields to add new movie.</div>
+            <div class="jumbotron" style="font-size: 14px;">
+                <form role="form" name="add_movie_form" method="POST">
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-film"></span></span>
+                        <input type="text" class="form-control" placeholder="Film name" name="name">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        <input type="number" min="1920" max="2015" class="form-control" placeholder="year" name="publish_year">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-bookmark"></span></span>
+                        <select class="form-control" name="genre">
+                            {% for key, value in genres %}
+                                <option value="{{ key }}">{{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            <span class="glyphicon glyphicon-eye-close"></span>
+                            <span class="glyphicon glyphicon-certificate"></span>
+                        </span>
+                        <div class="form-control">
+                            <label class="radio-inline">
+                                <input type="radio" name="status" value="w">Watched &nbsp;&nbsp;&nbsp;
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="status" value="p">Will watch &nbsp;&nbsp;&nbsp;
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="status" value="f">Favourite &nbsp;&nbsp;&nbsp;
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                            <span class="glyphicon glyphicon-thumbs-down"></span>
+                        </span>
+                        <div class="form-control">
+                            <input type="range" max="10" min="0" name="rate" style="display: inline-block" oninput="range.value=this.value">
+                            <output name="range" for="rate_range" style="display: inline-block">5</output>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-star"></span></span>
+                        <textarea class="form-control" maxlength="255" rows="2" style="resize: none;" name="stars"></textarea>
+                    </div><br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-bell"></span></span>
+                        <div class="form-control disabled">Please, check if all fields is correct! </div>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">Save</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

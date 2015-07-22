@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ movie.name|title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+      <link href="/static/custom/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+{#    <script src="https://code.jquery.com/jquery.js"></script>#}
+    <script src="/static/custom/jquery-2.0.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+      $('#movie_operation a').click(function (e) {
+          e.preventDefault()
+{#          $('#movie_operation a').tab('hide');#}
+          $(this).tab('hide')
+        })
+        $('#movie_operation a[href="#movie_detail"]').tab('show');
+        $('#movie_operation a[href="#change_rate"]').tab('show');
+        $('#movie_operation a[href="#change_status"]').tab('show');
+  </script>
+  </head>
+  <body>
+        <div class="container">
+            <div class="well well-sm">
+                <ol class="breadcrumb">
+                    <li><a href="/">Movies</a></li>
+                    <li class="active">{{ movie.name|capfirst }}</li>
+                    <div class="pull-right"><a class="btn btn-primary" href="/add_movie">Add movie</a></div>
+                </ol>
+            </div>
+            <div class="jumbotron">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <ul class="nav nav-tabs" id="movie_operation">
+                            <li class="active"><a href="#movie_detail" data-toggle="tab"> {{ movie.name|capfirst }} </a></li>
+                            <li><a href="#change_rate" data-toggle="tab"> Change rate </a></li>
+                            <li><a href="#change_status" data-toggle="tab">Change status</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="movie_detail" class="active tab-pane">
+                                <br>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Publish year</span>
+                                    <div class="form-control">{{ movie.publish_year }}</div>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Movie genre</span>
+                                    <div class="form-control">{{ movie.get_genre_name }}</div>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Movie status</span>
+                                    <div class="form-control">{{ movie.get_status_name }}</div>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Personal rate</span>
+                                    <div class="form-control">{{ movie.personal_rate }}</div>
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">Stars</span>
+                                    <div class="form-control">{{ movie.stars }}</div>
+                                </div>
+                            </div>
+                            <div id="change_rate" class="tab-pane">
+                                <br>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Personal rate for " {{ movie.name }} "</div>
+                                    <div class="panel-body">
+                                        <form class="form-inline" role="form" name="change_personal_rate" method="POST">
+                                            <div class="form-group">
+                                                <input type="range" max="10" min="0" name="rate_range" style="display: inline-block"
+                                                       value="{{ movie.personal_rate }}" oninput="new_range.value=this.value" >
+                                                <output name="new_range" for="rate_range" style="display: inline-block">{{ movie.personal_rate }}</output>
+                                            </div>
+                                            <button type="submit" class="btn btn-default">Rate</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="change_status" class="tab-pane">
+                                <br>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Status of " {{ movie.name|title }} "</div>
+                                    <div class="panel-body">
+                                        <form class="form-inline" role="form" method="POST">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                {% for key,value in status_choice %}
+                                                     <label class="btn btn-default {% if movie.status == key %} active {% endif %}">
+                                                        <input type="radio" name="new_status" value="{{ key }}">{{ value }}
+                                                     </label>
+                                                {% endfor %}
+                                            </div>
+                                            <button type="submit" class="btn btn-default">Save status</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </body>
+</html>
