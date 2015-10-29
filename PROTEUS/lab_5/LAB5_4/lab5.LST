@@ -1,0 +1,62 @@
+C51 COMPILER V8.02   LAB5                                                                  12/18/2014 02:40:46 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE LAB5
+OBJECT MODULE PLACED IN lab5.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lab5.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <math.h>
+   3          #include "REG51.h"
+   4          void delay (int N)
+   5          { int k;
+   6   1      for (k=0; k<N; k++)
+   7   1      { TMOD=0x01;
+   8   2      TH0=0xD8;
+   9   2      TL0=0xF0;
+  10   2      TR0=1;
+  11   2      while (!TF0) {};
+  12   2      TR0=0;
+  13   2      TF0=0;
+  14   2      }
+  15   1      }
+  16          void main ()
+  17          { int N,l;
+  18   1      while (1) {
+  19   2      if (P3!=0xFB)
+  20   2      {
+  21   3      N=25;
+  22   3      for (l=0;l<8;l++)
+  23   3      {
+  24   4      P1 = pow(0x02,l); 
+  25   4      delay (N);
+  26   4      }
+  27   3      }
+  28   2      else
+  29   2      {
+  30   3      N=50;
+  31   3      for (l=7;l>0;l--)
+  32   3      {
+  33   4      P1 = pow(0x02,l); 
+  34   4      delay (N);
+  35   4      }
+  36   3      }
+  37   2      }
+  38   1      return;
+  39   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    186    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

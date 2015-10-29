@@ -1,0 +1,219 @@
+BL51 BANKED LINKER/LOCATER V6.00                                                        12/18/2014  02:40:46  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE lab5.obj TO l5_2
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  lab5.obj (LAB5)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?CASTF)
+  C:\KEIL\C51\LIB\C51FPS.LIB (POW)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?CHKFLOAT)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPCMP)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPNEG)
+  C:\KEIL\C51\LIB\C51FPS.LIB (EXP)
+  C:\KEIL\C51\LIB\C51FPS.LIB (LOG)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL\C51\LIB\C51FPS.LIB (?C?FPSERIES)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LLDCODE)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LLDCODE0)
+
+
+LINK MAP OF MODULE:  l5_2 (LAB5)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0012H     UNIT         _DATA_GROUP_
+                    001AH     0006H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         _BIT_GROUP_
+                    0020H.1   0000H.7                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0470H     UNIT         ?C?LIB_CODE
+            CODE    0C70H     0135H     UNIT         ?PR?LOG?LOG
+            CODE    0DA5H     0117H     UNIT         ?PR?_POW?POW
+            CODE    0EBCH     009AH     UNIT         ?PR?EXP?EXP
+            CODE    0F56H     0087H     UNIT         ?PR?MAIN?LAB5
+            CODE    0FDDH     0033H     UNIT         ?PR?_DELAY?LAB5
+            CODE    1010H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   l5_2 (LAB5)
+
+
+BL51 BANKED LINKER/LOCATER V6.00                                                      12/18/2014  02:40:46  PAGE 2
+
+
+SEGMENT                           BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH     START    LENGTH
+------------------------------------------------------------------
+?C_C51STARTUP                  -----    -----      -----    -----
+  +--> ?PR?MAIN?LAB5
+
+?PR?MAIN?LAB5                  -----    -----      0008H    0004H
+  +--> ?PR?_POW?POW
+  +--> ?PR?_DELAY?LAB5
+
+?PR?_POW?POW                   -----    -----      000CH    000AH
+  +--> ?PR?LOG?LOG
+  +--> ?PR?EXP?EXP
+
+?PR?LOG?LOG                    0020H.0  0000H.1    0016H    0004H
+
+
+
+SYMBOL TABLE OF MODULE:  l5_2 (LAB5)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LAB5
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:0F56H         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  C:0FE6H         PUBLIC        _delay
+  -------         PROC          L?0021
+  -------         ENDPROC       L?0021
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        N
+  -------         DO            
+  D:0004H         SYMBOL        k
+  -------         ENDDO         
+  C:0FE6H         LINE#         4
+  C:0FE6H         LINE#         5
+  C:0FE6H         LINE#         6
+  C:0FF6H         LINE#         7
+  C:0FF9H         LINE#         8
+  C:0FFCH         LINE#         9
+  C:0FFFH         LINE#         10
+  C:1001H         LINE#         11
+  C:1004H         LINE#         12
+  C:1006H         LINE#         13
+  C:1008H         LINE#         14
+  C:100FH         LINE#         15
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        N
+BL51 BANKED LINKER/LOCATER V6.00                                                      12/18/2014  02:40:46  PAGE 3
+
+
+  D:000AH         SYMBOL        l
+  -------         ENDDO         
+  C:0F56H         LINE#         16
+  C:0F56H         LINE#         17
+  C:0F56H         LINE#         18
+  C:0F56H         LINE#         19
+  C:0F5CH         LINE#         20
+  C:0F5CH         LINE#         21
+  C:0F62H         LINE#         22
+  C:0F74H         LINE#         23
+  C:0F74H         LINE#         24
+  C:0F8FH         LINE#         25
+  C:0F92H         LINE#         26
+  C:0F9CH         LINE#         27
+  C:0F9CH         LINE#         29
+  C:0F9CH         LINE#         30
+  C:0FA2H         LINE#         31
+  C:0FB5H         LINE#         32
+  C:0FB5H         LINE#         33
+  C:0FD0H         LINE#         34
+  C:0FD3H         LINE#         35
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LAB5
+
+  -------         MODULE        ?C?FCAST
+  C:080AH         PUBLIC        ?C?FCASTC
+  C:0805H         PUBLIC        ?C?FCASTI
+  C:0800H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        ?C?CASTF
+  C:083EH         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        POW
+  D:000CH         PUBLIC        ?_pow?BYTE
+  C:0DA5H         PUBLIC        _pow
+  -------         ENDMOD        POW
+
+  -------         MODULE        ?C?CHKFLOAT
+  C:0875H         PUBLIC        ?C?CHKFLOAT
+  -------         ENDMOD        ?C?CHKFLOAT
+
+  -------         MODULE        ?C?FPADD
+  C:0896H         PUBLIC        ?C?FPADD
+  C:0892H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FPMUL
+  C:0987H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPCMP
+  C:0A8FH         PUBLIC        ?C?FPCMP
+  C:0A8DH         PUBLIC        ?C?FPCMP3
+  -------         ENDMOD        ?C?FPCMP
+
+BL51 BANKED LINKER/LOCATER V6.00                                                      12/18/2014  02:40:46  PAGE 4
+
+
+  -------         MODULE        ?C?FPNEG
+  C:0AFAH         PUBLIC        ?C?FPNEG
+  -------         ENDMOD        ?C?FPNEG
+
+  -------         MODULE        EXP
+  C:0EF4H         PUBLIC        _EXP
+  -------         ENDMOD        EXP
+
+  -------         MODULE        LOG
+  C:0CA4H         PUBLIC        _LOG
+  C:0CA0H         PUBLIC        _LOG10
+  -------         ENDMOD        LOG
+
+  -------         MODULE        ?C?FPDIV
+  C:0B58H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?LNEG
+  C:0C42H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?LLDCODE
+  C:0C50H         PUBLIC        ?C?LLDCODE
+  -------         ENDMOD        ?C?LLDCODE
+
+  -------         MODULE        ?C?LLDCODE0
+  C:0C60H         PUBLIC        ?C?LLDCODE0
+  -------         ENDMOD        ?C?LLDCODE0
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00BAH BYTE ( 9%) *
+******************************************************************************
+
+Program Size: data=27.1 xdata=0 code=2079
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

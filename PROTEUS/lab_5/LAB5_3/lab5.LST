@@ -1,0 +1,129 @@
+C51 COMPILER V8.02   LAB5                                                                  12/18/2014 02:18:12 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE LAB5
+OBJECT MODULE PLACED IN lab5.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lab5.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <math.h>
+   3          #include "REG51.h"
+   4          void delay (int N)
+   5          { int k;
+   6   1      for (k=0; k<N; k++)
+   7   1      { TMOD=0x01;
+   8   2      TH0=0xD8;
+   9   2      TL0=0xF0;
+  10   2      TR0=1;
+  11   2      while (!TF0) {};
+  12   2      TR0=0;
+  13   2      TF0=0;
+  14   2      }
+  15   1      }
+  16          void main ()
+  17          { int N;
+  18   1      int i,p,s; 
+  19   1      int l;
+  20   1      int sum; int del;
+  21   1      while (1) {
+  22   2      N=50;
+  23   2      for (l=0;l<8;l++)
+  24   2      {
+  25   3      P3 = pow(0x02,l); 
+  26   3      delay (N);
+  27   3      }
+  28   2      ///////////////////////////////////
+  29   2      sum=1;
+  30   2      for (l=1;l<8;l++)
+  31   2      {
+  32   3      P3 = sum+pow(0x02,l);
+  33   3      sum=pow(0x02,l);
+  34   3      delay (N);
+  35   3      }
+  36   2      
+  37   2      sum=0x02+1;
+  38   2      for (l=2;l<8;l++)
+  39   2      {
+  40   3      P3 = sum+pow(0x02,l);
+  41   3      sum=pow(0x02,l)+pow(0x02,l-1);
+  42   3      delay (N);
+  43   3      }
+  44   2      
+  45   2      sum=0x04+0x02+1;
+  46   2      for (l=3;l<8;l++)
+  47   2      {
+  48   3      P3 = sum+pow(0x02,l);
+  49   3      sum=pow(0x02,l)+pow(0x02,l-1)+pow(0x02,l-2);
+  50   3      delay (N);
+  51   3      }
+  52   2      
+  53   2      sum=0x08+0x04+0x02+1;
+  54   2      for (l=4;l<8;l++)
+  55   2      {
+C51 COMPILER V8.02   LAB5                                                                  12/18/2014 02:18:12 PAGE 2   
+
+  56   3      P3 = sum+pow(0x02,l);
+  57   3      sum=pow(0x02,l)+pow(0x02,l-1)+pow(0x02,l-2)+pow(0x02,l-3);
+  58   3      delay (N);
+  59   3      }
+  60   2      
+  61   2      sum=0x10+0x08+0x04+0x02+1;
+  62   2      for (l=5;l<8;l++)
+  63   2      {
+  64   3      P3 = sum+pow(0x02,l);
+  65   3      sum=pow(0x02,l)+pow(0x02,l-1)+pow(0x02,l-2)+pow(0x02,l-3)+pow(0x02,l-4);
+  66   3      delay (N);
+  67   3      }
+  68   2      
+  69   2      sum=0x20+0x10+0x08+0x04+0x02+1;
+  70   2      for (l=6;l<8;l++)
+  71   2      {
+  72   3      P3 = sum+pow(0x02,l);
+  73   3      sum=pow(0x02,l)+pow(0x02,l-1)+pow(0x02,l-2)+pow(0x02,l-3)+pow(0x02,l-4)+pow(0x02,l-5);
+  74   3      delay (N);
+  75   3      } 
+  76   2       /*
+  77   2      sum=0x40+0x20+0x10+0x08+0x04+0x02+1;
+  78   2      for (l=7;l<8;l++)
+  79   2      {
+  80   2      P3 = sum+pow(0x02,l);
+  81   2      sum=pow(0x02,l)+pow(0x02,l-1)+pow(0x02,l-2)+pow(0x02,l-3)+pow(0x02,l-4)+pow(0x02,l-5)+pow(0x02,l-6);
+  82   2      delay (N);
+  83   2      } 
+  84   2      */        
+  85   2      N=30;
+  86   2      s=6;
+  87   2      sum=0x80+0x40+0x20+0x10+0x08+0x04+0x02;
+  88   2      for (p=0;p<7;p++)
+  89   2      {
+  90   3        del=sum;
+  91   3        for (l=8;l>s;l--)
+  92   3        {
+  93   4        P3 = del;
+  94   4        del=del-pow(0x02,l-1)+pow(0x02,l-(s+2)); 
+  95   4        delay (N);
+  96   4        }
+  97   3        sum=sum-pow(0x02,p+1);
+  98   3        s--;
+  99   3      } 
+ 100   2        
+ 101   2      }
+ 102   1      return;
+ 103   1      }
+*** WARNING C280 IN LINE 18 OF LAB5.C: 'i': unreferenced local variable
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1903    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      14
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

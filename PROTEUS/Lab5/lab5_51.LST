@@ -1,0 +1,56 @@
+C51 COMPILER V8.05a   LAB5_51                                                              10/23/2014 10:41:11 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE LAB5_51
+OBJECT MODULE PLACED IN lab5_51.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lab5_51.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include "REG51.h"
+   3          void delay (int N)
+   4          {  
+   5   1              int  k;
+   6   1              for  (k=0;   k<N;   k++)
+   7   1              {  
+   8   2                      TMOD=0x01;
+   9   2                      TH0=0xD8;
+  10   2                      TL0=0xF0;
+  11   2                      TR0=1;
+  12   2                      while (!TF0) {};
+  13   2                      TR0=0;
+  14   2                      TF0=0;
+  15   2              } 
+  16   1      }
+  17          void main ()
+  18          {  
+  19   1              int  N;
+  20   1              while (1)  
+  21   1              {
+  22   2                      P1 = 0x01;
+  23   2                      N=500;
+  24   2                      delay (N);
+  25   2                      P1 = 0x02;
+  26   2                      N=100;
+  27   2                      delay (N);
+  28   2                      P1 = 0x04;
+  29   2                      N=300;
+  30   2                      delay (300);
+  31   2              }
+  32   1              return;
+  33   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     82    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

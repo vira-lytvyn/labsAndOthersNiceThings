@@ -1,0 +1,112 @@
+BL51 BANKED LINKER/LOCATER V6.02                                                        10/23/2014  11:19:13  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.02, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE lab5_51.obj TO lab5
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  lab5_51.obj (LAB5_51)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  lab5 (LAB5_51)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     002AH     UNIT         ?PR?_DELAY?LAB5_51
+            CODE    082AH     0028H     UNIT         ?PR?MAIN?LAB5_51
+            CODE    0852H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   lab5 (LAB5_51)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LAB5_51
+
+?PR?MAIN?LAB5_51
+  +--> ?PR?_DELAY?LAB5_51
+
+
+
+SYMBOL TABLE OF MODULE:  lab5 (LAB5_51)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LAB5_51
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        _delay
+  C:082AH         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+BL51 BANKED LINKER/LOCATER V6.02                                                      10/23/2014  11:19:13  PAGE 2
+
+
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        N
+  -------         DO            
+  D:0004H         SYMBOL        k
+  -------         ENDDO         
+  C:0800H         LINE#         3
+  C:0800H         LINE#         4
+  C:0800H         LINE#         6
+  C:0810H         LINE#         7
+  C:0810H         LINE#         8
+  C:0813H         LINE#         9
+  C:0816H         LINE#         10
+  C:0819H         LINE#         11
+  C:081BH         LINE#         12
+  C:081EH         LINE#         13
+  C:0820H         LINE#         14
+  C:0822H         LINE#         15
+  C:0829H         LINE#         16
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0002H         SYMBOL        N
+  -------         ENDDO         
+  C:082AH         LINE#         17
+  C:082AH         LINE#         18
+  C:082AH         LINE#         20
+  C:082AH         LINE#         21
+  C:082AH         LINE#         22
+  C:082DH         LINE#         23
+  C:0831H         LINE#         24
+  C:0838H         LINE#         25
+  C:083BH         LINE#         26
+  C:083EH         LINE#         27
+  C:0844H         LINE#         28
+  C:0847H         LINE#         29
+  C:084AH         LINE#         30
+  C:0850H         LINE#         31
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LAB5_51
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0052H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=97
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

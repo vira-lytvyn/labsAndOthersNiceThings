@@ -1,0 +1,97 @@
+C51 COMPILER V8.05a   LAB9_2                                                               11/13/2014 09:43:39 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE LAB9_2
+OBJECT MODULE PLACED IN lab9_2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lab9_2.c DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h> 
+   2          #include <REG52.H> 
+   3          sbit RW = P3^5; 
+   4          sbit RS = P3^6; 
+   5          sbit EN = P3^7; 
+   6          sbit BUSY = P1^7; 
+   7          unsigned char STATE; 
+   8          void wait_lcd (void) 
+   9          { 
+  10   1              do { 
+  11   2                      EN = 1; 
+  12   2                      RS = 0; 
+  13   2                      RW = 1; 
+  14   2                      P1 = 0xFF; 
+  15   2                      STATE = BUSY; 
+  16   2                      EN = 0; 
+  17   2              } while (STATE != 0); 
+  18   1              RW = 0; 
+  19   1      } 
+  20          void init_lcd(void) 
+  21          { 
+  22   1              EN = 1; 
+  23   1              RS = 0; 
+  24   1              RW = 0; 
+  25   1              P1 = 0x38; 
+  26   1              EN = 0; 
+  27   1              wait_lcd(); 
+  28   1              EN = 1; 
+  29   1              RS = 0; 
+  30   1              RW = 0; 
+  31   1              P1 = 0x0E; 
+  32   1              EN = 0;
+  33   1              wait_lcd(); 
+  34   1              EN = 1; 
+  35   1              RS = 0; 
+  36   1              RW = 0; 
+  37   1              P1 = 0x06; 
+  38   1              EN = 0; 
+  39   1              wait_lcd(); 
+  40   1      } 
+  41          void clear_lcd(void) 
+  42          { 
+  43   1              EN = 1; 
+  44   1              RS = 0; 
+  45   1              RW = 0; 
+  46   1              P1 = 0x01; 
+  47   1              EN = 0; 
+  48   1              wait_lcd(); 
+  49   1      } 
+  50          void write_char(unsigned char *c1) 
+  51          { 
+  52   1              EN = 1; 
+  53   1              RS = 1; 
+  54   1              RW = 0; 
+  55   1              P1 = *c1; 
+C51 COMPILER V8.05a   LAB9_2                                                               11/13/2014 09:43:39 PAGE 2   
+
+  56   1              EN = 0; 
+  57   1              wait_lcd(); 
+  58   1      } 
+  59          void main(void) 
+  60          { 
+  61   1              idata char buf[64]; 
+  62   1              char *pbuf = buf; 
+  63   1              float f1 = 3.141592; 
+  64   1              int bytes, cnt; 
+  65   1              bytes = sprintf(buf, "%s", "PI == "); 
+  66   1              bytes += sprintf(buf + bytes, "%8.6f\n", f1); 
+  67   1              init_lcd(); 
+  68   1              clear_lcd(); 
+  69   1              for (cnt = 0; cnt < bytes; cnt++) 
+  70   1              write_char(pbuf++); 
+  71   1              while(1); 
+  72   1      } 
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    237    ----
+   CONSTANT SIZE    =     17    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       9
+   IDATA SIZE       =   ----      64
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

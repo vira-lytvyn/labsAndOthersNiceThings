@@ -1,0 +1,72 @@
+C51 COMPILER V9.00   MAIN                                                                  12/17/2010 00:44:49 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <atmel/at89x51.h>
+   2          
+   3          unsigned char letter [6][7]=
+   4          {
+   5                  0x10,0x10,0x10,0x10,0x10,0x10,0x1f, //L
+   6                  0x11,0x11,0x11,0x1f,0x01,0x01,0x1f, //Y
+   7                  0x1f,0x04,0x04,0x04,0x04,0x04,0x04, //T
+   8                  0x11,0x11,0x11,0x0a,0x0a,0x0a,0x0e, //V
+   9                  0x11,0x11,0x11,0x1f,0x01,0x01,0x1f, //Y
+  10                  0x11,0x19,0x19,0x15,0x13,0x13,0x11, //N                                 
+  11          };
+  12          
+  13          void main ()
+  14          {
+  15   1              int dx,i,j,k=0,t=0;
+  16   1              P2 = 0xff;
+  17   1              P3 = 0xff;
+  18   1      
+  19   1              dx=1;
+  20   1              i=0;
+  21   1      
+  22   1              for (;;)
+  23   1              {
+  24   2                      P2 ^= dx;
+  25   2                      P3 = letter [t][i];
+  26   2                      for (j=0; j<1000; j++);
+  27   2                      if (dx>128)
+  28   2                      {
+  29   3                         dx=1;
+  30   3                         i=0;
+  31   3                         k++;
+  32   3                      }
+  33   2                      else
+  34   2                      {
+  35   3                         dx +=dx;
+  36   3                         i+=1;
+  37   3                      }
+  38   2                      P2 = 0xff;
+  39   2                      P3 = 0xff;
+  40   2                      if (k==25)
+  41   2                      {
+  42   3                              k=0;
+  43   3                              t++;
+  44   3                              if(t==6) t=0;
+  45   3                      }
+  46   2              }
+  47   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    121    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     42       2
+C51 COMPILER V9.00   MAIN                                                                  12/17/2010 00:44:49 PAGE 2   
+
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

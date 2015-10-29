@@ -1,0 +1,55 @@
+C51 COMPILER V8.02   LAB5_J                                                                10/18/2014 10:43:22 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE LAB5_J
+OBJECT MODULE PLACED IN lab5_j.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lab5_j.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include "stdio.h"
+   2          #include "REG51.h"
+   3          
+   4          void delay (int N)
+   5          {               int k;
+   6   1                      for (k=0; k<N; k++)
+   7   1                      {       
+   8   2                              TMOD=0x01;
+   9   2                              TH0=0xD8;
+  10   2                              TL0=0xF0;
+  11   2                              TR0=1;
+  12   2                              while (!TF0) {};
+  13   2                              TR0=0;
+  14   2                              TF0=0;
+  15   2                      }
+  16   1      }
+  17          void main ()
+  18                  {       int N;
+  19   1                      while (1) 
+  20   1                      {
+  21   2                                      P1 = 0x01;
+  22   2                                      N=500;
+  23   2                                      delay (N);
+  24   2                                      P1 = 0x02;
+  25   2                                      N=100;
+  26   2                                      delay (N); 
+  27   2                                      P1 = 0x04;
+  28   2                                      N=300;
+  29   2                                      delay (300);
+  30   2                      }
+  31   1                      return;
+  32   1              }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     82    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

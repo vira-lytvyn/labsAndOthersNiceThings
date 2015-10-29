@@ -1,0 +1,56 @@
+C51 COMPILER V8.02   LAB6PROG                                                              10/20/2014 16:58:11 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE LAB6PROG
+OBJECT MODULE PLACED IN lab6prog.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lab6prog.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <REG51.H>
+   3          #define ESC 0x1B
+   4          unsigned int cnt;
+   5          unsigned char codeTable[11] = { ESC, 0x0C0, 0x0F9, 0x0A4, 0x0B0, 0x99, 0x92, 0x82, 0x0F8, 0x80, 0x98};
+   6          unsigned char *pcodeTable;
+   7          
+   8          void T0Isr(void) interrupt 1 using 1 
+   9          {
+  10   1              cnt++;
+  11   1              if (cnt > 30)
+  12   1              {
+  13   2                      cnt = 0;
+  14   2                      P1 = *pcodeTable--;
+  15   2                      if (*pcodeTable == ESC)
+  16   2                              pcodeTable = codeTable+10;
+  17   2              }
+  18   1      }
+  19          
+  20          void main(void)
+  21          {
+  22   1              pcodeTable = codeTable+10;
+  23   1              cnt = 0;
+  24   1              P1 = 0x80;
+  25   1              P1 = *pcodeTable;
+  26   1              TH0 = 0x0;
+  27   1              TL0 = 0x0;
+  28   1              TMOD |= 0x1; //
+  29   1              TR0 = 1; // flag if equals 1 then started if 0 then stoped
+  30   1              ET0 = 1; //   when 1 then accept dozvil pereruvan TR0
+  31   1              EA = 1;  //       dozvil vsix pererevan
+  32   1              while(1);
+  33   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    123    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     16    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

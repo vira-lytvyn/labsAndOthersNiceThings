@@ -1,0 +1,133 @@
+C51 COMPILER V8.05a   LAB8_1                                                               11/19/2014 01:16:46 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE LAB8_1
+OBJECT MODULE PLACED IN lab8_1.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lab8_1.c DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          #define LCD P1 
+   4          unsigned char fset = 0x38;                      
+   5          unsigned char Cursor_ON = 0x0e;         
+   6          unsigned char Clear_Lcd = 0x01;         
+   7          unsigned char Cursor_Right = 0x06;      
+   8          unsigned char Cursor_HOME = 0x02;       
+   9            
+  10          sbit RW = P3^0; 
+  11          sbit RS = P3^1; 
+  12          sbit E = P3^2;  
+  13          sbit busy = P1^7;
+  14          
+  15          void getReady()
+  16          {
+  17   1              E = 0;
+  18   1              busy = 1;
+  19   1              RS = 0; 
+  20   1              RW = 1; 
+  21   1              while (busy == 1) 
+  22   1              {
+  23   2                      E = 0;
+  24   2                      E = 1;
+  25   2              }
+  26   1              E = 1;
+  27   1      }
+  28          
+  29          void writeCmd(unsigned char cmd)
+  30          {
+  31   1              getReady();
+  32   1              E = 0;     
+  33   1              LCD = cmd;
+  34   1              RS = 0;
+  35   1              RW = 0;
+  36   1              E = 1;
+  37   1              E = 0;
+  38   1      }
+  39          
+  40          void init()                      
+  41          
+  42          {                                
+  43   1              writeCmd(fset);
+  44   1              writeCmd(Cursor_ON);
+  45   1              writeCmd(Clear_Lcd);
+  46   1              writeCmd(Cursor_Right);
+  47   1              writeCmd(Cursor_HOME);
+  48   1      }
+  49          
+  50          void delay(int Count)
+  51          {
+  52   1              int k;
+  53   1              for (k=0; k<Count; k++)
+  54   1              {
+  55   2                      TMOD=0x01;
+C51 COMPILER V8.05a   LAB8_1                                                               11/19/2014 01:16:46 PAGE 2   
+
+  56   2                      TH0=0xFC;
+  57   2                      TL0=0x28;
+  58   2                      TR0=1;
+  59   2                      while (!TF0){};
+  60   2                      TR0=0;
+  61   2                      TF0=0;
+  62   2              };
+  63   1      } 
+  64           
+  65          void writeString(unsigned char *str)
+  66          {
+  67   1              unsigned char i;
+  68   1              unsigned int j;
+  69   1              getReady();
+  70   1              E = 0;
+  71   1              for(i=0;str[i]!='\0';i++)
+  72   1              {
+  73   2                      LCD=str[i];
+  74   2                      RS = 1;
+  75   2                      RW = 0;
+  76   2                      E = 1;
+  77   2                      E = 0;
+  78   2                      for(j=0;j<7000;j++);
+  79   2                      delay(5);
+  80   2              }
+  81   1       }
+  82           
+  83          void main(void)
+  84          {
+  85   1              unsigned char l1=0x00;
+  86   1              unsigned char l2=0xc0;
+  87   1              unsigned char l3=0x90;
+  88   1              unsigned char l4=0xd0;
+  89   1      
+  90   1              int k=0;
+  91   1              init ();                      
+  92   1              for(;;)                 
+  93   1              {
+  94   2                      writeCmd (Clear_Lcd);
+  95   2                      writeCmd (l1);
+  96   2                      writeString("*** FEIm-51 ***");
+  97   2                      writeCmd (l2);
+  98   2                      writeString ("// lab8-LCD //");
+  99   2                      writeCmd(l3);
+ 100   2                      writeString ("Hooray!!! :)");
+ 101   2                      writeCmd (l4);
+ 102   2                      writeString ("GL&HF ;)");
+ 103   2                      delay(3);
+ 104   2                      for(k=0;k<70000;k++);
+ 105   2              }
+ 106   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    289    ----
+   CONSTANT SIZE    =     53    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      5       8
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V8.05a   LAB8_1                                                               11/19/2014 01:16:46 PAGE 3   
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

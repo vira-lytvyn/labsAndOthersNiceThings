@@ -1,0 +1,237 @@
+BL51 BANKED LINKER/LOCATER V6.02                                                        11/19/2014  01:23:29  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.02, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE lab8_1.obj TO lab8
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  lab8_1.obj (LAB8_1)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  lab8 (LAB8_1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         _DATA_GROUP_
+            DATA    0010H     0005H     UNIT         ?DT?LAB8_1
+            IDATA   0015H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0077H     UNIT         ?PR?MAIN?LAB8_1
+            CODE    0903H     0043H     UNIT         ?PR?_WRITESTRING?LAB8_1
+            CODE    0946H     0043H     UNIT         ?C?LIB_CODE
+            CODE    0989H     0035H     UNIT         ?CO?LAB8_1
+            CODE    09BEH     002AH     UNIT         ?PR?_DELAY?LAB8_1
+            CODE    09E8H     0019H     UNIT         ?PR?INIT?LAB8_1
+            CODE    0A01H     0014H     UNIT         ?PR?GETREADY?LAB8_1
+            CODE    0A15H     0010H     UNIT         ?PR?_WRITECMD?LAB8_1
+            CODE    0A25H     0010H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   lab8 (LAB8_1)
+
+
+SEGMENT                           DATA_GROUP 
+  +--> CALLED SEGMENT           START    LENGTH
+-----------------------------------------------
+?C_C51STARTUP                   -----    -----
+  +--> ?PR?MAIN?LAB8_1
+  +--> ?C_INITSEG
+
+?PR?MAIN?LAB8_1                 0008H    0004H
+  +--> ?PR?INIT?LAB8_1
+  +--> ?PR?_WRITECMD?LAB8_1
+  +--> ?CO?LAB8_1
+  +--> ?PR?_WRITESTRING?LAB8_1
+BL51 BANKED LINKER/LOCATER V6.02                                                      11/19/2014  01:23:29  PAGE 2
+
+
+  +--> ?PR?_DELAY?LAB8_1
+
+?PR?INIT?LAB8_1                 -----    -----
+  +--> ?PR?_WRITECMD?LAB8_1
+
+?PR?_WRITECMD?LAB8_1            -----    -----
+  +--> ?PR?GETREADY?LAB8_1
+
+?PR?_WRITESTRING?LAB8_1         000CH    0004H
+  +--> ?PR?GETREADY?LAB8_1
+  +--> ?PR?_DELAY?LAB8_1
+
+
+
+SYMBOL TABLE OF MODULE:  lab8 (LAB8_1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LAB8_1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0010H         PUBLIC        Cursor_ON
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:0011H         PUBLIC        Cursor_HOME
+  C:09BEH         PUBLIC        _delay
+  B:00B0H.1       PUBLIC        RS
+  C:088CH         PUBLIC        main
+  B:00B0H.0       PUBLIC        RW
+  C:0903H         PUBLIC        _writeString
+  D:0012H         PUBLIC        fset
+  D:0089H         PUBLIC        TMOD
+  C:09E8H         PUBLIC        init
+  C:0A01H         PUBLIC        getReady
+  C:0A15H         PUBLIC        _writeCmd
+  B:00B0H.2       PUBLIC        E
+  B:0090H.7       PUBLIC        busy
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  D:0013H         PUBLIC        Clear_Lcd
+  D:0014H         PUBLIC        Cursor_Right
+  -------         PROC          GETREADY
+  C:0A01H         LINE#         15
+  C:0A01H         LINE#         16
+  C:0A01H         LINE#         17
+  C:0A03H         LINE#         18
+  C:0A05H         LINE#         19
+  C:0A07H         LINE#         20
+  C:0A09H         LINE#         21
+  C:0A0CH         LINE#         22
+  C:0A0CH         LINE#         23
+  C:0A0EH         LINE#         24
+  C:0A10H         LINE#         25
+  C:0A12H         LINE#         26
+  C:0A14H         LINE#         27
+BL51 BANKED LINKER/LOCATER V6.02                                                      11/19/2014  01:23:29  PAGE 3
+
+
+  -------         ENDPROC       GETREADY
+  -------         PROC          _WRITECMD
+  D:0007H         SYMBOL        cmd
+  C:0A15H         LINE#         29
+  C:0A15H         LINE#         30
+  C:0A15H         LINE#         31
+  C:0A18H         LINE#         32
+  C:0A1AH         LINE#         33
+  C:0A1CH         LINE#         34
+  C:0A1EH         LINE#         35
+  C:0A20H         LINE#         36
+  C:0A22H         LINE#         37
+  C:0A24H         LINE#         38
+  -------         ENDPROC       _WRITECMD
+  -------         PROC          INIT
+  C:09E8H         LINE#         40
+  C:09E8H         LINE#         42
+  C:09E8H         LINE#         43
+  C:09EDH         LINE#         44
+  C:09F2H         LINE#         45
+  C:09F7H         LINE#         46
+  C:09FCH         LINE#         47
+  -------         ENDPROC       INIT
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        Count
+  -------         DO            
+  D:0004H         SYMBOL        k
+  -------         ENDDO         
+  C:09BEH         LINE#         50
+  C:09BEH         LINE#         51
+  C:09BEH         LINE#         53
+  C:09CEH         LINE#         54
+  C:09CEH         LINE#         55
+  C:09D1H         LINE#         56
+  C:09D4H         LINE#         57
+  C:09D7H         LINE#         58
+  C:09D9H         LINE#         59
+  C:09DCH         LINE#         60
+  C:09DEH         LINE#         61
+  C:09E0H         LINE#         62
+  C:09E7H         LINE#         63
+  -------         ENDPROC       _DELAY
+  -------         PROC          _WRITESTRING
+  D:000CH         SYMBOL        str
+  -------         DO            
+  D:000FH         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0903H         LINE#         65
+  C:0909H         LINE#         66
+  C:0909H         LINE#         69
+  C:090CH         LINE#         70
+  C:090EH         LINE#         71
+  C:0922H         LINE#         72
+  C:0922H         LINE#         73
+  C:0924H         LINE#         74
+  C:0926H         LINE#         75
+BL51 BANKED LINKER/LOCATER V6.02                                                      11/19/2014  01:23:29  PAGE 4
+
+
+  C:0928H         LINE#         76
+  C:092AH         LINE#         77
+  C:092CH         LINE#         78
+  C:093AH         LINE#         79
+  C:0941H         LINE#         80
+  C:0945H         LINE#         81
+  -------         ENDPROC       _WRITESTRING
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        l1
+  D:0009H         SYMBOL        l2
+  D:000AH         SYMBOL        l3
+  D:000BH         SYMBOL        l4
+  D:0082H         SYMBOL        k
+  -------         ENDDO         
+  C:088CH         LINE#         83
+  C:088CH         LINE#         84
+  C:088CH         LINE#         85
+  C:088FH         LINE#         86
+  C:0892H         LINE#         87
+  C:0895H         LINE#         88
+  C:0898H         LINE#         90
+  C:089CH         LINE#         91
+  C:089FH         LINE#         92
+  C:089FH         LINE#         93
+  C:089FH         LINE#         94
+  C:08A4H         LINE#         95
+  C:08A9H         LINE#         96
+  C:08B2H         LINE#         97
+  C:08B7H         LINE#         98
+  C:08C0H         LINE#         99
+  C:08C5H         LINE#         100
+  C:08CEH         LINE#         101
+  C:08D3H         LINE#         102
+  C:08DCH         LINE#         103
+  C:08E3H         LINE#         104
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LAB8_1
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0946H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?SLCMP
+  C:0973H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0165H BYTE (17%) *
+******************************************************************************
+
+Program Size: data=22.0 xdata=0 code=568
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
