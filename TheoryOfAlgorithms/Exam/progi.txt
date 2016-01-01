@@ -1,0 +1,168 @@
+/бульбашка
+
+procedure TForm1.Button2Click(Sender: TObject);
+Var
+i,j,e : integer;
+
+Begin
+
+
+ for i:=1 to n do
+for j:=1 to n-i do
+if a[j]>a[j+1] then
+begin {Обмін елементів}
+e:=a[j];
+a[j]:=a[j+1];
+a[j+1]:=e;
+end;
+for i:=1 to n do
+for j:=1 to n-i do
+if a[j]>a[j+1] then
+begin {Обмін елементів}
+e:=a[j];
+a[j]:=a[j+1];
+a[j+1]:=e;
+end;
+for i:=1 to n do
+begin
+stringgrid2.Cells[0,i-1]:=IntToStr(a[i]);
+end;
+End;
+
+
+
+  //   вставки
+
+
+
+    procedure TForm1.Button3Click(Sender: TObject);
+  begin
+for i:=1 to N do
+ begin
+  j:=i;
+  while (j>1) and (B[j-1]>A[i]) do
+   begin
+    B[j]:=B[j-1];
+    j:=j-1;
+   end;
+  B[j]:=A[i];
+ end;
+   for i:=1 to n do
+begin
+stringgrid2.Cells[0,i-1]:=IntToStr(b[i]);
+end;
+end;
+
+
+
+  //   Процедура для злиття
+Procedure zluv(p,q : integer);
+Var r,i,j,k : integer;
+Begin
+ r:=(p+q) div 2;
+ i:=p;
+ j:=r+1;
+ for k:=p to q do
+ if (i<=r) and ((j>q) or (a[i]<a[j])) then
+  begin
+   b[k]:=a[i];
+   i:=i+1;
+  end
+ else
+  begin
+   b[k]:=a[j];
+   j:=j+1;
+  end ;
+ for k:=p to q do
+  a[k]:=b[k];
+End;
+Procedure Sort(p,q : integer);
+Begin
+ if p<q then
+ begin
+  Sort(p,(p+q) div 2);
+  Sort((p+q) div 2 + 1,q);
+  Zluv(p,q);
+ end;
+End;
+
+//    злиття
+procedure TForm1.Button4Click(Sender: TObject);
+var i: integer;
+
+begin
+
+Sort(1,N);
+  for i:=1 to n do
+begin
+stringgrid2.Cells[0,i-1]:=IntToStr(a[i]);
+
+end;
+ end;
+
+  //       опис процедури для швидкого сортуванння
+ Procedure Shvudke(p,q : integer); {p,q - индексы начала и конца сортируемой части массива}
+Var i,j,r   ,N,T  : integer;
+Begin
+ if p<q then
+ begin
+  r:=A[p];
+  i:=p-1;
+  j:=q+1;
+  while i<j do
+   begin
+    repeat
+     i:=i+1;
+    until A[i]>=r;
+    repeat
+     j:=j-1;
+    until A[j]<=r;
+    if i<j then
+     begin
+      T:=A[i];
+      A[i]:=A[j];
+      A[j]:=T;
+     end;
+   end;
+ Sort (p,j);
+   Sort(j+1,q);
+ end;
+End;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+
+Sort(1,N);
+  for i:=1 to n do
+begin
+stringgrid2.Cells[0,i-1]:=IntToStr(a[i]);
+ end;
+end;
+
+ //Вобором
+procedure TForm1.Button6Click(Sender: TObject);
+ var
+ i,j,k : Integer;
+
+begin
+  for i := 1 to n-1 do  begin
+    k := i;
+    for j := i+1 to n do
+      if a[k] > a[j]
+      then begin
+        k := j;
+      end;
+        if k <> i then begin
+      r := a[k];
+      a[k] := a[i];
+      a[i] := r;
+    end;
+  end;
+
+
+ for i:=1 to n do
+begin
+stringgrid2.Cells[0,i-1]:=IntToStr(a[i]);
+
+end;
+end;
