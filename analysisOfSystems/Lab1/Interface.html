@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Множення матриць</title>
+    <link type="text/css" rel="stylesheet" href="lab1.css">
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
+</head>
+<body>
+    <div class="header">
+        *************************************************************************************************************
+    </div>
+    <div class="content">
+        <div>Вхідні дані:</div>
+        <div id="numerous_block">
+            <label>Кількість матриць</label>
+            <input type="number" id="num" min="2" max="15" step="1" value="2">
+        </div>
+        <br><br><br>
+        <div id="matrixs_block">
+            <label>Розмірність матриць</label><br><br><br>
+            <label class="rozmir">m</label>
+            <label class="rozmir">n</label><br><br>
+            <div id="matrix_1">
+                <label>A1</label>
+                <input type="text" id="m_1">
+                <input type="text" id="n_1">
+            </div>
+            <div id="matrix_2">
+                <label>A2</label>
+                <input type="text" id="m_2">
+                <input type="text" id="n_2">
+            </div>
+        </div>
+        <div id="resolve_btn">Розв'язати</div>
+        <div id="result_block">
+            <div>
+                <label>Кількість операцій множення й додавання елементів матриць :</label>
+                <a id="count_op"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        *************************************************************************************************************
+        &#169; Віра Литвин 2013
+    </div>
+</body>
+</html>

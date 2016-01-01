@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Множення матриць</title>
+    <link type="text/css" rel="stylesheet" href="lab1.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        *************************************************************************************************************
+    </div>
+    <div class="content">
+        <div>Вхідні дані:</div>
+        <br>
+        <div id="matrixs_block">
+            <label> Введіть кількість рядків у матрицях</label>
+            <input id="rows" type="textbox" value="30,35,15,5,10"><br>
+            <label> Введіть кількість стовпців у матрицях</label>
+            <input id="columns" type="textbox" value="35,15,5,10,20"> <br>
+            <br><br><br>
+        </div>
+        <input type="button" value="Обчислити" onclick="matrixMult();">
+        <input type="button" value="Очистити результати" onclick="clearOutput();">
+        <div id="result_block">
+            <div>
+                <br>
+                Результат: <br>
+                <textarea id="output" cols="80" rows="25"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        *************************************************************************************************************
+        &#169; Віра Литвин 2013
+    </div>
+</body>
+</html>

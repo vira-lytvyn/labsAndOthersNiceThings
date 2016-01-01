@@ -1,0 +1,49 @@
+body{
+     margin: auto;
+     width: 1200px;
+     background: #f7ffef;
+     font-family: VERDANA;
+     font-size: 13pt;
+     color: #0f6805;
+ }
+.header, .footer{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.footer{
+    text-align: center;
+    margin-top: 150px;
+}
+.content input{
+    outline-color: #8fff9e;
+    margin-top: 10px;
+    padding-left: 8px;
+    width: 110px;
+    border-radius: 5px;
+    height: 22px;
+}
+.content > div:first-child{
+    margin-bottom: 30px;
+}
+#resolve_btn{
+    width: 122px;
+    height: 32px;
+    border: 2px solid #8fff9e;
+    margin: 30px;
+    text-align: center;
+    line-height: 32px;
+    margin-left: 300px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+label.rozmir{
+    width: 128px;
+    display: block;
+    float: left;
+}
+.content #result_block{
+    display: none;
+}
+#count_op{
+    color: #11cb67;
+}
