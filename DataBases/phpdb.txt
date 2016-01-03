@@ -1,0 +1,118 @@
+newtable.php
+############
+<?
+require("conf.php");
+
+$sql="create table $db_table 
+(id int PRIMARY KEY AUTO_INCREMENT, title char(30), email char(30) ) ";
+mysql_connect("$host_name","$db_user","$db_password");
+mysql("$db_name","$sql");
+
+echo "Table $db_table has been created";
+
+exit;
+?> 
+############
+
+conf.php
+############
+<?
+# Database options
+$db_name="db11";
+$host_name="localhost";
+$db_user="";
+$db_password="";
+$db_table="tb2";
+$page_header="
+<html>
+<body bgcolor='#ffffff'>
+";
+$page_footer="
+</body>
+</html>
+";
+?>
+############
+
+
+index.php
+###########?
+# Test script created by Pavl. B.
+
+require ("conf.php");
+
+mysql_connect("$host_name","$db_user","$db_password");
+mysql_select_db("$db_name");
+
+if ($tp=="") {print_menu();}
+if ($tp=="submit") {submit_entry();}
+if ($tp=="view") {view_entries();}
+
+function print_menu()
+{
+global $page_header, $page_footer;
+echo "
+$page_header
+<p>
+<form action='index.php' method='post'>
+Title: <input type='text' name='title'>
+<br>
+E-mail: <input type='text' name='email'>
+<input type='hidden' name='tp' value='submit'>
+<br>
+<input type='submit'>
+</form>
+<p>
+<a href='index.php?tp=view'>View Entries</a>
+$page_footer
+";
+exit;
+}
+
+function submit_entry()
+{
+global $page_header, $page_footer, $db_table, $email, $title;
+
+$sql="insert into $db_table ( title, email ) values( '$title', '$email')";
+mysql_query("$sql");
+
+echo "
+$page_header
+<p> 
+Entry has been submitted
+$page_footer
+";
+exit;
+}
+
+function view_entries()
+{
+global $page_header, $page_footer, $db_table;
+
+echo "
+$page_header
+";
+
+$sql="select * from $db_table ";
+$entries=mysql_query("$sql");
+ 
+while ($row = mysql_fetch_array ($entries))
+{
+echo "<p>
+".$row['id'].".<br>
+title: ".$row['title']."
+; 
+<br> e-mail: ".$row['email']."; 
+";
+}
+
+echo "
+$page_footer
+";
+exit;
+}
+
+?>
+
+
+
