@@ -1,0 +1,9 @@
+|lab_5_3
+Q <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+R => inst4.IN0
+C => inst1.IN1
+C => inst2.IN0
+S => inst.IN1
+NOTQ <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+

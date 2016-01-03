@@ -1,0 +1,77 @@
+|lab_8_2
+Mult[0] <= lpm_mult0:inst.result[0]
+Mult[1] <= lpm_mult0:inst.result[1]
+Mult[2] <= lpm_mult0:inst.result[2]
+Mult[3] <= lpm_mult0:inst.result[3]
+Mult[4] <= lpm_mult0:inst.result[4]
+Mult[5] <= lpm_mult0:inst.result[5]
+Mult[6] <= lpm_mult0:inst.result[6]
+Mult[7] <= lpm_mult0:inst.result[7]
+A[0] => lpm_mult0:inst.dataa[0]
+A[1] => lpm_mult0:inst.dataa[1]
+A[2] => lpm_mult0:inst.dataa[2]
+A[3] => lpm_mult0:inst.dataa[3]
+B[0] => lpm_mult0:inst.datab[0]
+B[1] => lpm_mult0:inst.datab[1]
+B[2] => lpm_mult0:inst.datab[2]
+B[3] => lpm_mult0:inst.datab[3]
+
+
+|lab_8_2|lpm_mult0:inst
+dataa[0] => lpm_mult:lpm_mult_component.dataa[0]
+dataa[1] => lpm_mult:lpm_mult_component.dataa[1]
+dataa[2] => lpm_mult:lpm_mult_component.dataa[2]
+dataa[3] => lpm_mult:lpm_mult_component.dataa[3]
+datab[0] => lpm_mult:lpm_mult_component.datab[0]
+datab[1] => lpm_mult:lpm_mult_component.datab[1]
+datab[2] => lpm_mult:lpm_mult_component.datab[2]
+datab[3] => lpm_mult:lpm_mult_component.datab[3]
+result[0] <= lpm_mult:lpm_mult_component.result[0]
+result[1] <= lpm_mult:lpm_mult_component.result[1]
+result[2] <= lpm_mult:lpm_mult_component.result[2]
+result[3] <= lpm_mult:lpm_mult_component.result[3]
+result[4] <= lpm_mult:lpm_mult_component.result[4]
+result[5] <= lpm_mult:lpm_mult_component.result[5]
+result[6] <= lpm_mult:lpm_mult_component.result[6]
+result[7] <= lpm_mult:lpm_mult_component.result[7]
+
+
+|lab_8_2|lpm_mult0:inst|lpm_mult:lpm_mult_component
+dataa[0] => mult_p2n:auto_generated.dataa[0]
+dataa[1] => mult_p2n:auto_generated.dataa[1]
+dataa[2] => mult_p2n:auto_generated.dataa[2]
+dataa[3] => mult_p2n:auto_generated.dataa[3]
+datab[0] => mult_p2n:auto_generated.datab[0]
+datab[1] => mult_p2n:auto_generated.datab[1]
+datab[2] => mult_p2n:auto_generated.datab[2]
+datab[3] => mult_p2n:auto_generated.datab[3]
+sum[0] => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mult_p2n:auto_generated.result[0]
+result[1] <= mult_p2n:auto_generated.result[1]
+result[2] <= mult_p2n:auto_generated.result[2]
+result[3] <= mult_p2n:auto_generated.result[3]
+result[4] <= mult_p2n:auto_generated.result[4]
+result[5] <= mult_p2n:auto_generated.result[5]
+result[6] <= mult_p2n:auto_generated.result[6]
+result[7] <= mult_p2n:auto_generated.result[7]
+
+
+|lab_8_2|lpm_mult0:inst|lpm_mult:lpm_mult_component|mult_p2n:auto_generated
+datab[0] => cs3a[0].SUM_IN
+datab[1] => cs1a[0].SUM_IN
+datab[1] => cs1a[0].CIN
+datab[1] => cs3a[0].CIN
+datab[3] => sft12a[0].DATAIN
+result[0] <= sft9a[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= sft9a[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= sft9a[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= sft9a[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= sft9a[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= sft9a[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= sft9a[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= sft9a[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

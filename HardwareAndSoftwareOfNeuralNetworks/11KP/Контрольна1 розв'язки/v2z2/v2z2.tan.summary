@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.200 ns
+From           : 11
+To             : lpm_shiftreg0:inst|lpm_shiftreg:lpm_shiftreg_component|dffs[0]
+From Clock     : --
+To Clock       : C
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.000 ns
+From           : lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]
+To             : Q22
+From Clock     : C
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.000 ns
+From           : 12
+To             : lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]
+From Clock     : --
+To Clock       : C
+Failed Paths   : 0
+
+Type           : Clock Setup: 'C'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 126.58 MHz ( period = 7.900 ns )
+From           : lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]
+To             : lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]
+From Clock     : C
+To Clock       : C
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

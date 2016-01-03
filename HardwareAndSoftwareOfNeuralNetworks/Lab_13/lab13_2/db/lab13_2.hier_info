@@ -1,0 +1,22 @@
+|lab13_2
+QN <= D_FF:inst.QN
+D => D_FF:inst.D
+CLK => D_FF:inst.CLK
+CLR => D_FF:inst.CLR
+PRE => D_FF:inst.PRE
+Q <= D_FF:inst.Q
+
+
+|lab13_2|D_FF:inst
+D => Q~reg0.DATAIN
+D => QN~reg0.DATAIN
+CLK => QN~reg0.CLK
+CLK => Q~reg0.CLK
+CLR => QN.IN0
+CLR => QN~reg0.PRESET
+CLR => Q~reg0.ACLR
+PRE => QN.IN1
+QN <= QN~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

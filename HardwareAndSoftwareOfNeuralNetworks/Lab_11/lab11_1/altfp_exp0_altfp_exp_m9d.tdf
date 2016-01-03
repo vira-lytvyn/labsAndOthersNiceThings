@@ -1,0 +1,691 @@
+--altfp_exp CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone III" PIPELINE=17 ROUNDING="TO_NEAREST" WIDTH_EXP=8 WIDTH_MAN=23 clk_en clock data result
+--VERSION_BEGIN 9.1SP2 cbx_altfp_exp 2010:03:24:20:43:42:SJ cbx_altmult_opt 2010:03:24:20:43:42:SJ cbx_cycloneii 2010:03:24:20:43:43:SJ cbx_lpm_add_sub 2010:03:24:20:43:43:SJ cbx_lpm_clshift 2010:03:24:20:43:43:SJ cbx_lpm_compare 2010:03:24:20:43:43:SJ cbx_lpm_mult 2010:03:24:20:43:43:SJ cbx_lpm_mux 2010:03:24:20:43:43:SJ cbx_mgl 2010:03:24:21:01:05:SJ cbx_padd 2010:03:24:20:43:43:SJ cbx_stratix 2010:03:24:20:43:43:SJ cbx_stratixii 2010:03:24:20:43:43:SJ cbx_util_mgl 2010:03:24:20:43:43:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2010 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION lpm_add_sub (aclr, add_sub, cin, clken, clock, dataa[LPM_WIDTH-1..0], datab[LPM_WIDTH-1..0])
+WITH ( CARRY_CHAIN, CARRY_CHAIN_LENGTH, LPM_DIRECTION, LPM_PIPELINE, LPM_REPRESENTATION, LPM_WIDTH, ONE_INPUT_IS_CONSTANT, REGISTERED_AT_END, USE_WYS)
+RETURNS ( cout, overflow, result[LPM_WIDTH-1..0]);
+FUNCTION lpm_clshift (aclr, clken, clock, data[LPM_WIDTH-1..0], direction, distance[LPM_WIDTHDIST-1..0])
+WITH ( LPM_PIPELINE, LPM_SHIFTTYPE, LPM_WIDTH, LPM_WIDTHDIST)
+RETURNS ( overflow, result[LPM_WIDTH-1..0], underflow);
+FUNCTION lpm_compare (aclr, clken, clock, dataa[LPM_WIDTH-1..0], datab[LPM_WIDTH-1..0])
+WITH ( LPM_PIPELINE, LPM_REPRESENTATION, LPM_WIDTH, ONE_INPUT_IS_CONSTANT)
+RETURNS ( aeb, agb, ageb, alb, aleb, aneb);
+FUNCTION lpm_mult (aclr, clken, clock, dataa[LPM_WIDTHA-1..0], datab[LPM_WIDTHB-1..0], sum[LPM_WIDTHS-1..0])
+WITH ( DEDICATED_MULTIPLIER_CIRCUITRY, DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO, DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO, DSP_BLOCK_BALANCING, INPUT_A_FIXED_VALUE, INPUT_A_IS_CONSTANT, INPUT_B_FIXED_VALUE, INPUT_B_IS_CONSTANT, LATENCY, LPM_PIPELINE, LPM_REPRESENTATION, LPM_WIDTHA, LPM_WIDTHB, LPM_WIDTHP, LPM_WIDTHS = 1, MAXIMIZE_SPEED, USE_AHDL_IMPLEMENTATION, USE_EAB, USE_WYS)
+RETURNS ( result[LPM_WIDTHP-1..0]);
+FUNCTION lpm_mux (aclr, clken, clock, data[LPM_SIZE-1..0][LPM_WIDTH-1..0], sel[LPM_WIDTHS-1..0])
+WITH ( CASCADE_CHAIN, IGNORE_CASCADE_BUFFERS, LPM_PIPELINE, LPM_SIZE, LPM_WIDTH, LPM_WIDTHS)
+RETURNS ( result[LPM_WIDTH-1..0]);
+
+--synthesis_resources = lpm_add_sub 9 lpm_clshift 1 lpm_compare 3 lpm_mult 5 lpm_mux 3 mux21 124 reg 745 
+SUBDESIGN altfp_exp0_altfp_exp_m9d
+( 
+	clk_en	:	input;
+	clock	:	input;
+	data[31..0]	:	input;
+	result[31..0]	:	output;
+) 
+VARIABLE 
+	barrel_shifter_underflow_dffe2_15_pipes[14..0] : dffe;
+	distance_overflow_dffe2_15_pipes[14..0] : dffe;
+	exp_value_b4_bias_dffe_0a[7..0] : dffe;
+	exp_value_b4_bias_dffe_10a[7..0] : dffe;
+	exp_value_b4_bias_dffe_1a[7..0] : dffe;
+	exp_value_b4_bias_dffe_2a[7..0] : dffe;
+	exp_value_b4_bias_dffe_3a[7..0] : dffe;
+	exp_value_b4_bias_dffe_4a[7..0] : dffe;
+	exp_value_b4_bias_dffe_5a[7..0] : dffe;
+	exp_value_b4_bias_dffe_6a[7..0] : dffe;
+	exp_value_b4_bias_dffe_7a[7..0] : dffe;
+	exp_value_b4_bias_dffe_8a[7..0] : dffe;
+	exp_value_b4_bias_dffe_9a[7..0] : dffe;
+	exp_value_dffe1a[8..0] : dffe;
+	extra_ln2_dffe_0 : dffe;
+	extra_ln2_dffe_1 : dffe;
+	extra_ln2_dffe_2 : dffe;
+	extra_ln2_dffe_3 : dffe;
+	extra_ln2_dffe_4 : dffe;
+	extra_ln2_dffe_5 : dffe;
+	fraction_dffe1a[22..0] : dffe;
+	input_is_infinity_16_pipes[15..0] : dffe;
+	input_is_nan_16_pipes[15..0] : dffe;
+	input_is_zero_16_pipes[15..0] : dffe;
+	man_overflow_dffe15 : dffe;
+	man_prod_dffe14a[61..0] : dffe;
+	man_round_dffe15a[22..0] : dffe;
+	result_pipe_dffe16a[30..0] : dffe;
+	round_up_dffe15 : dffe;
+	sign_dffe[15..0] : dffe;
+	tbl1_compare_dffe11_4_pipes[3..0] : dffe;
+	tbl1_tbl2_prod_dffe12a[30..0] : dffe;
+	tbl3_taylor_prod_dffe12a[30..0] : dffe;
+	x_fixed_dffe_0a[37..0] : dffe;
+	x_fixed_dffe_1a[37..0] : dffe;
+	x_fixed_dffe_2a[37..0] : dffe;
+	x_fixed_dffe_3a[37..0] : dffe;
+	x_fixed_dffe_4a[37..0] : dffe;
+	xf_pre_2_dffe10a[37..0] : dffe;
+	xf_pre_dffe9a[37..0] : dffe;
+	xi_exp_value_dffe4a[7..0] : dffe;
+	xi_ln2_prod_dffe7a[45..0] : dffe;
+	xi_prod_dffe3a[20..0] : dffe;
+	exp_minus_bias : lpm_add_sub
+		WITH (
+			LPM_DIRECTION = "SUB",
+			LPM_REPRESENTATION = "SIGNED",
+			LPM_WIDTH = 9
+		);
+	exp_value_add_bias : lpm_add_sub
+		WITH (
+			LPM_DIRECTION = "ADD",
+			LPM_PIPELINE = 1,
+			LPM_REPRESENTATION = "SIGNED",
+			LPM_WIDTH = 9
+		);
+	exp_value_man_over : lpm_add_sub
+		WITH (
+			LPM_DIRECTION = "ADD",
+			LPM_REPRESENTATION = "SIGNED",
+			LPM_WIDTH = 9
+		);
+	invert_exp_value : lpm_add_sub
+		WITH (
+			LPM_DIRECTION = "SUB",
+			LPM_PIPELINE = 1,
+			LPM_REPRESENTATION = "SIGNED",
+			LPM_WIDTH = 8
+		);
+	man_round : lpm_add_sub
+		WITH (
+			LPM_DIRECTION = "ADD",
+			LPM_REPRESENTATION = "SIGNED",
+			LPM_WIDTH = 23
+		);
+	one_minus_xf : lpm_add_sub
+		WITH (
+			LPM_DIRECTION = "SUB",
+			LPM_PIPELINE = 1,
+			LPM_REPRESENTATION = "SIGNED",
+			LPM_WIDTH = 31
+		);
+	x_fixed_minus_xiln2 : lpm_add_sub
+		WITH (
+			LPM_DIRECTION = "SUB",
+			LPM_PIPELINE = 1,
+			LPM_REPRESENTATION = "SIGNED",
+			LPM_WIDTH = 38
+		);
+	xf_minus_ln2 : lpm_add_sub
+		WITH (
+			LPM_DIRECTION = "SUB",
+			LPM_PIPELINE = 1,
+			LPM_REPRESENTATION = "SIGNED",
+			LPM_WIDTH = 31
+		);
+	xi_add_one : lpm_add_sub
+		WITH (
+			LPM_DIRECTION = "ADD",
+			LPM_PIPELINE = 1,
+			LPM_REPRESENTATION = "SIGNED",
+			LPM_WIDTH = 8
+		);
+	rbarrel_shift : lpm_clshift
+		WITH (
+			LPM_PIPELINE = 2,
+			LPM_SHIFTTYPE = "LOGICAL",
+			LPM_WIDTH = 38,
+			LPM_WIDTHDIST = 6
+		);
+	distance_overflow_comp : lpm_compare
+		WITH (
+			LPM_REPRESENTATION = "UNSIGNED",
+			LPM_WIDTH = 8
+		);
+	tbl1_compare : lpm_compare
+		WITH (
+			LPM_REPRESENTATION = "UNSIGNED",
+			LPM_WIDTH = 5
+		);
+	underflow_compare : lpm_compare
+		WITH (
+			LPM_REPRESENTATION = "UNSIGNED",
+			LPM_WIDTH = 8
+		);
+	man_prod : lpm_mult
+		WITH (
+			DEDICATED_MULTIPLIER_CIRCUITRY = "YES",
+			LPM_PIPELINE = 1,
+			LPM_REPRESENTATION = "UNSIGNED",
+			LPM_WIDTHA = 31,
+			LPM_WIDTHB = 31,
+			LPM_WIDTHP = 62
+		);
+	tbl1_tbl2_prod : lpm_mult
+		WITH (
+			DEDICATED_MULTIPLIER_CIRCUITRY = "YES",
+			LPM_PIPELINE = 1,
+			LPM_REPRESENTATION = "UNSIGNED",
+			LPM_WIDTHA = 32,
+			LPM_WIDTHB = 32,
+			LPM_WIDTHP = 64
+		);
+	tbl3_taylor_prod : lpm_mult
+		WITH (
+			DEDICATED_MULTIPLIER_CIRCUITRY = "YES",
+			LPM_PIPELINE = 1,
+			LPM_REPRESENTATION = "UNSIGNED",
+			LPM_WIDTHA = 32,
+			LPM_WIDTHB = 30,
+			LPM_WIDTHP = 62
+		);
+	xi_ln2_prod : lpm_mult
+		WITH (
+			DEDICATED_MULTIPLIER_CIRCUITRY = "YES",
+			LPM_PIPELINE = 2,
+			LPM_REPRESENTATION = "UNSIGNED",
+			LPM_WIDTHA = 8,
+			LPM_WIDTHB = 38,
+			LPM_WIDTHP = 46
+		);
+	xi_prod : lpm_mult
+		WITH (
+			DEDICATED_MULTIPLIER_CIRCUITRY = "YES",
+			LPM_REPRESENTATION = "UNSIGNED",
+			LPM_WIDTHA = 12,
+			LPM_WIDTHB = 9,
+			LPM_WIDTHP = 21
+		);
+	table_one : lpm_mux
+		WITH (
+			LPM_SIZE = 32,
+			LPM_WIDTH = 32,
+			LPM_WIDTHS = 5
+		);
+	table_three : lpm_mux
+		WITH (
+			LPM_SIZE = 32,
+			LPM_WIDTH = 21,
+			LPM_WIDTHS = 5
+		);
+	table_two : lpm_mux
+		WITH (
+			LPM_SIZE = 32,
+			LPM_WIDTH = 26,
+			LPM_WIDTHS = 5
+		);
+	cin_to_bias_dataout	:	WIRE;
+	exp_result_mux_prea_dataout[7..0]	:	WIRE;
+	exp_value_b4_biasa_dataout[7..0]	:	WIRE;
+	exp_value_selecta_dataout[5..0]	:	WIRE;
+	exp_value_to_compare_muxa_dataout[7..0]	:	WIRE;
+	exp_value_to_ln2a_dataout[7..0]	:	WIRE;
+	extra_ln2_muxa_dataout[30..0]	:	WIRE;
+	man_result_muxa_dataout[22..0]	:	WIRE;
+	xf_muxa_dataout[30..0]	:	WIRE;
+	aclr	: NODE;
+	addr_val_more_than_one[4..0]	: WIRE;
+	barrel_shifter_data[37..0]	: WIRE;
+	barrel_shifter_distance[5..0]	: WIRE;
+	barrel_shifter_underflow	: WIRE;
+	barrel_shifter_underflow_wi	: WIRE;
+	distance_overflow	: WIRE;
+	distance_overflow_val_w[7..0]	: WIRE;
+	distance_overflow_wi	: WIRE;
+	exp_bias[7..0]	: WIRE;
+	exp_bias_all_ones_w[7..0]	: WIRE;
+	exp_data_all_one_w[7..0]	: WIRE;
+	exp_data_not_zero_w[7..0]	: WIRE;
+	exp_invert[7..0]	: WIRE;
+	exp_one[7..0]	: WIRE;
+	exp_out_all_one_w[7..0]	: WIRE;
+	exp_out_not_zero_w[7..0]	: WIRE;
+	exp_result_out[7..0]	: WIRE;
+	exp_result_w[7..0]	: WIRE;
+	exp_value[8..0]	: WIRE;
+	exp_value_wi[8..0]	: WIRE;
+	exp_value_wo[8..0]	: WIRE;
+	exp_w[7..0]	: WIRE;
+	extra_ln2	: WIRE;
+	fraction[22..0]	: WIRE;
+	fraction_wi[22..0]	: WIRE;
+	fraction_wo[22..0]	: WIRE;
+	gnd_w	: WIRE;
+	guard_bit	: WIRE;
+	input_is_infinity_wi	: WIRE;
+	input_is_infinity_wo	: WIRE;
+	input_is_nan_wi	: WIRE;
+	input_is_nan_wo	: WIRE;
+	input_is_zero_wi	: WIRE;
+	input_is_zero_wo	: WIRE;
+	ln2_w[37..0]	: WIRE;
+	man_data_not_zero_w[22..0]	: WIRE;
+	man_overflow	: WIRE;
+	man_overflow_wi	: WIRE;
+	man_overflow_wo	: WIRE;
+	man_prod_result[61..0]	: WIRE;
+	man_prod_shifted[61..0]	: WIRE;
+	man_prod_wi[61..0]	: WIRE;
+	man_prod_wire[61..0]	: WIRE;
+	man_prod_wo[61..0]	: WIRE;
+	man_result_all_ones[22..0]	: WIRE;
+	man_result_w[22..0]	: WIRE;
+	man_round_wi[22..0]	: WIRE;
+	man_round_wo[22..0]	: WIRE;
+	nan_w	: WIRE;
+	negative_infinity	: WIRE;
+	one_over_ln2_w[8..0]	: WIRE;
+	overflow_w	: WIRE;
+	positive_infinity	: WIRE;
+	result_pipe_wi[30..0]	: WIRE;
+	result_pipe_wo[30..0]	: WIRE;
+	result_underflow_w	: WIRE;
+	round_bit	: WIRE;
+	round_up	: WIRE;
+	round_up_wi	: WIRE;
+	round_up_wo	: WIRE;
+	shifted_value	: WIRE;
+	sign_w	: WIRE;
+	sticky_bits[4..0]	: WIRE;
+	table_one_data[1023..0]	: WIRE;
+	table_one_out[31..0]	: WIRE;
+	table_three_data[671..0]	: WIRE;
+	table_three_out[31..0]	: WIRE;
+	table_three_out_tmp[20..0]	: WIRE;
+	table_two_data[831..0]	: WIRE;
+	table_two_out[31..0]	: WIRE;
+	table_two_out_tmp[25..0]	: WIRE;
+	tbl1_compare_wi	: WIRE;
+	tbl1_compare_wo	: WIRE;
+	tbl1_tbl2_prod_wi[30..0]	: WIRE;
+	tbl1_tbl2_prod_wo[30..0]	: WIRE;
+	tbl3_taylor_prod_wi[30..0]	: WIRE;
+	tbl3_taylor_prod_wo[30..0]	: WIRE;
+	underflow_compare_val_w[7..0]	: WIRE;
+	underflow_w	: WIRE;
+	x_fixed[37..0]	: WIRE;
+	xf[30..0]	: WIRE;
+	xf_pre[37..0]	: WIRE;
+	xf_pre_2_wi[37..0]	: WIRE;
+	xf_pre_2_wo[37..0]	: WIRE;
+	xf_pre_wi[37..0]	: WIRE;
+	xf_pre_wo[37..0]	: WIRE;
+	xi_exp_value[7..0]	: WIRE;
+	xi_exp_value_wi[7..0]	: WIRE;
+	xi_exp_value_wo[7..0]	: WIRE;
+	xi_ln2_prod_wi[45..0]	: WIRE;
+	xi_ln2_prod_wo[45..0]	: WIRE;
+	xi_prod_wi[20..0]	: WIRE;
+	xi_prod_wo[20..0]	: WIRE;
+
+BEGIN 
+	barrel_shifter_underflow_dffe2_15_pipes[].clk = clock;
+	barrel_shifter_underflow_dffe2_15_pipes[].clrn = (! aclr);
+	barrel_shifter_underflow_dffe2_15_pipes[].d = ( barrel_shifter_underflow_dffe2_15_pipes[13..0].q, barrel_shifter_underflow_wi);
+	barrel_shifter_underflow_dffe2_15_pipes[].ena = clk_en;
+	distance_overflow_dffe2_15_pipes[].clk = clock;
+	distance_overflow_dffe2_15_pipes[].clrn = (! aclr);
+	distance_overflow_dffe2_15_pipes[].d = ( distance_overflow_dffe2_15_pipes[13..0].q, distance_overflow_wi);
+	distance_overflow_dffe2_15_pipes[].ena = clk_en;
+	exp_value_b4_bias_dffe_0a[].clk = clock;
+	exp_value_b4_bias_dffe_0a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_0a[].d = exp_value_b4_biasa_dataout[];
+	exp_value_b4_bias_dffe_0a[].ena = clk_en;
+	exp_value_b4_bias_dffe_10a[].clk = clock;
+	exp_value_b4_bias_dffe_10a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_10a[].d = exp_value_b4_bias_dffe_9a[].q;
+	exp_value_b4_bias_dffe_10a[].ena = clk_en;
+	exp_value_b4_bias_dffe_1a[].clk = clock;
+	exp_value_b4_bias_dffe_1a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_1a[].d = exp_value_b4_bias_dffe_0a[].q;
+	exp_value_b4_bias_dffe_1a[].ena = clk_en;
+	exp_value_b4_bias_dffe_2a[].clk = clock;
+	exp_value_b4_bias_dffe_2a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_2a[].d = exp_value_b4_bias_dffe_1a[].q;
+	exp_value_b4_bias_dffe_2a[].ena = clk_en;
+	exp_value_b4_bias_dffe_3a[].clk = clock;
+	exp_value_b4_bias_dffe_3a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_3a[].d = exp_value_b4_bias_dffe_2a[].q;
+	exp_value_b4_bias_dffe_3a[].ena = clk_en;
+	exp_value_b4_bias_dffe_4a[].clk = clock;
+	exp_value_b4_bias_dffe_4a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_4a[].d = exp_value_b4_bias_dffe_3a[].q;
+	exp_value_b4_bias_dffe_4a[].ena = clk_en;
+	exp_value_b4_bias_dffe_5a[].clk = clock;
+	exp_value_b4_bias_dffe_5a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_5a[].d = exp_value_b4_bias_dffe_4a[].q;
+	exp_value_b4_bias_dffe_5a[].ena = clk_en;
+	exp_value_b4_bias_dffe_6a[].clk = clock;
+	exp_value_b4_bias_dffe_6a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_6a[].d = exp_value_b4_bias_dffe_5a[].q;
+	exp_value_b4_bias_dffe_6a[].ena = clk_en;
+	exp_value_b4_bias_dffe_7a[].clk = clock;
+	exp_value_b4_bias_dffe_7a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_7a[].d = exp_value_b4_bias_dffe_6a[].q;
+	exp_value_b4_bias_dffe_7a[].ena = clk_en;
+	exp_value_b4_bias_dffe_8a[].clk = clock;
+	exp_value_b4_bias_dffe_8a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_8a[].d = exp_value_b4_bias_dffe_7a[].q;
+	exp_value_b4_bias_dffe_8a[].ena = clk_en;
+	exp_value_b4_bias_dffe_9a[].clk = clock;
+	exp_value_b4_bias_dffe_9a[].clrn = (! aclr);
+	exp_value_b4_bias_dffe_9a[].d = exp_value_b4_bias_dffe_8a[].q;
+	exp_value_b4_bias_dffe_9a[].ena = clk_en;
+	exp_value_dffe1a[].clk = clock;
+	exp_value_dffe1a[].clrn = (! aclr);
+	exp_value_dffe1a[].d = exp_value_wi[];
+	exp_value_dffe1a[].ena = clk_en;
+	extra_ln2_dffe_0.clk = clock;
+	extra_ln2_dffe_0.clrn = (! aclr);
+	extra_ln2_dffe_0.d = extra_ln2;
+	extra_ln2_dffe_0.ena = clk_en;
+	extra_ln2_dffe_1.clk = clock;
+	extra_ln2_dffe_1.clrn = (! aclr);
+	extra_ln2_dffe_1.d = extra_ln2_dffe_0.q;
+	extra_ln2_dffe_1.ena = clk_en;
+	extra_ln2_dffe_2.clk = clock;
+	extra_ln2_dffe_2.clrn = (! aclr);
+	extra_ln2_dffe_2.d = extra_ln2_dffe_1.q;
+	extra_ln2_dffe_2.ena = clk_en;
+	extra_ln2_dffe_3.clk = clock;
+	extra_ln2_dffe_3.clrn = (! aclr);
+	extra_ln2_dffe_3.d = extra_ln2_dffe_2.q;
+	extra_ln2_dffe_3.ena = clk_en;
+	extra_ln2_dffe_4.clk = clock;
+	extra_ln2_dffe_4.clrn = (! aclr);
+	extra_ln2_dffe_4.d = extra_ln2_dffe_3.q;
+	extra_ln2_dffe_4.ena = clk_en;
+	extra_ln2_dffe_5.clk = clock;
+	extra_ln2_dffe_5.clrn = (! aclr);
+	extra_ln2_dffe_5.d = extra_ln2_dffe_4.q;
+	extra_ln2_dffe_5.ena = clk_en;
+	fraction_dffe1a[].clk = clock;
+	fraction_dffe1a[].clrn = (! aclr);
+	fraction_dffe1a[].d = fraction_wi[];
+	fraction_dffe1a[].ena = clk_en;
+	input_is_infinity_16_pipes[].clk = clock;
+	input_is_infinity_16_pipes[].clrn = (! aclr);
+	input_is_infinity_16_pipes[].d = ( input_is_infinity_16_pipes[14..0].q, input_is_infinity_wi);
+	input_is_infinity_16_pipes[].ena = clk_en;
+	input_is_nan_16_pipes[].clk = clock;
+	input_is_nan_16_pipes[].clrn = (! aclr);
+	input_is_nan_16_pipes[].d = ( input_is_nan_16_pipes[14..0].q, input_is_nan_wi);
+	input_is_nan_16_pipes[].ena = clk_en;
+	input_is_zero_16_pipes[].clk = clock;
+	input_is_zero_16_pipes[].clrn = (! aclr);
+	input_is_zero_16_pipes[].d = ( input_is_zero_16_pipes[14..0].q, input_is_zero_wi);
+	input_is_zero_16_pipes[].ena = clk_en;
+	man_overflow_dffe15.clk = clock;
+	man_overflow_dffe15.clrn = (! aclr);
+	man_overflow_dffe15.d = man_overflow_wi;
+	man_overflow_dffe15.ena = clk_en;
+	man_prod_dffe14a[].clk = clock;
+	man_prod_dffe14a[].clrn = (! aclr);
+	man_prod_dffe14a[].d = man_prod_wi[];
+	man_prod_dffe14a[].ena = clk_en;
+	man_round_dffe15a[].clk = clock;
+	man_round_dffe15a[].clrn = (! aclr);
+	man_round_dffe15a[].d = man_round_wi[];
+	man_round_dffe15a[].ena = clk_en;
+	result_pipe_dffe16a[].clk = clock;
+	result_pipe_dffe16a[].clrn = (! aclr);
+	result_pipe_dffe16a[].d = result_pipe_wi[];
+	result_pipe_dffe16a[].ena = clk_en;
+	round_up_dffe15.clk = clock;
+	round_up_dffe15.clrn = (! aclr);
+	round_up_dffe15.d = round_up_wi;
+	round_up_dffe15.ena = clk_en;
+	sign_dffe[].clk = clock;
+	sign_dffe[].clrn = (! aclr);
+	sign_dffe[].d = ( sign_dffe[14..0].q, sign_w);
+	sign_dffe[].ena = clk_en;
+	tbl1_compare_dffe11_4_pipes[].clk = clock;
+	tbl1_compare_dffe11_4_pipes[].clrn = (! aclr);
+	tbl1_compare_dffe11_4_pipes[].d = ( tbl1_compare_dffe11_4_pipes[2..0].q, tbl1_compare_wi);
+	tbl1_compare_dffe11_4_pipes[].ena = clk_en;
+	tbl1_tbl2_prod_dffe12a[].clk = clock;
+	tbl1_tbl2_prod_dffe12a[].clrn = (! aclr);
+	tbl1_tbl2_prod_dffe12a[].d = tbl1_tbl2_prod_wi[];
+	tbl1_tbl2_prod_dffe12a[].ena = clk_en;
+	tbl3_taylor_prod_dffe12a[].clk = clock;
+	tbl3_taylor_prod_dffe12a[].clrn = (! aclr);
+	tbl3_taylor_prod_dffe12a[].d = tbl3_taylor_prod_wi[];
+	tbl3_taylor_prod_dffe12a[].ena = clk_en;
+	x_fixed_dffe_0a[].clk = clock;
+	x_fixed_dffe_0a[].clrn = (! aclr);
+	x_fixed_dffe_0a[].d = x_fixed[];
+	x_fixed_dffe_0a[].ena = clk_en;
+	x_fixed_dffe_1a[].clk = clock;
+	x_fixed_dffe_1a[].clrn = (! aclr);
+	x_fixed_dffe_1a[].d = x_fixed_dffe_0a[].q;
+	x_fixed_dffe_1a[].ena = clk_en;
+	x_fixed_dffe_2a[].clk = clock;
+	x_fixed_dffe_2a[].clrn = (! aclr);
+	x_fixed_dffe_2a[].d = x_fixed_dffe_1a[].q;
+	x_fixed_dffe_2a[].ena = clk_en;
+	x_fixed_dffe_3a[].clk = clock;
+	x_fixed_dffe_3a[].clrn = (! aclr);
+	x_fixed_dffe_3a[].d = x_fixed_dffe_2a[].q;
+	x_fixed_dffe_3a[].ena = clk_en;
+	x_fixed_dffe_4a[].clk = clock;
+	x_fixed_dffe_4a[].clrn = (! aclr);
+	x_fixed_dffe_4a[].d = x_fixed_dffe_3a[].q;
+	x_fixed_dffe_4a[].ena = clk_en;
+	xf_pre_2_dffe10a[].clk = clock;
+	xf_pre_2_dffe10a[].clrn = (! aclr);
+	xf_pre_2_dffe10a[].d = xf_pre_2_wi[];
+	xf_pre_2_dffe10a[].ena = clk_en;
+	xf_pre_dffe9a[].clk = clock;
+	xf_pre_dffe9a[].clrn = (! aclr);
+	xf_pre_dffe9a[].d = xf_pre_wi[];
+	xf_pre_dffe9a[].ena = clk_en;
+	xi_exp_value_dffe4a[].clk = clock;
+	xi_exp_value_dffe4a[].clrn = (! aclr);
+	xi_exp_value_dffe4a[].d = xi_exp_value_wi[];
+	xi_exp_value_dffe4a[].ena = clk_en;
+	xi_ln2_prod_dffe7a[].clk = clock;
+	xi_ln2_prod_dffe7a[].clrn = (! aclr);
+	xi_ln2_prod_dffe7a[].d = xi_ln2_prod_wi[];
+	xi_ln2_prod_dffe7a[].ena = clk_en;
+	xi_prod_dffe3a[].clk = clock;
+	xi_prod_dffe3a[].clrn = (! aclr);
+	xi_prod_dffe3a[].d = xi_prod_wi[];
+	xi_prod_dffe3a[].ena = clk_en;
+	exp_minus_bias.dataa[] = ( B"0", exp_w[]);
+	exp_minus_bias.datab[] = ( B"0", exp_bias[]);
+	exp_value_add_bias.aclr = aclr;
+	exp_value_add_bias.cin = cin_to_bias_dataout;
+	exp_value_add_bias.clken = clk_en;
+	exp_value_add_bias.clock = clock;
+	exp_value_add_bias.dataa[] = ( B"0", exp_value_b4_bias_dffe_10a[].q);
+	exp_value_add_bias.datab[] = ( B"0", exp_bias[7..1], (! extra_ln2_dffe_5.q));
+	exp_value_man_over.dataa[] = exp_value_add_bias.result[];
+	exp_value_man_over.datab[] = ( B"00000000", man_overflow_wo);
+	invert_exp_value.aclr = aclr;
+	invert_exp_value.clken = clk_en;
+	invert_exp_value.clock = clock;
+	invert_exp_value.dataa[] = B"00000000";
+	invert_exp_value.datab[7..0] = exp_value[7..0];
+	man_round.dataa[] = man_round_wo[];
+	man_round.datab[] = ( B"0000000000000000000000", round_up_wo);
+	one_minus_xf.aclr = aclr;
+	one_minus_xf.clken = clk_en;
+	one_minus_xf.clock = clock;
+	one_minus_xf.dataa[] = ( B"1", B"000000000000000000000000000000");
+	one_minus_xf.datab[] = extra_ln2_muxa_dataout[];
+	x_fixed_minus_xiln2.aclr = aclr;
+	x_fixed_minus_xiln2.clken = clk_en;
+	x_fixed_minus_xiln2.clock = clock;
+	x_fixed_minus_xiln2.dataa[] = x_fixed_dffe_4a[].q;
+	x_fixed_minus_xiln2.datab[] = ( B"0", xi_ln2_prod_wo[45..9]);
+	xf_minus_ln2.aclr = aclr;
+	xf_minus_ln2.clken = clk_en;
+	xf_minus_ln2.clock = clock;
+	xf_minus_ln2.dataa[30..0] = xf_pre[30..0];
+	xf_minus_ln2.datab[] = ( B"00", ln2_w[37..9]);
+	xi_add_one.aclr = aclr;
+	xi_add_one.clken = clk_en;
+	xi_add_one.clock = clock;
+	xi_add_one.dataa[] = xi_exp_value[];
+	xi_add_one.datab[] = B"00000001";
+	rbarrel_shift.aclr = aclr;
+	rbarrel_shift.clken = clk_en;
+	rbarrel_shift.clock = clock;
+	rbarrel_shift.data[] = barrel_shifter_data[];
+	rbarrel_shift.direction = exp_value_wo[8..8];
+	rbarrel_shift.distance[] = barrel_shifter_distance[];
+	distance_overflow_comp.dataa[] = exp_value_to_compare_muxa_dataout[];
+	distance_overflow_comp.datab[] = distance_overflow_val_w[];
+	tbl1_compare.dataa[4..0] = xf[28..24];
+	tbl1_compare.datab[] = addr_val_more_than_one[];
+	underflow_compare.dataa[] = exp_value_to_compare_muxa_dataout[];
+	underflow_compare.datab[] = underflow_compare_val_w[];
+	man_prod.aclr = aclr;
+	man_prod.clken = clk_en;
+	man_prod.clock = clock;
+	man_prod.dataa[] = tbl1_tbl2_prod_wo[];
+	man_prod.datab[] = tbl3_taylor_prod_wo[];
+	tbl1_tbl2_prod.aclr = aclr;
+	tbl1_tbl2_prod.clken = clk_en;
+	tbl1_tbl2_prod.clock = clock;
+	tbl1_tbl2_prod.dataa[] = table_one_out[];
+	tbl1_tbl2_prod.datab[] = table_two_out[];
+	tbl3_taylor_prod.aclr = aclr;
+	tbl3_taylor_prod.clken = clk_en;
+	tbl3_taylor_prod.clock = clock;
+	tbl3_taylor_prod.dataa[] = table_three_out[];
+	tbl3_taylor_prod.datab[] = ( B"1", B"000000000000000", xf[13..0]);
+	xi_ln2_prod.aclr = aclr;
+	xi_ln2_prod.clken = clk_en;
+	xi_ln2_prod.clock = clock;
+	xi_ln2_prod.dataa[] = exp_value_to_ln2a_dataout[];
+	xi_ln2_prod.datab[] = ln2_w[];
+	xi_prod.dataa[11..0] = x_fixed[37..26];
+	xi_prod.datab[] = one_over_ln2_w[];
+	table_one.data[][] = table_one_data[];
+	table_one.sel[4..0] = xf[28..24];
+	table_three.data[][] = table_three_data[];
+	table_three.sel[4..0] = xf[18..14];
+	table_two.data[][] = table_two_data[];
+	table_two.sel[4..0] = xf[23..19];
+	cin_to_bias_dataout = shifted_value;
+	exp_result_mux_prea_dataout[] = ((((barrel_shifter_underflow # overflow_w) # input_is_zero_wo) # nan_w) # positive_infinity) & exp_one[] # !(((((barrel_shifter_underflow # overflow_w) # input_is_zero_wo) # nan_w) # positive_infinity)) & exp_result_w[];
+	exp_value_b4_biasa_dataout[] = sign_dffe[3].q & exp_invert[] # !(sign_dffe[3].q) & xi_exp_value[];
+	exp_value_selecta_dataout[] = exp_value_wo[8..8] & invert_exp_value.result[5..0] # !(exp_value_wo[8..8]) & exp_value_wo[5..0];
+	exp_value_to_compare_muxa_dataout[] = exp_value_wo[8..8] & invert_exp_value.result[] # !(exp_value_wo[8..8]) & exp_value_wo[7..0];
+	exp_value_to_ln2a_dataout[] = sign_dffe[4].q & xi_add_one.result[] # !(sign_dffe[4].q) & xi_exp_value_wo[];
+	extra_ln2_muxa_dataout[] = extra_ln2_dffe_0.q & xf_minus_ln2.result[] # !(extra_ln2_dffe_0.q) & xf_pre_wo[30..0];
+	man_result_muxa_dataout[] = ((((overflow_w # underflow_w) # nan_w) # input_is_zero_wo) # input_is_infinity_wo) & ( nan_w, B"0000000000000000000000") # !(((((overflow_w # underflow_w) # nan_w) # input_is_zero_wo) # input_is_infinity_wo)) & man_round.result[];
+	xf_muxa_dataout[] = sign_dffe[10].q & one_minus_xf.result[] # !(sign_dffe[10].q) & xf_pre_2_wo[30..0];
+	aclr = GND;
+	addr_val_more_than_one[] = B"10111";
+	barrel_shifter_data[] = ( B"00000000", B"1", fraction_wo[], B"000000");
+	barrel_shifter_distance[] = exp_value_selecta_dataout[];
+	barrel_shifter_underflow = barrel_shifter_underflow_dffe2_15_pipes[14].q;
+	barrel_shifter_underflow_wi = (underflow_compare.agb & exp_value_wo[8..8]);
+	distance_overflow = distance_overflow_dffe2_15_pipes[14].q;
+	distance_overflow_val_w[] = B"00000110";
+	distance_overflow_wi = (distance_overflow_comp.agb & (! exp_value_wo[8..8]));
+	exp_bias[] = B"01111111";
+	exp_bias_all_ones_w[] = B"11111111";
+	exp_data_all_one_w[] = ( (data[30..30] & exp_data_all_one_w[6..6]), (data[29..29] & exp_data_all_one_w[5..5]), (data[28..28] & exp_data_all_one_w[4..4]), (data[27..27] & exp_data_all_one_w[3..3]), (data[26..26] & exp_data_all_one_w[2..2]), (data[25..25] & exp_data_all_one_w[1..1]), (data[24..24] & exp_data_all_one_w[0..0]), data[23..23]);
+	exp_data_not_zero_w[] = ( (data[30..30] # exp_data_not_zero_w[6..6]), (data[29..29] # exp_data_not_zero_w[5..5]), (data[28..28] # exp_data_not_zero_w[4..4]), (data[27..27] # exp_data_not_zero_w[3..3]), (data[26..26] # exp_data_not_zero_w[2..2]), (data[25..25] # exp_data_not_zero_w[1..1]), (data[24..24] # exp_data_not_zero_w[0..0]), data[23..23]);
+	exp_invert[] = (xi_exp_value[] $ exp_bias_all_ones_w[]);
+	exp_one[] = ( ((overflow_w # nan_w) # positive_infinity), B"1111111");
+	exp_out_all_one_w[] = ( (exp_result_w[7..7] & exp_out_all_one_w[6..6]), (exp_result_w[6..6] & exp_out_all_one_w[5..5]), (exp_result_w[5..5] & exp_out_all_one_w[4..4]), (exp_result_w[4..4] & exp_out_all_one_w[3..3]), (exp_result_w[3..3] & exp_out_all_one_w[2..2]), (exp_result_w[2..2] & exp_out_all_one_w[1..1]), (exp_result_w[1..1] & exp_out_all_one_w[0..0]), exp_result_w[0..0]);
+	exp_out_not_zero_w[] = ( (exp_result_w[7..7] # exp_out_not_zero_w[6..6]), (exp_result_w[6..6] # exp_out_not_zero_w[5..5]), (exp_result_w[5..5] # exp_out_not_zero_w[4..4]), (exp_result_w[4..4] # exp_out_not_zero_w[3..3]), (exp_result_w[3..3] # exp_out_not_zero_w[2..2]), (exp_result_w[2..2] # exp_out_not_zero_w[1..1]), (exp_result_w[1..1] # exp_out_not_zero_w[0..0]), exp_result_w[0..0]);
+	exp_result_out[] = (exp_result_mux_prea_dataout[] & (! ((underflow_w & (! barrel_shifter_underflow)) # negative_infinity)));
+	exp_result_w[7..0] = exp_value_man_over.result[7..0];
+	exp_value[] = exp_minus_bias.result[];
+	exp_value_wi[] = exp_value[];
+	exp_value_wo[] = exp_value_dffe1a[].q;
+	exp_w[7..0] = data[30..23];
+	extra_ln2 = ((! xf_pre[37..37]) & sign_dffe[8].q);
+	fraction[] = ( data[22..0]);
+	fraction_wi[] = fraction[];
+	fraction_wo[] = fraction_dffe1a[].q;
+	gnd_w = B"0";
+	guard_bit = man_prod_result[35..35];
+	input_is_infinity_wi = (exp_data_all_one_w[7..7] & (! man_data_not_zero_w[22..22]));
+	input_is_infinity_wo = input_is_infinity_16_pipes[15].q;
+	input_is_nan_wi = (exp_data_all_one_w[7..7] & man_data_not_zero_w[22..22]);
+	input_is_nan_wo = input_is_nan_16_pipes[15].q;
+	input_is_zero_wi = (! exp_data_not_zero_w[7..7]);
+	input_is_zero_wo = input_is_zero_16_pipes[15].q;
+	ln2_w[] = B"10110001011100100001011111110111110100";
+	man_data_not_zero_w[] = ( (data[22..22] # man_data_not_zero_w[21..21]), (data[21..21] # man_data_not_zero_w[20..20]), (data[20..20] # man_data_not_zero_w[19..19]), (data[19..19] # man_data_not_zero_w[18..18]), (data[18..18] # man_data_not_zero_w[17..17]), (data[17..17] # man_data_not_zero_w[16..16]), (data[16..16] # man_data_not_zero_w[15..15]), (data[15..15] # man_data_not_zero_w[14..14]), (data[14..14] # man_data_not_zero_w[13..13]), (data[13..13] # man_data_not_zero_w[12..12]), (data[12..12] # man_data_not_zero_w[11..11]), (data[11..11] # man_data_not_zero_w[10..10]), (data[10..10] # man_data_not_zero_w[9..9]), (data[9..9] # man_data_not_zero_w[8..8]), (data[8..8] # man_data_not_zero_w[7..7]), (data[7..7] # man_data_not_zero_w[6..6]), (data[6..6] # man_data_not_zero_w[5..5]), (data[5..5] # man_data_not_zero_w[4..4]), (data[4..4] # man_data_not_zero_w[3..3]), (data[3..3] # man_data_not_zero_w[2..2]), (data[2..2] # man_data_not_zero_w[1..1]), (data[1..1] # man_data_not_zero_w[0..0]), data[0..0]);
+	man_overflow = (round_up & man_result_all_ones[22..22]);
+	man_overflow_wi = man_overflow;
+	man_overflow_wo = man_overflow_dffe15.q;
+	man_prod_result[] = ((man_prod_shifted[] & man_prod_wo[59..59]) # (man_prod_wire[] & (! man_prod_wo[59..59])));
+	man_prod_shifted[] = ( gnd_w, man_prod_wo[61..1]);
+	man_prod_wi[] = man_prod.result[];
+	man_prod_wire[] = man_prod_wo[];
+	man_prod_wo[] = man_prod_dffe14a[].q;
+	man_result_all_ones[] = ( (man_round_wi[22..22] & man_result_all_ones[21..21]), (man_round_wi[21..21] & man_result_all_ones[20..20]), (man_round_wi[20..20] & man_result_all_ones[19..19]), (man_round_wi[19..19] & man_result_all_ones[18..18]), (man_round_wi[18..18] & man_result_all_ones[17..17]), (man_round_wi[17..17] & man_result_all_ones[16..16]), (man_round_wi[16..16] & man_result_all_ones[15..15]), (man_round_wi[15..15] & man_result_all_ones[14..14]), (man_round_wi[14..14] & man_result_all_ones[13..13]), (man_round_wi[13..13] & man_result_all_ones[12..12]), (man_round_wi[12..12] & man_result_all_ones[11..11]), (man_round_wi[11..11] & man_result_all_ones[10..10]), (man_round_wi[10..10] & man_result_all_ones[9..9]), (man_round_wi[9..9] & man_result_all_ones[8..8]), (man_round_wi[8..8] & man_result_all_ones[7..7]), (man_round_wi[7..7] & man_result_all_ones[6..6]), (man_round_wi[6..6] & man_result_all_ones[5..5]), (man_round_wi[5..5] & man_result_all_ones[4..4]), (man_round_wi[4..4] & man_result_all_ones[3..3]), (man_round_wi[3..3] & man_result_all_ones[2..2]), (man_round_wi[2..2] & man_result_all_ones[1..1]), (man_round_wi[1..1] & man_result_all_ones[0..0]), man_round_wi[0..0]);
+	man_result_w[] = man_result_muxa_dataout[];
+	man_round_wi[22..0] = man_prod_result[57..35];
+	man_round_wo[] = man_round_dffe15a[].q;
+	nan_w = input_is_nan_wo;
+	negative_infinity = (sign_dffe[15].q & input_is_infinity_wo);
+	one_over_ln2_w[] = B"101110001";
+	overflow_w = ((((! sign_dffe[15].q) & (((distance_overflow # exp_value_add_bias.result[8..8]) # exp_out_all_one_w[7..7]) # exp_value_man_over.result[8..8])) & (! underflow_w)) & (! input_is_nan_wo));
+	positive_infinity = ((! sign_dffe[15].q) & input_is_infinity_wo);
+	result[] = ( B"0", result_pipe_wo[]);
+	result_pipe_wi[] = ( exp_result_out[], man_result_w[]);
+	result_pipe_wo[] = result_pipe_dffe16a[].q;
+	result_underflow_w = ((! exp_out_not_zero_w[7..7]) & (((! exp_value_man_over.result[8..8]) & (! sign_dffe[15].q)) # sign_dffe[15].q));
+	round_bit = man_prod_result[34..34];
+	round_up = (round_bit & (guard_bit # sticky_bits[4..4]));
+	round_up_wi = round_up;
+	round_up_wo = round_up_dffe15.q;
+	shifted_value = (tbl1_compare_wo # man_prod_wo[59..59]);
+	sign_w = data[31..31];
+	sticky_bits[] = ( (man_prod_result[29..29] # sticky_bits[3..3]), (man_prod_result[30..30] # sticky_bits[2..2]), (man_prod_result[31..31] # sticky_bits[1..1]), (man_prod_result[32..32] # sticky_bits[0..0]), man_prod_result[33..33]);
+	table_one_data[] = ( B"10101000100111100001011100110110", B"10100011011011100000001001111010", B"10011110011001101100101000011001", B"10011001100001110010110000111101", B"10010100110011011111000011111001", B"10010000001110011110100111111000", B"10001011110010011111001000110010", B"10000111011111001110110110100011", B"10000011010100011100100100000011", B"11111110100011101111001100001100", B"11110110101110011111100100100000", B"11101111001000101010111011111100", B"11100111110001110010111011000010", B"11100000101001011010000110001001", B"11011001101111000011111011100100", B"11010011000010010100110001110000", B"11001100100010110001110101101010", B"11000110010000000001001000111011", B"11000000001001101001100000011010", B"10111010001111010010100010011110", B"10110100100000100100100101100101", B"10101110111101001000101110110000", B"10101001100100101000110000000110", B"10100100010110101111000111100001", B"10011111010011000110111101010101", B"10011010011001011100000010111000", B"10010101101001011010110001011001", B"10010001000010110000001000101101", B"10001100100101001001101110000011", B"10001000010000010101101010111011", B"10000100000100000010101100000000", B"10000000000000000000000000000000");
+	table_one_out[] = table_one.result[];
+	table_three_data[] = ( B"111110000001111000001", B"111100000001110000100", B"111010000001101001001", B"111000000001100010000", B"110110000001011011001", B"110100000001010100100", B"110010000001001110001", B"110000000001001000000", B"101110000001000010001", B"101100000000111100100", B"101010000000110111001", B"101000000000110010000", B"100110000000101101001", B"100100000000101000100", B"100010000000100100001", B"100000000000100000000", B"011110000000011100001", B"011100000000011000100", B"011010000000010101001", B"011000000000010010000", B"010110000000001111001", B"010100000000001100100", B"010010000000001010001", B"010000000000001000000", B"001110000000000110001", B"001100000000000100100", B"001010000000000011001", B"001000000000000010000", B"000110000000000001001", B"000100000000000000100", B"000010000000000000001", B"000000000000000000000");
+	table_three_out[] = ( B"1", B"0000000000", table_three_out_tmp[]);
+	table_three_out_tmp[] = table_three.result[];
+	table_two_data[] = ( B"11111011110010101100010101", B"11110011100011001101101010", B"11101011010100001111111011", B"11100011000101110011000111", B"11011010110111110111001100", B"11010010101010011100001000", B"11001010011101100001111000", B"11000010010001001000011011", B"10111010000101001111101110", B"10110001111001110111110000", B"10101001101111000000011110", B"10100001100100101001110111", B"10011001011010110011111000", B"10010001010001011110100000", B"10001001001000101001101100", B"10000001000000010101011010", B"01111000111000100001101001", B"01110000110001001110010101", B"01101000101010011011011110", B"01100000100100001001000001", B"01011000011110010110111100", B"01010000011001000101001110", B"01001000010100010011110011", B"01000000010000000010101011", B"00111000001100010001110010", B"00110000001001000001001000", B"00101000000110010000101001", B"00100000000100000000010101", B"00011000000010010000001001", B"00010000000001000000000010", B"00001000000000010000000000", B"00000000000000000000000000");
+	table_two_out[] = ( B"1", B"00000", table_two_out_tmp[]);
+	table_two_out_tmp[] = table_two.result[];
+	tbl1_compare_wi = tbl1_compare.ageb;
+	tbl1_compare_wo = tbl1_compare_dffe11_4_pipes[3].q;
+	tbl1_tbl2_prod_wi[30..0] = tbl1_tbl2_prod.result[63..33];
+	tbl1_tbl2_prod_wo[] = tbl1_tbl2_prod_dffe12a[].q;
+	tbl3_taylor_prod_wi[30..0] = tbl3_taylor_prod.result[61..31];
+	tbl3_taylor_prod_wo[] = tbl3_taylor_prod_dffe12a[].q;
+	underflow_compare_val_w[] = B"00011101";
+	underflow_w = (((((result_underflow_w # barrel_shifter_underflow) # (sign_dffe[15].q & (distance_overflow # (! exp_value_add_bias.result[8..8])))) & (! input_is_zero_wo)) & (! input_is_infinity_wo)) & (! input_is_nan_wo));
+	x_fixed[] = rbarrel_shift.result[];
+	xf[] = xf_muxa_dataout[];
+	xf_pre[] = x_fixed_minus_xiln2.result[];
+	xf_pre_2_wi[] = xf_pre_wo[];
+	xf_pre_2_wo[] = xf_pre_2_dffe10a[].q;
+	xf_pre_wi[] = xf_pre[];
+	xf_pre_wo[] = xf_pre_dffe9a[].q;
+	xi_exp_value[7..0] = xi_prod_wo[18..11];
+	xi_exp_value_wi[] = xi_exp_value[];
+	xi_exp_value_wo[] = xi_exp_value_dffe4a[].q;
+	xi_ln2_prod_wi[] = xi_ln2_prod.result[];
+	xi_ln2_prod_wo[] = xi_ln2_prod_dffe7a[].q;
+	xi_prod_wi[] = xi_prod.result[];
+	xi_prod_wo[] = xi_prod_dffe3a[].q;
+END;
+--VALID FILE

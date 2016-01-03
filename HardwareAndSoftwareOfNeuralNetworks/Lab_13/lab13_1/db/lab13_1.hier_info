@@ -1,0 +1,27 @@
+|lab13_1
+Q <= RS_FF:inst.Q
+S => RS_FF:inst.S
+R => RS_FF:inst.R
+CLOCK => RS_FF:inst.CLOCK
+CLR => RS_FF:inst.CLR
+PRESET => RS_FF:inst.PRESET
+QN <= RS_FF:inst.QN
+
+
+|lab13_1|RS_FF:inst
+S => FF.IN0
+S => FF.IN0
+S => FF.IN0
+R => FF.IN1
+R => FF.IN1
+R => FF.IN1
+CLOCK => \FF:x.CLK
+CLOCK => \FF:x~en.CLK
+CLR => \FF:x.IN0
+CLR => \FF:x.ACLR
+CLR => WideOr0.IN1
+PRESET => \FF:x.IN1
+Q <= \FF:x.DB_MAX_OUTPUT_PORT_TYPE
+QN <= \FF:x.DB_MAX_OUTPUT_PORT_TYPE
+
+

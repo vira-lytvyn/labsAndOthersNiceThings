@@ -1,0 +1,733 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	PRINT_OPTIONS = "Print_options_version 6\
+range_start 0ps\
+range_end 1.0us\
+width 1\
+names_percentage 25\
+comments 1\
+grid_lines 1\
+time_bars 1\
+name_every_page 0\
+expand_groups 0\
+print_all 1\
+print_row_height 100";
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 126258162.448;
+	SIMULATION_TIME = 126258162.448;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 1000000000.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("C")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("LED")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("LED[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "LED";
+}
+
+SIGNAL("LED[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "LED";
+}
+
+SIGNAL("LED[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "LED";
+}
+
+SIGNAL("LED[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "LED";
+}
+
+TRANSITION_LIST("C")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 5.0;
+		NODE
+		{
+			REPEAT = 3199999999;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+		}
+		LEVEL 0 FOR 5.0;
+	}
+}
+
+TRANSITION_LIST("LED[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 607.541;
+		NODE
+		{
+			REPEAT = 98638;
+			LEVEL 0 FOR 640.035;
+			LEVEL 1 FOR 639.965;
+		}
+		LEVEL 0 FOR 640.035;
+		LEVEL 1 FOR 274.872;
+	}
+}
+
+TRANSITION_LIST("LED[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 287.882;
+		NODE
+		{
+			REPEAT = 197277;
+			LEVEL 0 FOR 320.04;
+			LEVEL 1 FOR 319.96;
+		}
+		LEVEL 0 FOR 320.04;
+		LEVEL 1 FOR 274.526;
+	}
+}
+
+TRANSITION_LIST("LED[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 127.605;
+		NODE
+		{
+			REPEAT = 394556;
+			LEVEL 0 FOR 160.033;
+			LEVEL 1 FOR 159.967;
+		}
+		LEVEL 0 FOR 114.843;
+	}
+}
+
+TRANSITION_LIST("LED[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 48.489;
+		NODE
+		{
+			REPEAT = 789113;
+			LEVEL 0 FOR 80.073;
+			LEVEL 1 FOR 79.927;
+		}
+		LEVEL 0 FOR 33.959;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "C";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "LED";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+	CHILDREN = 2, 3, 4, 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "LED[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "LED[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "LED[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "LED[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 1;
+}
+
+TIME_BAR
+{
+	TIME = 13550;
+	MASTER = TRUE;
+}
+;
+
+/*transitions from sub-simulation number 2*/
+
+TRANSITION_LIST("LED[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 365.093;
+		NODE
+		{
+			REPEAT = 98638;
+			LEVEL 0 FOR 640.035;
+			LEVEL 1 FOR 639.965;
+		}
+		LEVEL 0 FOR 640.035;
+		LEVEL 1 FOR 495.071;
+	}
+}
+
+TRANSITION_LIST("LED[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 45.434;
+		NODE
+		{
+			REPEAT = 197278;
+			LEVEL 0 FOR 320.04;
+			LEVEL 1 FOR 319.96;
+		}
+		LEVEL 0 FOR 174.765;
+	}
+}
+
+TRANSITION_LIST("LED[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.19;
+		NODE
+		{
+			REPEAT = 394556;
+			LEVEL 1 FOR 159.967;
+			LEVEL 0 FOR 160.033;
+		}
+		LEVEL 1 FOR 159.967;
+		LEVEL 0 FOR 15.042;
+	}
+}
+
+TRANSITION_LIST("LED[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 46.114;
+		NODE
+		{
+			REPEAT = 789113;
+			LEVEL 1 FOR 79.927;
+			LEVEL 0 FOR 80.073;
+		}
+		LEVEL 1 FOR 14.085;
+	}
+}
+;
+
+/*transitions from sub-simulation number 3*/
+
+TRANSITION_LIST("LED[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 144.894;
+		NODE
+		{
+			REPEAT = 98639;
+			LEVEL 0 FOR 640.035;
+			LEVEL 1 FOR 639.965;
+		}
+		LEVEL 0 FOR 77.658;
+	}
+}
+
+TRANSITION_LIST("LED[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 145.275;
+		NODE
+		{
+			REPEAT = 197278;
+			LEVEL 1 FOR 319.96;
+			LEVEL 0 FOR 320.04;
+		}
+		LEVEL 1 FOR 77.277;
+	}
+}
+
+TRANSITION_LIST("LED[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144.991;
+		NODE
+		{
+			REPEAT = 394556;
+			LEVEL 1 FOR 159.967;
+			LEVEL 0 FOR 160.033;
+		}
+		LEVEL 1 FOR 77.561;
+	}
+}
+
+TRANSITION_LIST("LED[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 65.842;
+		NODE
+		{
+			REPEAT = 789112;
+			LEVEL 0 FOR 80.073;
+			LEVEL 1 FOR 79.927;
+		}
+		LEVEL 0 FOR 80.073;
+		LEVEL 1 FOR 76.637;
+	}
+}
+;
+
+/*transitions from sub-simulation number 4*/
+
+TRANSITION_LIST("LED[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 562.377;
+		NODE
+		{
+			REPEAT = 98638;
+			LEVEL 1 FOR 639.965;
+			LEVEL 0 FOR 640.035;
+		}
+		LEVEL 1 FOR 639.965;
+		LEVEL 0 FOR 315.106;
+	}
+}
+
+TRANSITION_LIST("LED[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 242.683;
+		NODE
+		{
+			REPEAT = 197277;
+			LEVEL 0 FOR 320.04;
+			LEVEL 1 FOR 319.96;
+		}
+		LEVEL 0 FOR 320.04;
+		LEVEL 1 FOR 314.725;
+	}
+}
+
+TRANSITION_LIST("LED[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 82.406;
+		NODE
+		{
+			REPEAT = 394556;
+			LEVEL 0 FOR 160.033;
+			LEVEL 1 FOR 159.967;
+		}
+		LEVEL 0 FOR 155.042;
+	}
+}
+
+TRANSITION_LIST("LED[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 3.29;
+		NODE
+		{
+			REPEAT = 789113;
+			LEVEL 0 FOR 80.073;
+			LEVEL 1 FOR 79.927;
+		}
+		LEVEL 0 FOR 74.158;
+	}
+}
+;
+
+/*transitions from sub-simulation number 5*/
+
+TRANSITION_LIST("LED[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 324.929;
+		NODE
+		{
+			REPEAT = 98638;
+			LEVEL 1 FOR 639.965;
+			LEVEL 0 FOR 640.035;
+		}
+		LEVEL 1 FOR 639.965;
+		LEVEL 0 FOR 535.322;
+	}
+}
+
+TRANSITION_LIST("LED[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 5.235;
+		NODE
+		{
+			REPEAT = 197278;
+			LEVEL 0 FOR 320.04;
+			LEVEL 1 FOR 319.96;
+		}
+		LEVEL 0 FOR 214.981;
+	}
+}
+
+TRANSITION_LIST("LED[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 4.991;
+		NODE
+		{
+			REPEAT = 394556;
+			LEVEL 1 FOR 159.967;
+			LEVEL 0 FOR 160.033;
+		}
+		LEVEL 1 FOR 159.967;
+		LEVEL 0 FOR 55.258;
+	}
+}
+
+TRANSITION_LIST("LED[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5.915;
+		NODE
+		{
+			REPEAT = 789113;
+			LEVEL 1 FOR 79.927;
+			LEVEL 0 FOR 80.073;
+		}
+		LEVEL 1 FOR 54.301;
+	}
+}
+;
+
+/*transitions from sub-simulation number 6*/
+
+TRANSITION_LIST("LED[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 104.713;
+		NODE
+		{
+			REPEAT = 98639;
+			LEVEL 1 FOR 639.965;
+			LEVEL 0 FOR 640.035;
+		}
+		LEVEL 1 FOR 117.155;
+	}
+}
+
+TRANSITION_LIST("LED[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 105.059;
+		NODE
+		{
+			REPEAT = 197278;
+			LEVEL 1 FOR 319.96;
+			LEVEL 0 FOR 320.04;
+		}
+		LEVEL 1 FOR 116.809;
+	}
+}
+
+TRANSITION_LIST("LED[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 104.775;
+		NODE
+		{
+			REPEAT = 394556;
+			LEVEL 1 FOR 159.967;
+			LEVEL 0 FOR 160.033;
+		}
+		LEVEL 1 FOR 117.093;
+	}
+}
+
+TRANSITION_LIST("LED[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 25.626;
+		NODE
+		{
+			REPEAT = 789113;
+			LEVEL 0 FOR 80.073;
+			LEVEL 1 FOR 79.927;
+		}
+		LEVEL 0 FOR 36.242;
+	}
+}
+;
+
+/*transitions from sub-simulation number 7*/
+
+TRANSITION_LIST("LED[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 522.81;
+		NODE
+		{
+			REPEAT = 98638;
+			LEVEL 0 FOR 640.035;
+			LEVEL 1 FOR 639.965;
+		}
+		LEVEL 0 FOR 640.035;
+		LEVEL 1 FOR 343.362;
+	}
+}
+
+TRANSITION_LIST("LED[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 203.151;
+		NODE
+		{
+			REPEAT = 197278;
+			LEVEL 0 FOR 320.04;
+			LEVEL 1 FOR 319.96;
+		}
+		LEVEL 0 FOR 23.056;
+	}
+}
+
+TRANSITION_LIST("LED[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 42.874;
+		NODE
+		{
+			REPEAT = 394556;
+			LEVEL 0 FOR 160.033;
+			LEVEL 1 FOR 159.967;
+		}
+		LEVEL 0 FOR 160.033;
+		LEVEL 1 FOR 23.3;
+	}
+}
+
+TRANSITION_LIST("LED[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 43.831;
+		NODE
+		{
+			REPEAT = 789113;
+			LEVEL 1 FOR 79.927;
+			LEVEL 0 FOR 80.073;
+		}
+		LEVEL 1 FOR 22.376;
+	}
+}
+;
+
+/*transitions from sub-simulation number 8*/
+
+TRANSITION_LIST("LED[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 296.603;
+		NODE
+		{
+			REPEAT = 98638;
+			LEVEL 0 FOR 640.035;
+			LEVEL 1 FOR 639.965;
+		}
+		LEVEL 0 FOR 640.035;
+		LEVEL 1 FOR 573.362;
+	}
+}
+
+TRANSITION_LIST("LED[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 296.984;
+		NODE
+		{
+			REPEAT = 197277;
+			LEVEL 1 FOR 319.96;
+			LEVEL 0 FOR 320.04;
+		}
+		LEVEL 1 FOR 319.96;
+		LEVEL 0 FOR 253.056;
+	}
+}
+
+TRANSITION_LIST("LED[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 136.667;
+		NODE
+		{
+			REPEAT = 394556;
+			LEVEL 0 FOR 160.033;
+			LEVEL 1 FOR 159.967;
+		}
+		LEVEL 0 FOR 93.333;
+	}
+}
+
+TRANSITION_LIST("LED[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 57.551;
+		NODE
+		{
+			REPEAT = 789113;
+			LEVEL 0 FOR 80.073;
+			LEVEL 1 FOR 79.927;
+		}
+		LEVEL 0 FOR 12.449;
+	}
+}
+;

@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'C'
+Slack : -0.200
+TNS   : -0.200
+
+Type  : Slow 1200mV 85C Model Setup 'binary_counter_top:inst|CLK_DIV[2]'
+Slack : -0.037
+TNS   : -0.067
+
+Type  : Slow 1200mV 85C Model Hold 'C'
+Slack : -0.050
+TNS   : -0.050
+
+Type  : Slow 1200mV 85C Model Hold 'binary_counter_top:inst|CLK_DIV[2]'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'C'
+Slack : -3.000
+TNS   : -6.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'binary_counter_top:inst|CLK_DIV[2]'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Setup 'C'
+Slack : -0.071
+TNS   : -0.071
+
+Type  : Slow 1200mV 0C Model Setup 'binary_counter_top:inst|CLK_DIV[2]'
+Slack : 0.073
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'C'
+Slack : -0.063
+TNS   : -0.063
+
+Type  : Slow 1200mV 0C Model Hold 'binary_counter_top:inst|CLK_DIV[2]'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'C'
+Slack : -3.000
+TNS   : -6.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'binary_counter_top:inst|CLK_DIV[2]'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Setup 'C'
+Slack : 0.128
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'binary_counter_top:inst|CLK_DIV[2]'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'C'
+Slack : -0.118
+TNS   : -0.118
+
+Type  : Fast 1200mV 0C Model Hold 'binary_counter_top:inst|CLK_DIV[2]'
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'C'
+Slack : -3.000
+TNS   : -6.168
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'binary_counter_top:inst|CLK_DIV[2]'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

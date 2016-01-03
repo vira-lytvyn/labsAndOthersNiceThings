@@ -1,0 +1,17 @@
+LPM_TYPE=altfp_exp
+PIPELINE=17
+ROUNDING=TO_NEAREST
+WIDTH_EXP=8
+WIDTH_MAN=23
+DEVICE_FAMILY="Cyclone III"
+CBX_AUTO_BLACKBOX=ALL
+CBX_AUTO_BLACKBOX=ALL
+CBX_AUTO_BLACKBOX=ALL
+clk_en
+clock
+data
+nan
+overflow
+result
+underflow
+zero

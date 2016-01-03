@@ -1,0 +1,75 @@
+|lab15_2
+D0[0] <= mem:inst.Do[0]
+D0[1] <= mem:inst.Do[1]
+D0[2] <= mem:inst.Do[2]
+D0[3] <= mem:inst.Do[3]
+clk => mem:inst.clk
+Wn_R => mem:inst.Wn_R
+CSn => mem:inst.CSn
+Addr[0] => mem:inst.Addr[0]
+Addr[1] => mem:inst.Addr[1]
+Addr[2] => mem:inst.Addr[2]
+Addr[3] => mem:inst.Addr[3]
+Addr[4] => mem:inst.Addr[4]
+Di[0] => mem:inst.Di[0]
+Di[1] => mem:inst.Di[1]
+Di[2] => mem:inst.Di[2]
+Di[3] => mem:inst.Di[3]
+
+
+|lab15_2|mem:inst
+clk => RAM~8.CLK
+clk => RAM~0.CLK
+clk => RAM~1.CLK
+clk => RAM~2.CLK
+clk => RAM~3.CLK
+clk => RAM~4.CLK
+clk => RAM~5.CLK
+clk => RAM~6.CLK
+clk => RAM~7.CLK
+clk => Do[0]~reg0.CLK
+clk => Do[0]~en.CLK
+clk => Do[1]~reg0.CLK
+clk => Do[1]~en.CLK
+clk => Do[2]~reg0.CLK
+clk => Do[2]~en.CLK
+clk => Do[3]~reg0.CLK
+clk => Do[3]~en.CLK
+clk => RAM.CLK0
+Wn_R => Do[0]~en.DATAIN
+Wn_R => Do[1]~en.DATAIN
+Wn_R => Do[2]~en.DATAIN
+Wn_R => Do[3]~en.DATAIN
+Wn_R => RAM.DATAA
+CSn => Do[0]~en.ACLR
+CSn => Do[1]~en.ACLR
+CSn => Do[2]~en.ACLR
+CSn => Do[3]~en.ACLR
+CSn => RAM.OUTPUTSELECT
+Addr[0] => RAM~3.DATAIN
+Addr[0] => RAM.WADDR
+Addr[0] => RAM.RADDR
+Addr[1] => RAM~2.DATAIN
+Addr[1] => RAM.WADDR1
+Addr[1] => RAM.RADDR1
+Addr[2] => RAM~1.DATAIN
+Addr[2] => RAM.WADDR2
+Addr[2] => RAM.RADDR2
+Addr[3] => RAM~0.DATAIN
+Addr[3] => RAM.WADDR3
+Addr[3] => RAM.RADDR3
+Addr[4] => ~NO_FANOUT~
+Di[0] => RAM~7.DATAIN
+Di[0] => RAM.DATAIN
+Di[1] => RAM~6.DATAIN
+Di[1] => RAM.DATAIN1
+Di[2] => RAM~5.DATAIN
+Di[2] => RAM.DATAIN2
+Di[3] => RAM~4.DATAIN
+Di[3] => RAM.DATAIN3
+Do[0] <= Do[0].DB_MAX_OUTPUT_PORT_TYPE
+Do[1] <= Do[1].DB_MAX_OUTPUT_PORT_TYPE
+Do[2] <= Do[2].DB_MAX_OUTPUT_PORT_TYPE
+Do[3] <= Do[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

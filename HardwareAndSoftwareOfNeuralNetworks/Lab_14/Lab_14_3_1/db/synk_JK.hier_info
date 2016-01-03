@@ -1,0 +1,15 @@
+|synk_JK
+J => JK~1.IN0
+J => JK~0.IN0
+J => JK~2.IN0
+K => JK~2.IN1
+K => JK~1.IN1
+K => JK~0.IN1
+CLK => \JK:x.CLK
+PRST => \JK:x~0.IN1
+CLR => \JK:x~0.IN0
+CLR => \JK:x.ACLR
+Q <= \JK:x.DB_MAX_OUTPUT_PORT_TYPE
+QB <= \JK:x.DB_MAX_OUTPUT_PORT_TYPE
+
+

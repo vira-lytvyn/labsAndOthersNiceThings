@@ -1,0 +1,13 @@
+|Lab_4_part_2
+OUT <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+X1 => inst.IN0
+X1 => inst.IN2
+X1 => inst1.IN0
+X2 => inst.IN1
+X2 => inst2.IN1
+X2 => inst2.IN2
+X3 => inst1.IN1
+X3 => inst1.IN2
+X3 => inst2.IN0
+
+

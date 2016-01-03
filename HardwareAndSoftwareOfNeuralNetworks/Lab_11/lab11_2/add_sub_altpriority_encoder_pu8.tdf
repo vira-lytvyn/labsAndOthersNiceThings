@@ -1,0 +1,56 @@
+--altpriority_encoder CBX_AUTO_BLACKBOX="ALL" PIPELINE=2 WIDTH=32 WIDTHAD=5 aclr clk_en clock data q
+--VERSION_BEGIN 9.1SP2 cbx_altpriority_encoder 2010:03:24:20:43:42:SJ cbx_mgl 2010:03:24:21:01:05:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2010 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION add_sub_altpriority_encoder_pja (aclr, clk_en, clock, data[15..0])
+RETURNS ( q[3..0]);
+FUNCTION add_sub_altpriority_encoder_p2b (aclr, clk_en, clock, data[15..0])
+RETURNS ( q[3..0], zero);
+
+--synthesis_resources = reg 14 
+SUBDESIGN add_sub_altpriority_encoder_pu8
+( 
+	aclr	:	input;
+	clk_en	:	input;
+	clock	:	input;
+	data[31..0]	:	input;
+	q[4..0]	:	output;
+) 
+VARIABLE 
+	altpriority_encoder10 : add_sub_altpriority_encoder_pja;
+	altpriority_encoder11 : add_sub_altpriority_encoder_p2b;
+	pipeline_q_dffe[4..0] : dffe;
+	tmp_q_wire[4..0]	: WIRE;
+
+BEGIN 
+	altpriority_encoder10.aclr = aclr;
+	altpriority_encoder10.clk_en = clk_en;
+	altpriority_encoder10.clock = clock;
+	altpriority_encoder10.data[15..0] = data[15..0];
+	altpriority_encoder11.aclr = aclr;
+	altpriority_encoder11.clk_en = clk_en;
+	altpriority_encoder11.clock = clock;
+	altpriority_encoder11.data[15..0] = data[31..16];
+	pipeline_q_dffe[].clk = clock;
+	pipeline_q_dffe[].clrn = (! aclr);
+	pipeline_q_dffe[].d = tmp_q_wire[];
+	pipeline_q_dffe[].ena = clk_en;
+	q[] = pipeline_q_dffe[].q;
+	tmp_q_wire[] = ( (! altpriority_encoder11.zero), ((altpriority_encoder11.zero & altpriority_encoder10.q[]) # ((! altpriority_encoder11.zero) & altpriority_encoder11.q[])));
+END;
+--VALID FILE

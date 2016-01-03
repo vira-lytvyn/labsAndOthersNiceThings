@@ -1,0 +1,47 @@
+|sumator
+S <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+P => 74153:inst.1GN
+P => inst6.IN0
+P => 74153:inst1.1GN
+P => inst18.IN0
+B => 74153:inst.B
+B => 74153:inst1.B
+A => 74153:inst.A
+A => 74153:inst1.A
+P1 <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sumator|74153:inst
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|sumator|74153:inst1
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+

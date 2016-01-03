@@ -1,0 +1,63 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+28
+1716
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74153
+# storage
+db|sumator.(1).cnf
+db|sumator.(1).cnf
+# case_insensitive
+# source_file
+..|..|..|..|..|program files|altera|90|quartus|libraries|others|maxplus2|74153.bdf
+36cd3b3c347cff8c6b0555687a75ad
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74153:inst
+74153:inst1
+}
+# macro_sequence
+
+# end
+# entity
+sumator
+# storage
+db|sumator.(0).cnf
+db|sumator.(0).cnf
+# case_insensitive
+# source_file
+sumator.bdf
+936e50d75de046d94841431a2ca15e66
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

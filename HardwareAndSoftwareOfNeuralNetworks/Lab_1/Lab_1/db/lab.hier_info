@@ -1,0 +1,8 @@
+|lab
+F <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+X => inst.IN0
+Y => inst.IN1
+Z => inst5.IN1
+W => inst6.IN1
+
+

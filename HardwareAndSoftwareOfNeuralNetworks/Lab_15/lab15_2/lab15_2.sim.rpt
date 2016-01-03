@@ -1,0 +1,405 @@
+Simulator report for lab15_2
+Sun Dec 22 02:46:06 2013
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 199 nodes    ;
+; Simulation Coverage         ;      66.67 % ;
+; Total Number of Transitions ; 6170         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C16F484C8 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      66.67 % ;
+; Total nodes checked                                 ; 199          ;
+; Total output ports checked                          ; 198          ;
+; Total output ports with complete 1/0-value coverage ; 132          ;
+; Total output ports with no 1/0-value coverage       ; 44           ;
+; Total output ports with no 1-value coverage         ; 46           ;
+; Total output ports with no 0-value coverage         ; 64           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |lab15_2|D0[3]~output            ; |lab15_2|D0[3]~output            ; o                ;
+; |lab15_2|D0[2]~output            ; |lab15_2|D0[2]~output            ; o                ;
+; |lab15_2|D0[1]~output            ; |lab15_2|D0[1]~output            ; o                ;
+; |lab15_2|mem:inst|Do[3]~reg0     ; |lab15_2|mem:inst|Do[3]~reg0     ; q                ;
+; |lab15_2|mem:inst|Do[3]~en       ; |lab15_2|mem:inst|Do[3]~en       ; q                ;
+; |lab15_2|mem:inst|Do[2]~reg0     ; |lab15_2|mem:inst|Do[2]~reg0     ; q                ;
+; |lab15_2|mem:inst|Do[2]~en       ; |lab15_2|mem:inst|Do[2]~en       ; q                ;
+; |lab15_2|mem:inst|Do[1]~reg0     ; |lab15_2|mem:inst|Do[1]~reg0     ; q                ;
+; |lab15_2|mem:inst|Do[1]~en       ; |lab15_2|mem:inst|Do[1]~en       ; q                ;
+; |lab15_2|mem:inst|Do[0]~reg0     ; |lab15_2|mem:inst|Do[0]~reg0     ; q                ;
+; |lab15_2|mem:inst|Do[0]~en       ; |lab15_2|mem:inst|Do[0]~en       ; q                ;
+; |lab15_2|mem:inst|RAM~73         ; |lab15_2|mem:inst|RAM~73         ; combout          ;
+; |lab15_2|mem:inst|RAM~74         ; |lab15_2|mem:inst|RAM~74         ; combout          ;
+; |lab15_2|mem:inst|RAM~75         ; |lab15_2|mem:inst|RAM~75         ; combout          ;
+; |lab15_2|mem:inst|RAM~76         ; |lab15_2|mem:inst|RAM~76         ; combout          ;
+; |lab15_2|mem:inst|RAM~77         ; |lab15_2|mem:inst|RAM~77         ; combout          ;
+; |lab15_2|mem:inst|RAM~78         ; |lab15_2|mem:inst|RAM~78         ; combout          ;
+; |lab15_2|mem:inst|RAM~79         ; |lab15_2|mem:inst|RAM~79         ; combout          ;
+; |lab15_2|mem:inst|RAM~80         ; |lab15_2|mem:inst|RAM~80         ; combout          ;
+; |lab15_2|mem:inst|RAM~81         ; |lab15_2|mem:inst|RAM~81         ; combout          ;
+; |lab15_2|mem:inst|RAM~82         ; |lab15_2|mem:inst|RAM~82         ; combout          ;
+; |lab15_2|mem:inst|RAM~83         ; |lab15_2|mem:inst|RAM~83         ; combout          ;
+; |lab15_2|mem:inst|RAM~84         ; |lab15_2|mem:inst|RAM~84         ; combout          ;
+; |lab15_2|mem:inst|RAM~85         ; |lab15_2|mem:inst|RAM~85         ; combout          ;
+; |lab15_2|mem:inst|RAM~86         ; |lab15_2|mem:inst|RAM~86         ; combout          ;
+; |lab15_2|mem:inst|RAM~87         ; |lab15_2|mem:inst|RAM~87         ; combout          ;
+; |lab15_2|mem:inst|RAM~88         ; |lab15_2|mem:inst|RAM~88         ; combout          ;
+; |lab15_2|mem:inst|RAM~89         ; |lab15_2|mem:inst|RAM~89         ; combout          ;
+; |lab15_2|mem:inst|RAM~90         ; |lab15_2|mem:inst|RAM~90         ; combout          ;
+; |lab15_2|mem:inst|RAM~91         ; |lab15_2|mem:inst|RAM~91         ; combout          ;
+; |lab15_2|mem:inst|RAM~92         ; |lab15_2|mem:inst|RAM~92         ; combout          ;
+; |lab15_2|mem:inst|RAM~93         ; |lab15_2|mem:inst|RAM~93         ; combout          ;
+; |lab15_2|mem:inst|RAM~94         ; |lab15_2|mem:inst|RAM~94         ; combout          ;
+; |lab15_2|mem:inst|RAM~95         ; |lab15_2|mem:inst|RAM~95         ; combout          ;
+; |lab15_2|mem:inst|RAM~96         ; |lab15_2|mem:inst|RAM~96         ; combout          ;
+; |lab15_2|mem:inst|RAM~97         ; |lab15_2|mem:inst|RAM~97         ; combout          ;
+; |lab15_2|mem:inst|RAM~98         ; |lab15_2|mem:inst|RAM~98         ; combout          ;
+; |lab15_2|mem:inst|RAM~99         ; |lab15_2|mem:inst|RAM~99         ; combout          ;
+; |lab15_2|mem:inst|RAM~100        ; |lab15_2|mem:inst|RAM~100        ; combout          ;
+; |lab15_2|mem:inst|RAM~101        ; |lab15_2|mem:inst|RAM~101        ; combout          ;
+; |lab15_2|mem:inst|RAM~102        ; |lab15_2|mem:inst|RAM~102        ; combout          ;
+; |lab15_2|mem:inst|RAM~103        ; |lab15_2|mem:inst|RAM~103        ; combout          ;
+; |lab15_2|mem:inst|RAM~104        ; |lab15_2|mem:inst|RAM~104        ; combout          ;
+; |lab15_2|mem:inst|RAM~105        ; |lab15_2|mem:inst|RAM~105        ; combout          ;
+; |lab15_2|mem:inst|RAM~106        ; |lab15_2|mem:inst|RAM~106        ; combout          ;
+; |lab15_2|mem:inst|RAM~107        ; |lab15_2|mem:inst|RAM~107        ; combout          ;
+; |lab15_2|mem:inst|RAM~108        ; |lab15_2|mem:inst|RAM~108        ; combout          ;
+; |lab15_2|mem:inst|RAM~109        ; |lab15_2|mem:inst|RAM~109        ; combout          ;
+; |lab15_2|mem:inst|RAM~110        ; |lab15_2|mem:inst|RAM~110        ; combout          ;
+; |lab15_2|mem:inst|RAM~111        ; |lab15_2|mem:inst|RAM~111        ; combout          ;
+; |lab15_2|mem:inst|RAM~112        ; |lab15_2|mem:inst|RAM~112        ; combout          ;
+; |lab15_2|mem:inst|RAM~113        ; |lab15_2|mem:inst|RAM~113        ; combout          ;
+; |lab15_2|mem:inst|RAM~114        ; |lab15_2|mem:inst|RAM~114        ; combout          ;
+; |lab15_2|mem:inst|RAM~115        ; |lab15_2|mem:inst|RAM~115        ; combout          ;
+; |lab15_2|mem:inst|RAM~116        ; |lab15_2|mem:inst|RAM~116        ; combout          ;
+; |lab15_2|mem:inst|RAM~117        ; |lab15_2|mem:inst|RAM~117        ; combout          ;
+; |lab15_2|mem:inst|RAM~118        ; |lab15_2|mem:inst|RAM~118        ; combout          ;
+; |lab15_2|mem:inst|RAM~119        ; |lab15_2|mem:inst|RAM~119        ; combout          ;
+; |lab15_2|mem:inst|RAM~120        ; |lab15_2|mem:inst|RAM~120        ; combout          ;
+; |lab15_2|mem:inst|RAM~121        ; |lab15_2|mem:inst|RAM~121        ; combout          ;
+; |lab15_2|mem:inst|RAM~122        ; |lab15_2|mem:inst|RAM~122        ; combout          ;
+; |lab15_2|mem:inst|RAM~123        ; |lab15_2|mem:inst|RAM~123        ; combout          ;
+; |lab15_2|mem:inst|RAM~124        ; |lab15_2|mem:inst|RAM~124        ; combout          ;
+; |lab15_2|mem:inst|RAM~125        ; |lab15_2|mem:inst|RAM~125        ; combout          ;
+; |lab15_2|mem:inst|RAM~126        ; |lab15_2|mem:inst|RAM~126        ; combout          ;
+; |lab15_2|mem:inst|RAM~127        ; |lab15_2|mem:inst|RAM~127        ; combout          ;
+; |lab15_2|mem:inst|RAM~128        ; |lab15_2|mem:inst|RAM~128        ; combout          ;
+; |lab15_2|mem:inst|RAM~129        ; |lab15_2|mem:inst|RAM~129        ; combout          ;
+; |lab15_2|mem:inst|RAM~130        ; |lab15_2|mem:inst|RAM~130        ; combout          ;
+; |lab15_2|mem:inst|RAM~131        ; |lab15_2|mem:inst|RAM~131        ; combout          ;
+; |lab15_2|mem:inst|RAM~132        ; |lab15_2|mem:inst|RAM~132        ; combout          ;
+; |lab15_2|mem:inst|RAM~133        ; |lab15_2|mem:inst|RAM~133        ; combout          ;
+; |lab15_2|mem:inst|RAM~134        ; |lab15_2|mem:inst|RAM~134        ; combout          ;
+; |lab15_2|mem:inst|RAM~135        ; |lab15_2|mem:inst|RAM~135        ; combout          ;
+; |lab15_2|mem:inst|RAM~136        ; |lab15_2|mem:inst|RAM~136        ; combout          ;
+; |lab15_2|mem:inst|RAM~137        ; |lab15_2|mem:inst|RAM~137        ; combout          ;
+; |lab15_2|mem:inst|RAM~138        ; |lab15_2|mem:inst|RAM~138        ; combout          ;
+; |lab15_2|mem:inst|RAM~139        ; |lab15_2|mem:inst|RAM~139        ; combout          ;
+; |lab15_2|mem:inst|RAM~140        ; |lab15_2|mem:inst|RAM~140        ; combout          ;
+; |lab15_2|mem:inst|RAM~141        ; |lab15_2|mem:inst|RAM~141        ; combout          ;
+; |lab15_2|mem:inst|RAM~142        ; |lab15_2|mem:inst|RAM~142        ; combout          ;
+; |lab15_2|mem:inst|RAM~143        ; |lab15_2|mem:inst|RAM~143        ; combout          ;
+; |lab15_2|mem:inst|RAM~144        ; |lab15_2|mem:inst|RAM~144        ; combout          ;
+; |lab15_2|D0[3]                   ; |lab15_2|D0[3]                   ; padout           ;
+; |lab15_2|D0[2]                   ; |lab15_2|D0[2]                   ; padout           ;
+; |lab15_2|D0[1]                   ; |lab15_2|D0[1]                   ; padout           ;
+; |lab15_2|Addr[4]                 ; |lab15_2|Addr[4]                 ; padout           ;
+; |lab15_2|Addr[1]~input           ; |lab15_2|Addr[1]~input           ; o                ;
+; |lab15_2|Addr[1]                 ; |lab15_2|Addr[1]                 ; padout           ;
+; |lab15_2|Addr[0]~input           ; |lab15_2|Addr[0]~input           ; o                ;
+; |lab15_2|Addr[0]                 ; |lab15_2|Addr[0]                 ; padout           ;
+; |lab15_2|Addr[3]~input           ; |lab15_2|Addr[3]~input           ; o                ;
+; |lab15_2|Addr[3]                 ; |lab15_2|Addr[3]                 ; padout           ;
+; |lab15_2|Addr[2]~input           ; |lab15_2|Addr[2]~input           ; o                ;
+; |lab15_2|Addr[2]                 ; |lab15_2|Addr[2]                 ; padout           ;
+; |lab15_2|clk~input               ; |lab15_2|clk~input               ; o                ;
+; |lab15_2|clk                     ; |lab15_2|clk                     ; padout           ;
+; |lab15_2|Wn_R~input              ; |lab15_2|Wn_R~input              ; o                ;
+; |lab15_2|Wn_R                    ; |lab15_2|Wn_R                    ; padout           ;
+; |lab15_2|CSn~input               ; |lab15_2|CSn~input               ; o                ;
+; |lab15_2|CSn                     ; |lab15_2|CSn                     ; padout           ;
+; |lab15_2|Di[3]~input             ; |lab15_2|Di[3]~input             ; o                ;
+; |lab15_2|Di[3]                   ; |lab15_2|Di[3]                   ; padout           ;
+; |lab15_2|Di[2]~input             ; |lab15_2|Di[2]~input             ; o                ;
+; |lab15_2|Di[2]                   ; |lab15_2|Di[2]                   ; padout           ;
+; |lab15_2|Di[1]~input             ; |lab15_2|Di[1]~input             ; o                ;
+; |lab15_2|Di[1]                   ; |lab15_2|Di[1]                   ; padout           ;
+; |lab15_2|Di[0]~input             ; |lab15_2|Di[0]~input             ; o                ;
+; |lab15_2|Di[0]                   ; |lab15_2|Di[0]                   ; padout           ;
+; |lab15_2|clk~inputclkctrl        ; |lab15_2|clk~inputclkctrl        ; outclk           ;
+; |lab15_2|CSn~inputclkctrl        ; |lab15_2|CSn~inputclkctrl        ; outclk           ;
+; |lab15_2|mem:inst|Do[1]~enfeeder ; |lab15_2|mem:inst|Do[1]~enfeeder ; combout          ;
+; |lab15_2|mem:inst|RAM~20feeder   ; |lab15_2|mem:inst|RAM~20feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~36feeder   ; |lab15_2|mem:inst|RAM~36feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~64feeder   ; |lab15_2|mem:inst|RAM~64feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~16feeder   ; |lab15_2|mem:inst|RAM~16feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~32feeder   ; |lab15_2|mem:inst|RAM~32feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~48feeder   ; |lab15_2|mem:inst|RAM~48feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~39feeder   ; |lab15_2|mem:inst|RAM~39feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~27feeder   ; |lab15_2|mem:inst|RAM~27feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~31feeder   ; |lab15_2|mem:inst|RAM~31feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~47feeder   ; |lab15_2|mem:inst|RAM~47feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~18feeder   ; |lab15_2|mem:inst|RAM~18feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~46feeder   ; |lab15_2|mem:inst|RAM~46feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~30feeder   ; |lab15_2|mem:inst|RAM~30feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~62feeder   ; |lab15_2|mem:inst|RAM~62feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~14feeder   ; |lab15_2|mem:inst|RAM~14feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~66feeder   ; |lab15_2|mem:inst|RAM~66feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~50feeder   ; |lab15_2|mem:inst|RAM~50feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~53feeder   ; |lab15_2|mem:inst|RAM~53feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~41feeder   ; |lab15_2|mem:inst|RAM~41feeder   ; combout          ;
+; |lab15_2|mem:inst|RAM~49feeder   ; |lab15_2|mem:inst|RAM~49feeder   ; combout          ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                               ;
++--------------------------+--------------------------+------------------+
+; Node Name                ; Output Port Name         ; Output Port Type ;
++--------------------------+--------------------------+------------------+
+; |lab15_2|D0[0]~output    ; |lab15_2|D0[0]~output    ; o                ;
+; |lab15_2|mem:inst|RAM~48 ; |lab15_2|mem:inst|RAM~48 ; q                ;
+; |lab15_2|mem:inst|RAM~44 ; |lab15_2|mem:inst|RAM~44 ; q                ;
+; |lab15_2|mem:inst|RAM~36 ; |lab15_2|mem:inst|RAM~36 ; q                ;
+; |lab15_2|mem:inst|RAM~40 ; |lab15_2|mem:inst|RAM~40 ; q                ;
+; |lab15_2|mem:inst|RAM~12 ; |lab15_2|mem:inst|RAM~12 ; q                ;
+; |lab15_2|mem:inst|RAM~64 ; |lab15_2|mem:inst|RAM~64 ; q                ;
+; |lab15_2|mem:inst|RAM~68 ; |lab15_2|mem:inst|RAM~68 ; q                ;
+; |lab15_2|mem:inst|RAM~72 ; |lab15_2|mem:inst|RAM~72 ; q                ;
+; |lab15_2|mem:inst|RAM~35 ; |lab15_2|mem:inst|RAM~35 ; q                ;
+; |lab15_2|mem:inst|RAM~51 ; |lab15_2|mem:inst|RAM~51 ; q                ;
+; |lab15_2|mem:inst|RAM~19 ; |lab15_2|mem:inst|RAM~19 ; q                ;
+; |lab15_2|mem:inst|RAM~67 ; |lab15_2|mem:inst|RAM~67 ; q                ;
+; |lab15_2|mem:inst|RAM~15 ; |lab15_2|mem:inst|RAM~15 ; q                ;
+; |lab15_2|mem:inst|RAM~63 ; |lab15_2|mem:inst|RAM~63 ; q                ;
+; |lab15_2|mem:inst|RAM~55 ; |lab15_2|mem:inst|RAM~55 ; q                ;
+; |lab15_2|mem:inst|RAM~39 ; |lab15_2|mem:inst|RAM~39 ; q                ;
+; |lab15_2|mem:inst|RAM~23 ; |lab15_2|mem:inst|RAM~23 ; q                ;
+; |lab15_2|mem:inst|RAM~71 ; |lab15_2|mem:inst|RAM~71 ; q                ;
+; |lab15_2|mem:inst|RAM~34 ; |lab15_2|mem:inst|RAM~34 ; q                ;
+; |lab15_2|mem:inst|RAM~26 ; |lab15_2|mem:inst|RAM~26 ; q                ;
+; |lab15_2|mem:inst|RAM~50 ; |lab15_2|mem:inst|RAM~50 ; q                ;
+; |lab15_2|mem:inst|RAM~42 ; |lab15_2|mem:inst|RAM~42 ; q                ;
+; |lab15_2|mem:inst|RAM~14 ; |lab15_2|mem:inst|RAM~14 ; q                ;
+; |lab15_2|mem:inst|RAM~18 ; |lab15_2|mem:inst|RAM~18 ; q                ;
+; |lab15_2|mem:inst|RAM~10 ; |lab15_2|mem:inst|RAM~10 ; q                ;
+; |lab15_2|mem:inst|RAM~66 ; |lab15_2|mem:inst|RAM~66 ; q                ;
+; |lab15_2|mem:inst|RAM~62 ; |lab15_2|mem:inst|RAM~62 ; q                ;
+; |lab15_2|mem:inst|RAM~58 ; |lab15_2|mem:inst|RAM~58 ; q                ;
+; |lab15_2|mem:inst|RAM~29 ; |lab15_2|mem:inst|RAM~29 ; q                ;
+; |lab15_2|mem:inst|RAM~45 ; |lab15_2|mem:inst|RAM~45 ; q                ;
+; |lab15_2|mem:inst|RAM~13 ; |lab15_2|mem:inst|RAM~13 ; q                ;
+; |lab15_2|mem:inst|RAM~61 ; |lab15_2|mem:inst|RAM~61 ; q                ;
+; |lab15_2|mem:inst|RAM~49 ; |lab15_2|mem:inst|RAM~49 ; q                ;
+; |lab15_2|mem:inst|RAM~33 ; |lab15_2|mem:inst|RAM~33 ; q                ;
+; |lab15_2|mem:inst|RAM~17 ; |lab15_2|mem:inst|RAM~17 ; q                ;
+; |lab15_2|mem:inst|RAM~65 ; |lab15_2|mem:inst|RAM~65 ; q                ;
+; |lab15_2|mem:inst|RAM~41 ; |lab15_2|mem:inst|RAM~41 ; q                ;
+; |lab15_2|mem:inst|RAM~25 ; |lab15_2|mem:inst|RAM~25 ; q                ;
+; |lab15_2|mem:inst|RAM~9  ; |lab15_2|mem:inst|RAM~9  ; q                ;
+; |lab15_2|mem:inst|RAM~57 ; |lab15_2|mem:inst|RAM~57 ; q                ;
+; |lab15_2|mem:inst|RAM~37 ; |lab15_2|mem:inst|RAM~37 ; q                ;
+; |lab15_2|mem:inst|RAM~53 ; |lab15_2|mem:inst|RAM~53 ; q                ;
+; |lab15_2|mem:inst|RAM~21 ; |lab15_2|mem:inst|RAM~21 ; q                ;
+; |lab15_2|mem:inst|RAM~69 ; |lab15_2|mem:inst|RAM~69 ; q                ;
+; |lab15_2|D0[0]           ; |lab15_2|D0[0]           ; padout           ;
++--------------------------+--------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                               ;
++--------------------------+--------------------------+------------------+
+; Node Name                ; Output Port Name         ; Output Port Type ;
++--------------------------+--------------------------+------------------+
+; |lab15_2|mem:inst|RAM~52 ; |lab15_2|mem:inst|RAM~52 ; q                ;
+; |lab15_2|mem:inst|RAM~48 ; |lab15_2|mem:inst|RAM~48 ; q                ;
+; |lab15_2|mem:inst|RAM~44 ; |lab15_2|mem:inst|RAM~44 ; q                ;
+; |lab15_2|mem:inst|RAM~56 ; |lab15_2|mem:inst|RAM~56 ; q                ;
+; |lab15_2|mem:inst|RAM~32 ; |lab15_2|mem:inst|RAM~32 ; q                ;
+; |lab15_2|mem:inst|RAM~36 ; |lab15_2|mem:inst|RAM~36 ; q                ;
+; |lab15_2|mem:inst|RAM~28 ; |lab15_2|mem:inst|RAM~28 ; q                ;
+; |lab15_2|mem:inst|RAM~40 ; |lab15_2|mem:inst|RAM~40 ; q                ;
+; |lab15_2|mem:inst|RAM~20 ; |lab15_2|mem:inst|RAM~20 ; q                ;
+; |lab15_2|mem:inst|RAM~16 ; |lab15_2|mem:inst|RAM~16 ; q                ;
+; |lab15_2|mem:inst|RAM~12 ; |lab15_2|mem:inst|RAM~12 ; q                ;
+; |lab15_2|mem:inst|RAM~24 ; |lab15_2|mem:inst|RAM~24 ; q                ;
+; |lab15_2|mem:inst|RAM~64 ; |lab15_2|mem:inst|RAM~64 ; q                ;
+; |lab15_2|mem:inst|RAM~68 ; |lab15_2|mem:inst|RAM~68 ; q                ;
+; |lab15_2|mem:inst|RAM~60 ; |lab15_2|mem:inst|RAM~60 ; q                ;
+; |lab15_2|mem:inst|RAM~72 ; |lab15_2|mem:inst|RAM~72 ; q                ;
+; |lab15_2|mem:inst|RAM~35 ; |lab15_2|mem:inst|RAM~35 ; q                ;
+; |lab15_2|mem:inst|RAM~51 ; |lab15_2|mem:inst|RAM~51 ; q                ;
+; |lab15_2|mem:inst|RAM~19 ; |lab15_2|mem:inst|RAM~19 ; q                ;
+; |lab15_2|mem:inst|RAM~67 ; |lab15_2|mem:inst|RAM~67 ; q                ;
+; |lab15_2|mem:inst|RAM~47 ; |lab15_2|mem:inst|RAM~47 ; q                ;
+; |lab15_2|mem:inst|RAM~31 ; |lab15_2|mem:inst|RAM~31 ; q                ;
+; |lab15_2|mem:inst|RAM~15 ; |lab15_2|mem:inst|RAM~15 ; q                ;
+; |lab15_2|mem:inst|RAM~63 ; |lab15_2|mem:inst|RAM~63 ; q                ;
+; |lab15_2|mem:inst|RAM~27 ; |lab15_2|mem:inst|RAM~27 ; q                ;
+; |lab15_2|mem:inst|RAM~43 ; |lab15_2|mem:inst|RAM~43 ; q                ;
+; |lab15_2|mem:inst|RAM~11 ; |lab15_2|mem:inst|RAM~11 ; q                ;
+; |lab15_2|mem:inst|RAM~59 ; |lab15_2|mem:inst|RAM~59 ; q                ;
+; |lab15_2|mem:inst|RAM~55 ; |lab15_2|mem:inst|RAM~55 ; q                ;
+; |lab15_2|mem:inst|RAM~39 ; |lab15_2|mem:inst|RAM~39 ; q                ;
+; |lab15_2|mem:inst|RAM~23 ; |lab15_2|mem:inst|RAM~23 ; q                ;
+; |lab15_2|mem:inst|RAM~71 ; |lab15_2|mem:inst|RAM~71 ; q                ;
+; |lab15_2|mem:inst|RAM~34 ; |lab15_2|mem:inst|RAM~34 ; q                ;
+; |lab15_2|mem:inst|RAM~30 ; |lab15_2|mem:inst|RAM~30 ; q                ;
+; |lab15_2|mem:inst|RAM~26 ; |lab15_2|mem:inst|RAM~26 ; q                ;
+; |lab15_2|mem:inst|RAM~38 ; |lab15_2|mem:inst|RAM~38 ; q                ;
+; |lab15_2|mem:inst|RAM~46 ; |lab15_2|mem:inst|RAM~46 ; q                ;
+; |lab15_2|mem:inst|RAM~50 ; |lab15_2|mem:inst|RAM~50 ; q                ;
+; |lab15_2|mem:inst|RAM~42 ; |lab15_2|mem:inst|RAM~42 ; q                ;
+; |lab15_2|mem:inst|RAM~54 ; |lab15_2|mem:inst|RAM~54 ; q                ;
+; |lab15_2|mem:inst|RAM~14 ; |lab15_2|mem:inst|RAM~14 ; q                ;
+; |lab15_2|mem:inst|RAM~18 ; |lab15_2|mem:inst|RAM~18 ; q                ;
+; |lab15_2|mem:inst|RAM~10 ; |lab15_2|mem:inst|RAM~10 ; q                ;
+; |lab15_2|mem:inst|RAM~22 ; |lab15_2|mem:inst|RAM~22 ; q                ;
+; |lab15_2|mem:inst|RAM~66 ; |lab15_2|mem:inst|RAM~66 ; q                ;
+; |lab15_2|mem:inst|RAM~62 ; |lab15_2|mem:inst|RAM~62 ; q                ;
+; |lab15_2|mem:inst|RAM~58 ; |lab15_2|mem:inst|RAM~58 ; q                ;
+; |lab15_2|mem:inst|RAM~70 ; |lab15_2|mem:inst|RAM~70 ; q                ;
+; |lab15_2|mem:inst|RAM~29 ; |lab15_2|mem:inst|RAM~29 ; q                ;
+; |lab15_2|mem:inst|RAM~45 ; |lab15_2|mem:inst|RAM~45 ; q                ;
+; |lab15_2|mem:inst|RAM~13 ; |lab15_2|mem:inst|RAM~13 ; q                ;
+; |lab15_2|mem:inst|RAM~61 ; |lab15_2|mem:inst|RAM~61 ; q                ;
+; |lab15_2|mem:inst|RAM~49 ; |lab15_2|mem:inst|RAM~49 ; q                ;
+; |lab15_2|mem:inst|RAM~33 ; |lab15_2|mem:inst|RAM~33 ; q                ;
+; |lab15_2|mem:inst|RAM~17 ; |lab15_2|mem:inst|RAM~17 ; q                ;
+; |lab15_2|mem:inst|RAM~65 ; |lab15_2|mem:inst|RAM~65 ; q                ;
+; |lab15_2|mem:inst|RAM~41 ; |lab15_2|mem:inst|RAM~41 ; q                ;
+; |lab15_2|mem:inst|RAM~25 ; |lab15_2|mem:inst|RAM~25 ; q                ;
+; |lab15_2|mem:inst|RAM~9  ; |lab15_2|mem:inst|RAM~9  ; q                ;
+; |lab15_2|mem:inst|RAM~57 ; |lab15_2|mem:inst|RAM~57 ; q                ;
+; |lab15_2|mem:inst|RAM~37 ; |lab15_2|mem:inst|RAM~37 ; q                ;
+; |lab15_2|mem:inst|RAM~53 ; |lab15_2|mem:inst|RAM~53 ; q                ;
+; |lab15_2|mem:inst|RAM~21 ; |lab15_2|mem:inst|RAM~21 ; q                ;
+; |lab15_2|mem:inst|RAM~69 ; |lab15_2|mem:inst|RAM~69 ; q                ;
++--------------------------+--------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Dec 22 02:46:04 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off lab15_2 -c lab15_2
+Info: Using vector source file "D:/Labs_Rabuk/lab15_2/lab15_2.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      66.67 %
+Info: Number of transitions in simulation is 6170
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Sun Dec 22 02:46:06 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

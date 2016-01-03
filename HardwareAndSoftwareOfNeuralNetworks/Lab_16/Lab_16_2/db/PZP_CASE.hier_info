@@ -1,0 +1,31 @@
+|PZP_CASE
+clock => data_out[3]~reg0.CLK
+clock => data_out[2]~reg0.CLK
+clock => data_out[1]~reg0.CLK
+clock => data_out[0]~reg0.CLK
+address[0] => Mux3.IN36
+address[1] => Mux2.IN36
+address[2] => Mux1.IN36
+address[3] => Mux0.IN36
+address[4] => Mux3.IN35
+address[4] => Mux2.IN35
+address[4] => Mux1.IN35
+address[4] => Mux0.IN35
+address[5] => Mux3.IN34
+address[5] => Mux2.IN34
+address[5] => Mux1.IN34
+address[5] => Mux0.IN34
+address[6] => Mux3.IN33
+address[6] => Mux2.IN33
+address[6] => Mux1.IN33
+address[6] => Mux0.IN33
+address[7] => Mux3.IN32
+address[7] => Mux2.IN32
+address[7] => Mux1.IN32
+address[7] => Mux0.IN32
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

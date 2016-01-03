@@ -1,0 +1,189 @@
+Simulator report for lab13_4
+Sat Dec 21 19:34:26 2013
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 16.0 s       ;
+; Simulation Netlist Size     ; 15 nodes     ;
+; Simulation Coverage         ;      13.33 % ;
+; Total Number of Transitions ; 9            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C16F484C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      13.33 % ;
+; Total nodes checked                                 ; 15           ;
+; Total output ports checked                          ; 15           ;
+; Total output ports with complete 1/0-value coverage ; 2            ;
+; Total output ports with no 1/0-value coverage       ; 11           ;
+; Total output ports with no 1-value coverage         ; 11           ;
+; Total output ports with no 0-value coverage         ; 13           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |lab13_4|CLK~input ; |lab13_4|CLK~input ; o                ;
+; |lab13_4|CLK       ; |lab13_4|CLK       ; padout           ;
++--------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                   ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |lab13_4|T_FF:inst|\FF:x~_emulated ; |lab13_4|T_FF:inst|\FF:x~_emulated ; q                ;
+; |lab13_4|T_FF:inst|\FF:x~head_lut  ; |lab13_4|T_FF:inst|\FF:x~head_lut  ; combout          ;
+; |lab13_4|T_FF:inst|\FF:x~clear_lut ; |lab13_4|T_FF:inst|\FF:x~clear_lut ; combout          ;
+; |lab13_4|T_FF:inst|\FF:x~data_lut  ; |lab13_4|T_FF:inst|\FF:x~data_lut  ; combout          ;
+; |lab13_4|T_FF:inst|\FF:x~latch     ; |lab13_4|T_FF:inst|\FF:x~latch     ; combout          ;
+; |lab13_4|Q~output                  ; |lab13_4|Q~output                  ; o                ;
+; |lab13_4|Q                         ; |lab13_4|Q                         ; padout           ;
+; |lab13_4|PRST~input                ; |lab13_4|PRST~input                ; o                ;
+; |lab13_4|PRST                      ; |lab13_4|PRST                      ; padout           ;
+; |lab13_4|RST~input                 ; |lab13_4|RST~input                 ; o                ;
+; |lab13_4|RST                       ; |lab13_4|RST                       ; padout           ;
++------------------------------------+------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                   ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |lab13_4|T_FF:inst|\FF:x~_emulated ; |lab13_4|T_FF:inst|\FF:x~_emulated ; q                ;
+; |lab13_4|T_FF:inst|\FF:x~head_lut  ; |lab13_4|T_FF:inst|\FF:x~head_lut  ; combout          ;
+; |lab13_4|T_FF:inst|\FF:x~clear_lut ; |lab13_4|T_FF:inst|\FF:x~clear_lut ; combout          ;
+; |lab13_4|T_FF:inst|\FF:x~data_lut  ; |lab13_4|T_FF:inst|\FF:x~data_lut  ; combout          ;
+; |lab13_4|T_FF:inst|\FF:x~latch     ; |lab13_4|T_FF:inst|\FF:x~latch     ; combout          ;
+; |lab13_4|Q~output                  ; |lab13_4|Q~output                  ; o                ;
+; |lab13_4|Q                         ; |lab13_4|Q                         ; padout           ;
+; |lab13_4|PRST~input                ; |lab13_4|PRST~input                ; o                ;
+; |lab13_4|PRST                      ; |lab13_4|PRST                      ; padout           ;
+; |lab13_4|RST~input                 ; |lab13_4|RST~input                 ; o                ;
+; |lab13_4|RST                       ; |lab13_4|RST                       ; padout           ;
+; |lab13_4|T~input                   ; |lab13_4|T~input                   ; o                ;
+; |lab13_4|T                         ; |lab13_4|T                         ; padout           ;
++------------------------------------+------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Dec 21 19:34:24 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off lab13_4 -c lab13_4
+Info: Using vector source file "D:/Labs_Rabuk/lab13_4/lab13_4.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      13.33 %
+Info: Number of transitions in simulation is 9
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 152 megabytes
+    Info: Processing ended: Sat Dec 21 19:34:26 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

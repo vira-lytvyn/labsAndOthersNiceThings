@@ -1,0 +1,74 @@
+|lab_8_1
+Overflow <= lpm_add_sub0:inst.overflow
+ADD_SUB => lpm_add_sub0:inst.add_sub
+C_in => lpm_add_sub0:inst.cin
+A[0] => lpm_add_sub0:inst.dataa[0]
+A[1] => lpm_add_sub0:inst.dataa[1]
+A[2] => lpm_add_sub0:inst.dataa[2]
+A[3] => lpm_add_sub0:inst.dataa[3]
+B[0] => lpm_add_sub0:inst.datab[0]
+B[1] => lpm_add_sub0:inst.datab[1]
+B[2] => lpm_add_sub0:inst.datab[2]
+B[3] => lpm_add_sub0:inst.datab[3]
+C_out <= lpm_add_sub0:inst.cout
+RES[0] <= lpm_add_sub0:inst.result[0]
+RES[1] <= lpm_add_sub0:inst.result[1]
+RES[2] <= lpm_add_sub0:inst.result[2]
+RES[3] <= lpm_add_sub0:inst.result[3]
+
+
+|lab_8_1|lpm_add_sub0:inst
+add_sub => lpm_add_sub:lpm_add_sub_component.add_sub
+cin => lpm_add_sub:lpm_add_sub_component.cin
+dataa[0] => lpm_add_sub:lpm_add_sub_component.dataa[0]
+dataa[1] => lpm_add_sub:lpm_add_sub_component.dataa[1]
+dataa[2] => lpm_add_sub:lpm_add_sub_component.dataa[2]
+dataa[3] => lpm_add_sub:lpm_add_sub_component.dataa[3]
+datab[0] => lpm_add_sub:lpm_add_sub_component.datab[0]
+datab[1] => lpm_add_sub:lpm_add_sub_component.datab[1]
+datab[2] => lpm_add_sub:lpm_add_sub_component.datab[2]
+datab[3] => lpm_add_sub:lpm_add_sub_component.datab[3]
+cout <= lpm_add_sub:lpm_add_sub_component.cout
+overflow <= lpm_add_sub:lpm_add_sub_component.overflow
+result[0] <= lpm_add_sub:lpm_add_sub_component.result[0]
+result[1] <= lpm_add_sub:lpm_add_sub_component.result[1]
+result[2] <= lpm_add_sub:lpm_add_sub_component.result[2]
+result[3] <= lpm_add_sub:lpm_add_sub_component.result[3]
+
+
+|lab_8_1|lpm_add_sub0:inst|lpm_add_sub:lpm_add_sub_component
+dataa[0] => add_sub_pbi:auto_generated.dataa[0]
+dataa[1] => add_sub_pbi:auto_generated.dataa[1]
+dataa[2] => add_sub_pbi:auto_generated.dataa[2]
+dataa[3] => add_sub_pbi:auto_generated.dataa[3]
+datab[0] => add_sub_pbi:auto_generated.datab[0]
+datab[1] => add_sub_pbi:auto_generated.datab[1]
+datab[2] => add_sub_pbi:auto_generated.datab[2]
+datab[3] => add_sub_pbi:auto_generated.datab[3]
+cin => add_sub_pbi:auto_generated.cin
+add_sub => add_sub_pbi:auto_generated.add_sub
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_pbi:auto_generated.result[0]
+result[1] <= add_sub_pbi:auto_generated.result[1]
+result[2] <= add_sub_pbi:auto_generated.result[2]
+result[3] <= add_sub_pbi:auto_generated.result[3]
+cout <= add_sub_pbi:auto_generated.cout
+overflow <= add_sub_pbi:auto_generated.overflow
+
+
+|lab_8_1|lpm_add_sub0:inst|lpm_add_sub:lpm_add_sub_component|add_sub_pbi:auto_generated
+cin => op_1.IN10
+cin => op_1.IN11
+cout <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => op_1.IN8
+dataa[1] => op_1.IN6
+dataa[2] => op_1.IN4
+dataa[3] => op_1.IN2
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+
+

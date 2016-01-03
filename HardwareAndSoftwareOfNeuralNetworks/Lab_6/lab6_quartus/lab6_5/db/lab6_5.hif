@@ -1,0 +1,100 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+10
+767
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74393
+# storage
+db|lab6_5.(1).cnf
+db|lab6_5.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|74393.bdf
+19d73a54454fbcd7f4a5bbc04b4bf833
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74393:inst
+}
+# macro_sequence
+
+# end
+# entity
+74185
+# storage
+db|lab6_5.(2).cnf
+db|lab6_5.(2).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|74185.bdf
+6d80a21042df53c056e3d0d8d44f941
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+74247
+# storage
+db|lab6_5.(3).cnf
+db|lab6_5.(3).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|others|maxplus2|74247.bdf
+9e3451ff60169a6a149fc5149bcbe67
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74247:inst22
+}
+# macro_sequence
+
+# end
+# entity
+lab6_5
+# storage
+db|lab6_5.(0).cnf
+db|lab6_5.(0).cnf
+# case_insensitive
+# source_file
+lab6_5.bdf
+cb049da437ddc53635450f5203c8dca
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

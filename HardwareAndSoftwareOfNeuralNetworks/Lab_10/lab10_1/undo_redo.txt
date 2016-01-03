@@ -1,0 +1,15 @@
+MED
+D:\Vira\Nowadays\!!Апаратне і програмне забезпечення(Рабик)\Lab_10\lab10_1\lab10_1.mif
+
+	Undo Commands
+	     1.	Cells
+	     2.	Cells
+	     3.	Cells
+
+
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+

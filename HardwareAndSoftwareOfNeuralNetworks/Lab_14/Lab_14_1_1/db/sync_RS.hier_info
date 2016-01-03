@@ -1,0 +1,17 @@
+|sync_RS
+S => FF~1.IN0
+S => FF~0.IN0
+S => FF~2.IN0
+R => FF~2.IN1
+R => FF~1.IN1
+R => FF~0.IN1
+CLOCK => \FF:x~en.CLK
+CLOCK => \FF:x.CLK
+CLR => \FF:x~0.IN0
+CLR => WideOr0.IN0
+CLR => \FF:x.ACLR
+PRESET => \FF:x~0.IN1
+Q <= \FF:x~1.DB_MAX_OUTPUT_PORT_TYPE
+QN <= \FF:x~1.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,25 @@
+|lab13_3
+QN <= JK_FF:inst.QN
+K => JK_FF:inst.K
+J => JK_FF:inst.J
+CLK => JK_FF:inst.CLK
+CLR => JK_FF:inst.CLR
+RPE => JK_FF:inst.PRE
+Q <= JK_FF:inst.Q
+
+
+|lab13_3|JK_FF:inst
+K => FF.IN0
+K => FF.IN0
+K => FF.IN0
+J => FF.IN1
+J => FF.IN1
+J => FF.IN1
+CLK => \FF:x.CLK
+CLR => \FF:x.IN0
+CLR => \FF:x.ACLR
+PRE => \FF:x.IN1
+QN <= \FF:x.DB_MAX_OUTPUT_PORT_TYPE
+Q <= \FF:x.DB_MAX_OUTPUT_PORT_TYPE
+
+

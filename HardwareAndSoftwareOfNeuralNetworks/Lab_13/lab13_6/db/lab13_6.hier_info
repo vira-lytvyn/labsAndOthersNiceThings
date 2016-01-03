@@ -1,0 +1,18 @@
+|lab13_6
+LED[0] <= binary_subractor_top:inst.LED[0]
+LED[1] <= binary_subractor_top:inst.LED[1]
+LED[2] <= binary_subractor_top:inst.LED[2]
+LED[3] <= binary_subractor_top:inst.LED[3]
+CLK => binary_subractor_top:inst.CLK
+
+
+|lab13_6|binary_subractor_top:inst
+CLK => CLK_DIV[0].CLK
+CLK => CLK_DIV[1].CLK
+CLK => CLK_DIV[2].CLK
+LED[0] <= COUNT[0].DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= COUNT[1].DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= COUNT[2].DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= COUNT[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

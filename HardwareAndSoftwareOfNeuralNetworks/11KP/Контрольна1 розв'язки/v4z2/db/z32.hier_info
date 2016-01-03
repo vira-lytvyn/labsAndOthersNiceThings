@@ -1,0 +1,10 @@
+|z32
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst.ACLR
+Reset => inst3.ACLR
+Reset => inst4.ACLR
+C => inst.CLK
+Q2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+

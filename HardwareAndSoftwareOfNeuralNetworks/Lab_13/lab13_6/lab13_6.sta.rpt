@@ -1,0 +1,1096 @@
+TimeQuest Timing Analyzer report for lab13_6
+Sat Dec 21 20:12:46 2013
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Slow 1200mV 85C Model Setup Summary
+  7. Slow 1200mV 85C Model Hold Summary
+  8. Slow 1200mV 85C Model Recovery Summary
+  9. Slow 1200mV 85C Model Removal Summary
+ 10. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 11. Slow 1200mV 85C Model Setup: 'CLK'
+ 12. Slow 1200mV 85C Model Setup: 'binary_subractor_top:inst|CLK_DIV[2]'
+ 13. Slow 1200mV 85C Model Hold: 'CLK'
+ 14. Slow 1200mV 85C Model Hold: 'binary_subractor_top:inst|CLK_DIV[2]'
+ 15. Slow 1200mV 85C Model Minimum Pulse Width: 'CLK'
+ 16. Slow 1200mV 85C Model Minimum Pulse Width: 'binary_subractor_top:inst|CLK_DIV[2]'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Slow 1200mV 85C Model Metastability Report
+ 20. Slow 1200mV 0C Model Fmax Summary
+ 21. Slow 1200mV 0C Model Setup Summary
+ 22. Slow 1200mV 0C Model Hold Summary
+ 23. Slow 1200mV 0C Model Recovery Summary
+ 24. Slow 1200mV 0C Model Removal Summary
+ 25. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Slow 1200mV 0C Model Setup: 'CLK'
+ 27. Slow 1200mV 0C Model Setup: 'binary_subractor_top:inst|CLK_DIV[2]'
+ 28. Slow 1200mV 0C Model Hold: 'CLK'
+ 29. Slow 1200mV 0C Model Hold: 'binary_subractor_top:inst|CLK_DIV[2]'
+ 30. Slow 1200mV 0C Model Minimum Pulse Width: 'CLK'
+ 31. Slow 1200mV 0C Model Minimum Pulse Width: 'binary_subractor_top:inst|CLK_DIV[2]'
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Slow 1200mV 0C Model Metastability Report
+ 35. Fast 1200mV 0C Model Setup Summary
+ 36. Fast 1200mV 0C Model Hold Summary
+ 37. Fast 1200mV 0C Model Recovery Summary
+ 38. Fast 1200mV 0C Model Removal Summary
+ 39. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 40. Fast 1200mV 0C Model Setup: 'CLK'
+ 41. Fast 1200mV 0C Model Setup: 'binary_subractor_top:inst|CLK_DIV[2]'
+ 42. Fast 1200mV 0C Model Hold: 'CLK'
+ 43. Fast 1200mV 0C Model Hold: 'binary_subractor_top:inst|CLK_DIV[2]'
+ 44. Fast 1200mV 0C Model Minimum Pulse Width: 'CLK'
+ 45. Fast 1200mV 0C Model Minimum Pulse Width: 'binary_subractor_top:inst|CLK_DIV[2]'
+ 46. Clock to Output Times
+ 47. Minimum Clock to Output Times
+ 48. Fast 1200mV 0C Model Metastability Report
+ 49. Multicorner Timing Analysis Summary
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Board Trace Model Assignments
+ 53. Input Transition Times
+ 54. Slow Corner Signal Integrity Metrics
+ 55. Fast Corner Signal Integrity Metrics
+ 56. Setup Transfers
+ 57. Hold Transfers
+ 58. Report TCCS
+ 59. Report RSKM
+ 60. Unconstrained Paths
+ 61. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                   ;
++--------------------+----------------------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; lab13_6                                                        ;
+; Device Family      ; Cyclone III                                                    ;
+; Device Name        ; EP3C16F484C6                                                   ;
+; Timing Models      ; Final                                                          ;
+; Delay Model        ; Combined                                                       ;
+; Rise/Fall Delays   ; Enabled                                                        ;
++--------------------+----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                     ;
++--------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------------+
+; Clock Name                           ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                  ;
++--------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------------+
+; binary_subractor_top:inst|CLK_DIV[2] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { binary_subractor_top:inst|CLK_DIV[2] } ;
+; CLK                                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK }                                  ;
++--------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                                  ;
++------------+-----------------+--------------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                           ; Note                                                          ;
++------------+-----------------+--------------------------------------+---------------------------------------------------------------+
+; 817.66 MHz ; 250.0 MHz       ; CLK                                  ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 929.37 MHz ; 500.0 MHz       ; binary_subractor_top:inst|CLK_DIV[2] ; limit due to minimum period restriction (tmin)                ;
++------------+-----------------+--------------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                           ;
++--------------------------------------+--------+---------------+
+; Clock                                ; Slack  ; End Point TNS ;
++--------------------------------------+--------+---------------+
+; CLK                                  ; -0.223 ; -0.223        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; -0.076 ; -0.133        ;
++--------------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                            ;
++--------------------------------------+--------+---------------+
+; Clock                                ; Slack  ; End Point TNS ;
++--------------------------------------+--------+---------------+
+; CLK                                  ; -0.095 ; -0.095        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; 0.339  ; 0.000         ;
++--------------------------------------+--------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary             ;
++--------------------------------------+--------+---------------+
+; Clock                                ; Slack  ; End Point TNS ;
++--------------------------------------+--------+---------------+
+; CLK                                  ; -3.000 ; -6.000        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; -1.000 ; -4.000        ;
++--------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLK'                                                                                                                                                 ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock                         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; -0.223 ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 1.000        ; -0.062     ; 1.156      ;
+; -0.065 ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 1.000        ; -0.062     ; 0.998      ;
+; 0.012  ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; 0.500        ; 2.349      ; 3.021      ;
+; 0.097  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 1.000        ; -0.062     ; 0.836      ;
+; 0.274  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[0] ; CLK                                  ; CLK         ; 1.000        ; -0.062     ; 0.659      ;
+; 0.274  ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 1.000        ; -0.062     ; 0.659      ;
+; 0.580  ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; 1.000        ; 2.349      ; 2.953      ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'binary_subractor_top:inst|CLK_DIV[2]'                                                                                                                                     ;
++--------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                         ; Latch Clock                          ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; -0.076 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 1.010      ;
+; -0.057 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 0.991      ;
+; -0.039 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 0.973      ;
+; 0.202  ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 0.732      ;
+; 0.202  ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 0.732      ;
+; 0.206  ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 0.728      ;
+; 0.275  ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 0.659      ;
+; 0.275  ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 0.659      ;
+; 0.275  ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 0.659      ;
+; 0.275  ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.061     ; 0.659      ;
++--------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLK'                                                                                                                                                  ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock                         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; -0.095 ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; 0.000        ; 2.433      ; 2.724      ;
+; 0.338  ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.341  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[0] ; CLK                                  ; CLK         ; 0.000        ; 0.062      ; 0.580      ;
+; 0.502  ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; -0.500       ; 2.433      ; 2.821      ;
+; 0.503  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 0.000        ; 0.062      ; 0.742      ;
+; 0.646  ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 0.000        ; 0.062      ; 0.885      ;
+; 0.770  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 0.000        ; 0.062      ; 1.009      ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'binary_subractor_top:inst|CLK_DIV[2]'                                                                                                                                     ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                         ; Latch Clock                          ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; 0.339 ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.577      ;
+; 0.339 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.577      ;
+; 0.339 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.577      ;
+; 0.342 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.580      ;
+; 0.385 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.623      ;
+; 0.386 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.624      ;
+; 0.386 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.624      ;
+; 0.598 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.836      ;
+; 0.604 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.842      ;
+; 0.612 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.061      ; 0.850      ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'CLK'                                                                      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLK   ; Rise       ; CLK                                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[0] ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[1] ;
+; 0.188  ; 0.372        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~input|o                          ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CLK_DIV[0]|clk                  ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CLK_DIV[1]|clk                  ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CLK_DIV[2]|clk                  ;
+; 0.356  ; 0.356        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~inputclkctrl|inclk[0]            ;
+; 0.356  ; 0.356        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~inputclkctrl|outclk              ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[0] ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[1] ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~input|i                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~input|i                          ;
+; 0.643  ; 0.643        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~inputclkctrl|inclk[0]            ;
+; 0.643  ; 0.643        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~inputclkctrl|outclk              ;
+; 0.650  ; 0.650        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CLK_DIV[0]|clk                  ;
+; 0.650  ; 0.650        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CLK_DIV[1]|clk                  ;
+; 0.650  ; 0.650        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CLK_DIV[2]|clk                  ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~input|o                          ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'binary_subractor_top:inst|CLK_DIV[2]'                                                                  ;
++--------+--------------+----------------+------------------+--------------------------------------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                                ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+--------------------------------------+------------+------------------------------------+
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[2] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[3] ;
+; 0.279  ; 0.463        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[0] ;
+; 0.279  ; 0.463        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[1] ;
+; 0.279  ; 0.463        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[2] ;
+; 0.279  ; 0.463        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[3] ;
+; 0.317  ; 0.533        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[0] ;
+; 0.317  ; 0.533        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[1] ;
+; 0.317  ; 0.533        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[2] ;
+; 0.317  ; 0.533        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[3] ;
+; 0.441  ; 0.441        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[0]|clk                  ;
+; 0.441  ; 0.441        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[1]|clk                  ;
+; 0.441  ; 0.441        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[2]|clk                  ;
+; 0.441  ; 0.441        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[3]|clk                  ;
+; 0.450  ; 0.450        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|inclk[0]   ;
+; 0.450  ; 0.450        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]|q                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]|q                  ;
+; 0.548  ; 0.548        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|inclk[0]   ;
+; 0.548  ; 0.548        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|outclk     ;
+; 0.557  ; 0.557        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[0]|clk                  ;
+; 0.557  ; 0.557        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[1]|clk                  ;
+; 0.557  ; 0.557        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[2]|clk                  ;
+; 0.557  ; 0.557        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[3]|clk                  ;
++--------+--------------+----------------+------------------+--------------------------------------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; Data Port ; Clock Port                           ; Rise  ; Fall  ; Clock Edge ; Clock Reference                      ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; LED[*]    ; binary_subractor_top:inst|CLK_DIV[2] ; 5.837 ; 5.910 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[0]   ; binary_subractor_top:inst|CLK_DIV[2] ; 5.837 ; 5.910 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[1]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.953 ; 4.986 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[2]   ; binary_subractor_top:inst|CLK_DIV[2] ; 5.230 ; 5.270 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[3]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.889 ; 4.924 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                        ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; Data Port ; Clock Port                           ; Rise  ; Fall  ; Clock Edge ; Clock Reference                      ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; LED[*]    ; binary_subractor_top:inst|CLK_DIV[2] ; 4.773 ; 4.805 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[0]   ; binary_subractor_top:inst|CLK_DIV[2] ; 5.676 ; 5.744 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[1]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.836 ; 4.867 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[2]   ; binary_subractor_top:inst|CLK_DIV[2] ; 5.101 ; 5.139 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[3]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.773 ; 4.805 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                                    ;
++-------------+-----------------+--------------------------------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                           ; Note                                                          ;
++-------------+-----------------+--------------------------------------+---------------------------------------------------------------+
+; 915.75 MHz  ; 250.0 MHz       ; CLK                                  ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 1037.34 MHz ; 500.0 MHz       ; binary_subractor_top:inst|CLK_DIV[2] ; limit due to minimum period restriction (tmin)                ;
++-------------+-----------------+--------------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                            ;
++--------------------------------------+--------+---------------+
+; Clock                                ; Slack  ; End Point TNS ;
++--------------------------------------+--------+---------------+
+; CLK                                  ; -0.092 ; -0.092        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; 0.036  ; 0.000         ;
++--------------------------------------+--------+---------------+
+
+
++---------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                             ;
++--------------------------------------+--------+---------------+
+; Clock                                ; Slack  ; End Point TNS ;
++--------------------------------------+--------+---------------+
+; CLK                                  ; -0.091 ; -0.091        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; 0.291  ; 0.000         ;
++--------------------------------------+--------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary              ;
++--------------------------------------+--------+---------------+
+; Clock                                ; Slack  ; End Point TNS ;
++--------------------------------------+--------+---------------+
+; CLK                                  ; -3.000 ; -6.000        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; -1.000 ; -4.000        ;
++--------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLK'                                                                                                                                                  ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock                         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; -0.092 ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 1.000        ; -0.055     ; 1.032      ;
+; 0.041  ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 1.000        ; -0.055     ; 0.899      ;
+; 0.136  ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; 0.500        ; 2.168      ; 2.697      ;
+; 0.191  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 1.000        ; -0.055     ; 0.749      ;
+; 0.357  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[0] ; CLK                                  ; CLK         ; 1.000        ; -0.055     ; 0.583      ;
+; 0.357  ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 1.000        ; -0.055     ; 0.583      ;
+; 0.635  ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; 1.000        ; 2.168      ; 2.698      ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'binary_subractor_top:inst|CLK_DIV[2]'                                                                                                                                     ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                         ; Latch Clock                          ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; 0.036 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.903      ;
+; 0.053 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.886      ;
+; 0.070 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.869      ;
+; 0.282 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.657      ;
+; 0.282 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.657      ;
+; 0.285 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.654      ;
+; 0.356 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.583      ;
+; 0.356 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.583      ;
+; 0.356 ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.583      ;
+; 0.356 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.056     ; 0.583      ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLK'                                                                                                                                                   ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock                         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; -0.091 ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; 0.000        ; 2.242      ; 2.505      ;
+; 0.292  ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.300  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[0] ; CLK                                  ; CLK         ; 0.000        ; 0.055      ; 0.519      ;
+; 0.411  ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; -0.500       ; 2.242      ; 2.507      ;
+; 0.460  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 0.000        ; 0.055      ; 0.679      ;
+; 0.576  ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 0.000        ; 0.055      ; 0.795      ;
+; 0.684  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 0.000        ; 0.055      ; 0.903      ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'binary_subractor_top:inst|CLK_DIV[2]'                                                                                                                                      ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                         ; Latch Clock                          ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; 0.291 ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.511      ;
+; 0.291 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.511      ;
+; 0.291 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.511      ;
+; 0.299 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.519      ;
+; 0.339 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.559      ;
+; 0.340 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.560      ;
+; 0.340 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.560      ;
+; 0.532 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.752      ;
+; 0.541 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.761      ;
+; 0.548 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.056      ; 0.768      ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'CLK'                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLK   ; Rise       ; CLK                                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[0] ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[1] ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+; 0.339  ; 0.339        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~input|o                          ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CLK_DIV[0]|clk                  ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CLK_DIV[1]|clk                  ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CLK_DIV[2]|clk                  ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~inputclkctrl|inclk[0]            ;
+; 0.348  ; 0.348        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~inputclkctrl|outclk              ;
+; 0.416  ; 0.632        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[0] ;
+; 0.416  ; 0.632        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[1] ;
+; 0.416  ; 0.632        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~input|i                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~input|i                          ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~inputclkctrl|inclk[0]            ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~inputclkctrl|outclk              ;
+; 0.656  ; 0.656        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CLK_DIV[0]|clk                  ;
+; 0.656  ; 0.656        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CLK_DIV[1]|clk                  ;
+; 0.656  ; 0.656        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CLK_DIV[2]|clk                  ;
+; 0.661  ; 0.661        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~input|o                          ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'binary_subractor_top:inst|CLK_DIV[2]'                                                                   ;
++--------+--------------+----------------+------------------+--------------------------------------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                                ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+--------------------------------------+------------+------------------------------------+
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[2] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[3] ;
+; 0.298  ; 0.482        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[0] ;
+; 0.298  ; 0.482        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[1] ;
+; 0.298  ; 0.482        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[2] ;
+; 0.298  ; 0.482        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[3] ;
+; 0.301  ; 0.517        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[0] ;
+; 0.301  ; 0.517        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[1] ;
+; 0.301  ; 0.517        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[2] ;
+; 0.301  ; 0.517        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[3] ;
+; 0.458  ; 0.458        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[0]|clk                  ;
+; 0.458  ; 0.458        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[1]|clk                  ;
+; 0.458  ; 0.458        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[2]|clk                  ;
+; 0.458  ; 0.458        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[3]|clk                  ;
+; 0.465  ; 0.465        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|inclk[0]   ;
+; 0.465  ; 0.465        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]|q                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]|q                  ;
+; 0.534  ; 0.534        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|inclk[0]   ;
+; 0.534  ; 0.534        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|outclk     ;
+; 0.541  ; 0.541        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[0]|clk                  ;
+; 0.541  ; 0.541        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[1]|clk                  ;
+; 0.541  ; 0.541        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[2]|clk                  ;
+; 0.541  ; 0.541        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[3]|clk                  ;
++--------+--------------+----------------+------------------+--------------------------------------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; Data Port ; Clock Port                           ; Rise  ; Fall  ; Clock Edge ; Clock Reference                      ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; LED[*]    ; binary_subractor_top:inst|CLK_DIV[2] ; 5.477 ; 5.480 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[0]   ; binary_subractor_top:inst|CLK_DIV[2] ; 5.477 ; 5.480 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[1]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.672 ; 4.687 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[2]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.925 ; 4.938 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[3]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.609 ; 4.627 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                        ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; Data Port ; Clock Port                           ; Rise  ; Fall  ; Clock Edge ; Clock Reference                      ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; LED[*]    ; binary_subractor_top:inst|CLK_DIV[2] ; 4.506 ; 4.523 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[0]   ; binary_subractor_top:inst|CLK_DIV[2] ; 5.332 ; 5.333 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[1]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.568 ; 4.582 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[2]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.810 ; 4.823 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[3]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.506 ; 4.523 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                           ;
++--------------------------------------+-------+---------------+
+; Clock                                ; Slack ; End Point TNS ;
++--------------------------------------+-------+---------------+
+; CLK                                  ; 0.171 ; 0.000         ;
+; binary_subractor_top:inst|CLK_DIV[2] ; 0.395 ; 0.000         ;
++--------------------------------------+-------+---------------+
+
+
++---------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                             ;
++--------------------------------------+--------+---------------+
+; Clock                                ; Slack  ; End Point TNS ;
++--------------------------------------+--------+---------------+
+; CLK                                  ; -0.132 ; -0.132        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; 0.168  ; 0.000         ;
++--------------------------------------+--------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary              ;
++--------------------------------------+--------+---------------+
+; Clock                                ; Slack  ; End Point TNS ;
++--------------------------------------+--------+---------------+
+; CLK                                  ; -3.000 ; -6.168        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; -1.000 ; -4.000        ;
++--------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLK'                                                                                                                                                 ;
++-------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock                         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; 0.171 ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; 0.500        ; 1.371      ; 1.782      ;
+; 0.323 ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 1.000        ; -0.036     ; 0.628      ;
+; 0.408 ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 1.000        ; -0.036     ; 0.543      ;
+; 0.492 ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 1.000        ; -0.036     ; 0.459      ;
+; 0.592 ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[0] ; CLK                                  ; CLK         ; 1.000        ; -0.036     ; 0.359      ;
+; 0.592 ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 1.000        ; -0.036     ; 0.359      ;
+; 0.809 ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; 1.000        ; 1.371      ; 1.644      ;
++-------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'binary_subractor_top:inst|CLK_DIV[2]'                                                                                                                                     ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                         ; Latch Clock                          ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; 0.395 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.557      ;
+; 0.411 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.541      ;
+; 0.421 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.531      ;
+; 0.556 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.396      ;
+; 0.556 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.396      ;
+; 0.558 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.394      ;
+; 0.593 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.359      ;
+; 0.593 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.359      ;
+; 0.593 ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.359      ;
+; 0.593 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 1.000        ; -0.035     ; 0.359      ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLK'                                                                                                                                                   ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock                         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+; -0.132 ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; 0.000        ; 1.421      ; 1.508      ;
+; 0.167  ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.174  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[0] ; CLK                                  ; CLK         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.250  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[1] ; CLK                                  ; CLK         ; 0.000        ; 0.036      ; 0.390      ;
+; 0.326  ; binary_subractor_top:inst|CLK_DIV[1] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 0.000        ; 0.036      ; 0.466      ;
+; 0.396  ; binary_subractor_top:inst|CLK_DIV[0] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; CLK         ; 0.000        ; 0.036      ; 0.536      ;
+; 0.529  ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; CLK         ; -0.500       ; 1.421      ; 1.669      ;
++--------+--------------------------------------+--------------------------------------+--------------------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'binary_subractor_top:inst|CLK_DIV[2]'                                                                                                                                      ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                         ; Latch Clock                          ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+; 0.168 ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.307      ;
+; 0.168 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.307      ;
+; 0.168 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.307      ;
+; 0.175 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.314      ;
+; 0.194 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.333      ;
+; 0.194 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.333      ;
+; 0.194 ; binary_subractor_top:inst|COUNT[0] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.333      ;
+; 0.314 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.453      ;
+; 0.316 ; binary_subractor_top:inst|COUNT[2] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.455      ;
+; 0.320 ; binary_subractor_top:inst|COUNT[1] ; binary_subractor_top:inst|COUNT[3] ; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 0.000        ; 0.035      ; 0.459      ;
++-------+------------------------------------+------------------------------------+--------------------------------------+--------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'CLK'                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLK   ; Rise       ; CLK                                  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[0] ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[1] ;
+; -0.056 ; 0.128        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+; 0.118  ; 0.118        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~input|o                          ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CLK_DIV[0]|clk                  ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CLK_DIV[1]|clk                  ;
+; 0.123  ; 0.123        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|CLK_DIV[2]|clk                  ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~inputclkctrl|inclk[0]            ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~inputclkctrl|outclk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~input|i                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~input|i                          ;
+; 0.655  ; 0.871        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[0] ;
+; 0.655  ; 0.871        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[1] ;
+; 0.655  ; 0.871        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+; 0.867  ; 0.867        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~inputclkctrl|inclk[0]            ;
+; 0.867  ; 0.867        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~inputclkctrl|outclk              ;
+; 0.876  ; 0.876        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CLK_DIV[0]|clk                  ;
+; 0.876  ; 0.876        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CLK_DIV[1]|clk                  ;
+; 0.876  ; 0.876        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|CLK_DIV[2]|clk                  ;
+; 0.882  ; 0.882        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~input|o                          ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'binary_subractor_top:inst|CLK_DIV[2]'                                                                   ;
++--------+--------------+----------------+------------------+--------------------------------------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                                ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+--------------------------------------+------------+------------------------------------+
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[2] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[3] ;
+; 0.279  ; 0.463        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[0] ;
+; 0.279  ; 0.463        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[1] ;
+; 0.279  ; 0.463        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[2] ;
+; 0.279  ; 0.463        ; 0.184          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[3] ;
+; 0.316  ; 0.532        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[0] ;
+; 0.316  ; 0.532        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[1] ;
+; 0.316  ; 0.532        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[2] ;
+; 0.316  ; 0.532        ; 0.216          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; binary_subractor_top:inst|COUNT[3] ;
+; 0.459  ; 0.459        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[0]|clk                  ;
+; 0.459  ; 0.459        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[1]|clk                  ;
+; 0.459  ; 0.459        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[2]|clk                  ;
+; 0.459  ; 0.459        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[3]|clk                  ;
+; 0.469  ; 0.469        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|inclk[0]   ;
+; 0.469  ; 0.469        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]|q                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]|q                  ;
+; 0.529  ; 0.529        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|inclk[0]   ;
+; 0.529  ; 0.529        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|CLK_DIV[2]~clkctrl|outclk     ;
+; 0.538  ; 0.538        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[0]|clk                  ;
+; 0.538  ; 0.538        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[1]|clk                  ;
+; 0.538  ; 0.538        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[2]|clk                  ;
+; 0.538  ; 0.538        ; 0.000          ; High Pulse Width ; binary_subractor_top:inst|CLK_DIV[2] ; Rise       ; inst|COUNT[3]|clk                  ;
++--------+--------------+----------------+------------------+--------------------------------------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; Data Port ; Clock Port                           ; Rise  ; Fall  ; Clock Edge ; Clock Reference                      ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; LED[*]    ; binary_subractor_top:inst|CLK_DIV[2] ; 3.462 ; 3.577 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[0]   ; binary_subractor_top:inst|CLK_DIV[2] ; 3.462 ; 3.577 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[1]   ; binary_subractor_top:inst|CLK_DIV[2] ; 3.036 ; 3.057 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[2]   ; binary_subractor_top:inst|CLK_DIV[2] ; 3.187 ; 3.234 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[3]   ; binary_subractor_top:inst|CLK_DIV[2] ; 2.982 ; 3.005 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                        ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; Data Port ; Clock Port                           ; Rise  ; Fall  ; Clock Edge ; Clock Reference                      ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; LED[*]    ; binary_subractor_top:inst|CLK_DIV[2] ; 2.916 ; 2.938 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[0]   ; binary_subractor_top:inst|CLK_DIV[2] ; 3.371 ; 3.481 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[1]   ; binary_subractor_top:inst|CLK_DIV[2] ; 2.970 ; 2.989 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[2]   ; binary_subractor_top:inst|CLK_DIV[2] ; 3.115 ; 3.159 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[3]   ; binary_subractor_top:inst|CLK_DIV[2] ; 2.916 ; 2.938 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                ;
++---------------------------------------+--------+--------+----------+---------+---------------------+
+; Clock                                 ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack                      ; -0.223 ; -0.132 ; N/A      ; N/A     ; -3.000              ;
+;  CLK                                  ; -0.223 ; -0.132 ; N/A      ; N/A     ; -3.000              ;
+;  binary_subractor_top:inst|CLK_DIV[2] ; -0.076 ; 0.168  ; N/A      ; N/A     ; -1.000              ;
+; Design-wide TNS                       ; -0.356 ; -0.132 ; 0.0      ; 0.0     ; -10.168             ;
+;  CLK                                  ; -0.223 ; -0.132 ; N/A      ; N/A     ; -6.168              ;
+;  binary_subractor_top:inst|CLK_DIV[2] ; -0.133 ; 0.000  ; N/A      ; N/A     ; -4.000              ;
++---------------------------------------+--------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; Data Port ; Clock Port                           ; Rise  ; Fall  ; Clock Edge ; Clock Reference                      ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; LED[*]    ; binary_subractor_top:inst|CLK_DIV[2] ; 5.837 ; 5.910 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[0]   ; binary_subractor_top:inst|CLK_DIV[2] ; 5.837 ; 5.910 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[1]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.953 ; 4.986 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[2]   ; binary_subractor_top:inst|CLK_DIV[2] ; 5.230 ; 5.270 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[3]   ; binary_subractor_top:inst|CLK_DIV[2] ; 4.889 ; 4.924 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                        ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; Data Port ; Clock Port                           ; Rise  ; Fall  ; Clock Edge ; Clock Reference                      ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+; LED[*]    ; binary_subractor_top:inst|CLK_DIV[2] ; 2.916 ; 2.938 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[0]   ; binary_subractor_top:inst|CLK_DIV[2] ; 3.371 ; 3.481 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[1]   ; binary_subractor_top:inst|CLK_DIV[2] ; 2.970 ; 2.989 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[2]   ; binary_subractor_top:inst|CLK_DIV[2] ; 3.115 ; 3.159 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
+;  LED[3]   ; binary_subractor_top:inst|CLK_DIV[2] ; 2.916 ; 2.938 ; Rise       ; binary_subractor_top:inst|CLK_DIV[2] ;
++-----------+--------------------------------------+-------+-------+------------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; LED[3]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED[2]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED[1]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED[0]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; CLK                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LED[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.26e-007 V                  ; 2.35 V              ; -0.0109 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-010 s                 ; 8.05e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 7.26e-007 V                 ; 2.35 V             ; -0.0109 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-010 s                ; 8.05e-010 s                ; Yes                       ; Yes                       ;
+; LED[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.26e-007 V                  ; 2.35 V              ; -0.0109 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-010 s                 ; 8.05e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 7.26e-007 V                 ; 2.35 V             ; -0.0109 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-010 s                ; 8.05e-010 s                ; Yes                       ; Yes                       ;
+; LED[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.26e-007 V                  ; 2.35 V              ; -0.0109 V           ; 0.113 V                              ; 0.035 V                              ; 7.76e-010 s                 ; 8.05e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 7.26e-007 V                 ; 2.35 V             ; -0.0109 V          ; 0.113 V                             ; 0.035 V                             ; 7.76e-010 s                ; 8.05e-010 s                ; Yes                       ; Yes                       ;
+; LED[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-006 V                  ; 2.36 V              ; -0.0106 V           ; 0.122 V                              ; 0.021 V                              ; 4.5e-010 s                  ; 4.45e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-006 V                 ; 2.36 V             ; -0.0106 V          ; 0.122 V                             ; 0.021 V                             ; 4.5e-010 s                 ; 4.45e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-007 V                  ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-007 V                 ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-007 V                  ; 2.35 V              ; -0.00447 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-010 s                 ; 9.82e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-007 V                 ; 2.35 V             ; -0.00447 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-010 s                ; 9.82e-010 s                ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LED[3]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.07 V                               ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.07 V                              ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; LED[2]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.07 V                               ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.07 V                              ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; LED[1]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.78e-008 V                  ; 2.71 V              ; -0.0352 V           ; 0.253 V                              ; 0.07 V                               ; 4.96e-010 s                 ; 5.19e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.78e-008 V                 ; 2.71 V             ; -0.0352 V          ; 0.253 V                             ; 0.07 V                              ; 4.96e-010 s                ; 5.19e-010 s                ; No                        ; Yes                       ;
+; LED[0]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-008 V                  ; 2.73 V              ; -0.0569 V           ; 0.191 V                              ; 0.121 V                              ; 2.69e-010 s                 ; 2.76e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-008 V                 ; 2.73 V             ; -0.0569 V          ; 0.191 V                             ; 0.121 V                             ; 2.69e-010 s                ; 2.76e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.19e-008 V                  ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-010 s                  ; 3.01e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 2.19e-008 V                 ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-010 s                 ; 3.01e-010 s                ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-008 V                  ; 2.7 V               ; -0.0208 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-010 s                 ; 6.71e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-008 V                 ; 2.7 V              ; -0.0208 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-010 s                ; 6.71e-010 s                ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                         ;
++--------------------------------------+--------------------------------------+----------+----------+----------+----------+
+; From Clock                           ; To Clock                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------------+--------------------------------------+----------+----------+----------+----------+
+; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 10       ; 0        ; 0        ; 0        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; 1        ; 1        ; 0        ; 0        ;
+; CLK                                  ; CLK                                  ; 5        ; 0        ; 0        ; 0        ;
++--------------------------------------+--------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                          ;
++--------------------------------------+--------------------------------------+----------+----------+----------+----------+
+; From Clock                           ; To Clock                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------------+--------------------------------------+----------+----------+----------+----------+
+; binary_subractor_top:inst|CLK_DIV[2] ; binary_subractor_top:inst|CLK_DIV[2] ; 10       ; 0        ; 0        ; 0        ;
+; binary_subractor_top:inst|CLK_DIV[2] ; CLK                                  ; 1        ; 1        ; 0        ; 0        ;
+; CLK                                  ; CLK                                  ; 5        ; 0        ; 0        ; 0        ;
++--------------------------------------+--------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 4     ; 4    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Dec 21 20:12:39 2013
+Info: Command: quartus_sta lab13_6 -c lab13_6
+Info: qsta_default_script.tcl version: #1
+Info: Core supply voltage is 1.2V
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'lab13_6.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name binary_subractor_top:inst|CLK_DIV[2] binary_subractor_top:inst|CLK_DIV[2]
+    Info: create_clock -period 1.000 -name CLK CLK
+Info: No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.223
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.223        -0.223 CLK 
+    Info:    -0.076        -0.133 binary_subractor_top:inst|CLK_DIV[2] 
+Info: Worst-case hold slack is -0.095
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.095        -0.095 CLK 
+    Info:     0.339         0.000 binary_subractor_top:inst|CLK_DIV[2] 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.000        -6.000 CLK 
+    Info:    -1.000        -4.000 binary_subractor_top:inst|CLK_DIV[2] 
+Info: Analyzing Slow 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.092
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.092        -0.092 CLK 
+    Info:     0.036         0.000 binary_subractor_top:inst|CLK_DIV[2] 
+Info: Worst-case hold slack is -0.091
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.091        -0.091 CLK 
+    Info:     0.291         0.000 binary_subractor_top:inst|CLK_DIV[2] 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.000        -6.000 CLK 
+    Info:    -1.000        -4.000 binary_subractor_top:inst|CLK_DIV[2] 
+Info: Analyzing Fast 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -setup 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {CLK}] -hold 0.030
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -rise_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -fall_to [get_clocks {binary_subractor_top:inst|CLK_DIV[2]}] -hold 0.020
+Info: Worst-case setup slack is 0.171
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.171         0.000 CLK 
+    Info:     0.395         0.000 binary_subractor_top:inst|CLK_DIV[2] 
+Critical Warning: Timing requirements not met
+Info: Worst-case hold slack is -0.132
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.132        -0.132 CLK 
+    Info:     0.168         0.000 binary_subractor_top:inst|CLK_DIV[2] 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.000        -6.168 CLK 
+    Info:    -1.000        -4.000 binary_subractor_top:inst|CLK_DIV[2] 
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Sat Dec 21 20:12:46 2013
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
+
+

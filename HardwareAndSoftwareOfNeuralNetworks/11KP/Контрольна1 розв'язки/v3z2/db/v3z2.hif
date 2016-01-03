@@ -1,0 +1,62 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+28
+1720
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74164
+# storage
+db|v3z2.(1).cnf
+db|v3z2.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|90|quartus|libraries|others|maxplus2|74164.bdf
+3bacbe34cd718b3a49cef8b232b2f86
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74164:inst
+}
+# macro_sequence
+
+# end
+# entity
+v3z2
+# storage
+db|v3z2.(0).cnf
+db|v3z2.(0).cnf
+# case_insensitive
+# source_file
+v3z2.bdf
+77c2964ff5209ba52d9ead8ca714a094
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

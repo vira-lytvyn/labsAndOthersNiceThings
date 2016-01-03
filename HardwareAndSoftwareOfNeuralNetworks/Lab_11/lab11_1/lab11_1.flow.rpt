@@ -1,0 +1,126 @@
+Flow report for lab11_1
+Tue Dec 10 21:43:39 2013
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++------------------------------------+----------------------------------------------+
+; Flow Status                        ; Successful - Tue Dec 10 21:43:16 2013        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; lab11_1                                      ;
+; Top-level Entity Name              ; lab11_1                                      ;
+; Family                             ; Cyclone III                                  ;
+; Device                             ; EP3C16F484C8                                 ;
+; Timing Models                      ; Final                                        ;
+; Met timing requirements            ; N/A                                          ;
+; Total logic elements               ; 1,148 / 15,408 ( 7 % )                       ;
+;     Total combinational functions  ; 1,070 / 15,408 ( 7 % )                       ;
+;     Dedicated logic registers      ; 482 / 15,408 ( 3 % )                         ;
+; Total registers                    ; 482                                          ;
+; Total pins                         ; 70 / 347 ( 20 % )                            ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 260 / 516,096 ( < 1 % )                      ;
+; Embedded Multiplier 9-bit elements ; 31 / 112 ( 28 % )                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                ;
++------------------------------------+----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/10/2013 21:41:20 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lab11_1             ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                    ;
++------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 128575981362653.138670447909808 ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; ALTFP_EXP                       ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                             ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --          ; --             ;
+; MISC_FILE                          ; altfp_exp0.tdf                  ; --            ; --          ; --             ;
+; MISC_FILE                          ; altfp_exp0.bsf                  ; --            ; --          ; --             ;
+; MISC_FILE                          ; altfp_exp0.cmp                  ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE        ; 1.2V                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                        ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; --          ; Top            ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+---------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:59     ; 1.0                     ; 249 MB              ; 00:00:56                           ;
+; Fitter                    ; 00:00:43     ; 1.0                     ; 280 MB              ; 00:00:41                           ;
+; TimeQuest Timing Analyzer ; 00:00:29     ; 1.0                     ; 248 MB              ; 00:00:22                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 222 MB              ; 00:00:06                           ;
+; Total                     ; 00:02:11     ; --                      ; --                  ; 00:01:59                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+------------------+---------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++---------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis      ; Pauk             ; Windows Vista ; 6.2        ; i686           ;
+; Fitter                    ; Pauk             ; Windows Vista ; 6.2        ; i686           ;
+; Assembler                 ; Pauk             ; Windows Vista ; 6.2        ; i686           ;
+; TimeQuest Timing Analyzer ; Pauk             ; Windows Vista ; 6.2        ; i686           ;
++---------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lab11_1 -c lab11_1
+quartus_fit --read_settings_files=off --write_settings_files=off lab11_1 -c lab11_1
+quartus_asm --read_settings_files=off --write_settings_files=off lab11_1 -c lab11_1
+quartus_sta lab11_1 -c lab11_1
+
+
+

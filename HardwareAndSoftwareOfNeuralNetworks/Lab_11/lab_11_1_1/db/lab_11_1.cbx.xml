@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab_11_1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|altshift_taps:sign_dffe11_rtl_0" CBX_FILE_NAME="shift_taps_k4n.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_add_sub:man_round" CBX_FILE_NAME="add_sub_nbg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_mult:tbl3_taylor_prod" CBX_FILE_NAME="mult_3it.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|altshift_taps:exp_value_b4_bias_dffe_0_rtl_1" CBX_FILE_NAME="shift_taps_i4n.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|altshift_taps:input_is_nan_16_pipes0_rtl_3" CBX_FILE_NAME="shift_taps_j4n.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_add_sub:xf_minus_ln2" CBX_FILE_NAME="add_sub_jth.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_mult:xi_prod" CBX_FILE_NAME="mult_lvr.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_add_sub:exp_minus_bias" CBX_FILE_NAME="add_sub_cbg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_add_sub:one_minus_xf" CBX_FILE_NAME="add_sub_jth.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_add_sub:x_fixed_minus_xiln2" CBX_FILE_NAME="add_sub_qth.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_add_sub:xi_add_one" CBX_FILE_NAME="add_sub_6rh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_clshift:rbarrel_shift" CBX_FILE_NAME="lpm_clshift_ehf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_compare:tbl1_compare" CBX_FILE_NAME="cmpr_54i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_mult:tbl1_tbl2_prod" CBX_FILE_NAME="mult_6it.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|LPM_MUX:table_three" CBX_FILE_NAME="mux_i9e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_add_sub:exp_value_add_bias" CBX_FILE_NAME="add_sub_16i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_add_sub:exp_value_man_over" CBX_FILE_NAME="add_sub_bag.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_add_sub:invert_exp_value" CBX_FILE_NAME="add_sub_h8i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_mult:man_prod" CBX_FILE_NAME="mult_2it.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_mult:xi_ln2_prod" CBX_FILE_NAME="mult_0ht.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|LPM_MUX:table_one" CBX_FILE_NAME="mux_k9e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|LPM_MUX:table_two" CBX_FILE_NAME="mux_n9e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_clshift:rbarrel_shift|lpm_clshift_ehf:auto_generated|altshift_taps:pipe_wl2c_rtl_2" CBX_FILE_NAME="shift_taps_43n.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_compare:distance_overflow_comp" CBX_FILE_NAME="cmpr_31i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_11_1|altfp_exp0:inst|altfp_exp0_altfp_exp_vdg:altfp_exp0_altfp_exp_vdg_component|lpm_compare:underflow_compare" CBX_FILE_NAME="cmpr_31i.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

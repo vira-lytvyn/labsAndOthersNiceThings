@@ -1,0 +1,211 @@
+ -- Copyright (C) 1991-2009 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (3.3V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks (Bank 13, 14, 15, 16 and 17),
+ --           	    connect each pin marked GND* either individually through a 10k Ohm resistor
+ --           	    to GND or tie all pins together and connect through a single 10k Ohm resistor
+ --           	    to GND.
+ --           	    For non-transceiver I/O banks, connect each pin marked GND* directly to GND
+ --           	    or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ -- NON_MIGRATABLE: This pin cannot be migrated.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+CHIP  "sumator"  ASSIGNED TO AN: EPM3256ATC144-7
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+P1                           : 1         : output : 3.3-V LVTTL       :         :           : N              
+S                            : 2         : output : 3.3-V LVTTL       :         :           : N              
+GND                          : 3         : gnd    :                   :         :           :                
+TDI                          : 4         : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 5         :        :                   :         :           :                
+RESERVED                     : 6         :        :                   :         :           :                
+RESERVED                     : 7         :        :                   :         :           :                
+RESERVED                     : 8         :        :                   :         :           :                
+RESERVED                     : 9         :        :                   :         :           :                
+RESERVED                     : 10        :        :                   :         :           :                
+RESERVED                     : 11        :        :                   :         :           :                
+RESERVED                     : 12        :        :                   :         :           :                
+GND                          : 13        : gnd    :                   :         :           :                
+RESERVED                     : 14        :        :                   :         :           :                
+RESERVED                     : 15        :        :                   :         :           :                
+RESERVED                     : 16        :        :                   :         :           :                
+GND                          : 17        : gnd    :                   :         :           :                
+RESERVED                     : 18        :        :                   :         :           :                
+RESERVED                     : 19        :        :                   :         :           :                
+TMS                          : 20        : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 21        :        :                   :         :           :                
+RESERVED                     : 22        :        :                   :         :           :                
+RESERVED                     : 23        :        :                   :         :           :                
+VCCIO                        : 24        : power  :                   : 3.3V    :           :                
+RESERVED                     : 25        :        :                   :         :           :                
+GND                          : 26        : gnd    :                   :         :           :                
+RESERVED                     : 27        :        :                   :         :           :                
+RESERVED                     : 28        :        :                   :         :           :                
+RESERVED                     : 29        :        :                   :         :           :                
+RESERVED                     : 30        :        :                   :         :           :                
+RESERVED                     : 31        :        :                   :         :           :                
+RESERVED                     : 32        :        :                   :         :           :                
+GND                          : 33        : gnd    :                   :         :           :                
+RESERVED                     : 34        :        :                   :         :           :                
+RESERVED                     : 35        :        :                   :         :           :                
+RESERVED                     : 36        :        :                   :         :           :                
+RESERVED                     : 37        :        :                   :         :           :                
+RESERVED                     : 38        :        :                   :         :           :                
+RESERVED                     : 39        :        :                   :         :           :                
+RESERVED                     : 40        :        :                   :         :           :                
+RESERVED                     : 41        :        :                   :         :           :                
+RESERVED                     : 42        :        :                   :         :           :                
+RESERVED                     : 43        :        :                   :         :           :                
+RESERVED                     : 44        :        :                   :         :           :                
+RESERVED                     : 45        :        :                   :         :           :                
+RESERVED                     : 46        :        :                   :         :           :                
+RESERVED                     : 47        :        :                   :         :           :                
+RESERVED                     : 48        :        :                   :         :           :                
+RESERVED                     : 49        :        :                   :         :           :                
+VCCIO                        : 50        : power  :                   : 3.3V    :           :                
+VCCINT                       : 51        : power  :                   : 3.3V    :           :                
+GND                          : 52        : gnd    :                   :         :           :                
+RESERVED                     : 53        :        :                   :         :           :                
+RESERVED                     : 54        :        :                   :         :           :                
+RESERVED                     : 55        :        :                   :         :           :                
+RESERVED                     : 56        :        :                   :         :           :                
+GND                          : 57        : gnd    :                   :         :           :                
+VCCINT                       : 58        : power  :                   : 3.3V    :           :                
+GND                          : 59        : gnd    :                   :         :           :                
+RESERVED                     : 60        :        :                   :         :           :                
+RESERVED                     : 61        :        :                   :         :           :                
+RESERVED                     : 62        :        :                   :         :           :                
+RESERVED                     : 63        :        :                   :         :           :                
+GND                          : 64        : gnd    :                   :         :           :                
+RESERVED                     : 65        :        :                   :         :           :                
+RESERVED                     : 66        :        :                   :         :           :                
+RESERVED                     : 67        :        :                   :         :           :                
+RESERVED                     : 68        :        :                   :         :           :                
+RESERVED                     : 69        :        :                   :         :           :                
+RESERVED                     : 70        :        :                   :         :           :                
+RESERVED                     : 71        :        :                   :         :           :                
+RESERVED                     : 72        :        :                   :         :           :                
+VCCIO                        : 73        : power  :                   : 3.3V    :           :                
+RESERVED                     : 74        :        :                   :         :           :                
+RESERVED                     : 75        :        :                   :         :           :                
+VCCIO                        : 76        : power  :                   : 3.3V    :           :                
+GND                          : 77        : gnd    :                   :         :           :                
+RESERVED                     : 78        :        :                   :         :           :                
+RESERVED                     : 79        :        :                   :         :           :                
+RESERVED                     : 80        :        :                   :         :           :                
+P                            : 81        : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 82        :        :                   :         :           :                
+RESERVED                     : 83        :        :                   :         :           :                
+RESERVED                     : 84        :        :                   :         :           :                
+GND                          : 85        : gnd    :                   :         :           :                
+RESERVED                     : 86        :        :                   :         :           :                
+RESERVED                     : 87        :        :                   :         :           :                
+RESERVED                     : 88        :        :                   :         :           :                
+TCK                          : 89        : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 90        :        :                   :         :           :                
+RESERVED                     : 91        :        :                   :         :           :                
+RESERVED                     : 92        :        :                   :         :           :                
+RESERVED                     : 93        :        :                   :         :           :                
+GND                          : 94        : gnd    :                   :         :           :                
+VCCIO                        : 95        : power  :                   : 3.3V    :           :                
+RESERVED                     : 96        :        :                   :         :           :                
+RESERVED                     : 97        :        :                   :         :           :                
+RESERVED                     : 98        :        :                   :         :           :                
+RESERVED                     : 99        :        :                   :         :           :                
+RESERVED                     : 100       :        :                   :         :           :                
+RESERVED                     : 101       :        :                   :         :           :                
+RESERVED                     : 102       :        :                   :         :           :                
+RESERVED                     : 103       :        :                   :         :           :                
+TDO                          : 104       : output : 3.3-V LVTTL       :         :           : N              
+GND                          : 105       : gnd    :                   :         :           :                
+RESERVED                     : 106       :        :                   :         :           :                
+RESERVED                     : 107       :        :                   :         :           :                
+RESERVED                     : 108       :        :                   :         :           :                
+RESERVED                     : 109       :        :                   :         :           :                
+RESERVED                     : 110       :        :                   :         :           :                
+RESERVED                     : 111       :        :                   :         :           :                
+RESERVED                     : 112       :        :                   :         :           :                
+A                            : 113       : input  : 3.3-V LVTTL       :         :           : N              
+GND                          : 114       : gnd    :                   :         :           :                
+VCCIO                        : 115       : power  :                   : 3.3V    :           :                
+RESERVED                     : 116       :        :                   :         :           :                
+RESERVED                     : 117       :        :                   :         :           :                
+RESERVED                     : 118       :        :                   :         :           :                
+RESERVED                     : 119       :        :                   :         :           :                
+RESERVED                     : 120       :        :                   :         :           :                
+RESERVED                     : 121       :        :                   :         :           :                
+B                            : 122       : input  : 3.3-V LVTTL       :         :           : N              
+VCCINT                       : 123       : power  :                   : 3.3V    :           :                
+GND                          : 124       : gnd    :                   :         :           :                
+GND+                         : 125       :        :                   :         :           :                
+GND+                         : 126       :        :                   :         :           :                
+GND+                         : 127       :        :                   :         :           :                
+GND+                         : 128       :        :                   :         :           :                
+GND                          : 129       : gnd    :                   :         :           :                
+VCCINT                       : 130       : power  :                   : 3.3V    :           :                
+RESERVED                     : 131       :        :                   :         :           :                
+RESERVED                     : 132       :        :                   :         :           :                
+RESERVED                     : 133       :        :                   :         :           :                
+RESERVED                     : 134       :        :                   :         :           :                
+GND                          : 135       : gnd    :                   :         :           :                
+RESERVED                     : 136       :        :                   :         :           :                
+RESERVED                     : 137       :        :                   :         :           :                
+RESERVED                     : 138       :        :                   :         :           :                
+RESERVED                     : 139       :        :                   :         :           :                
+RESERVED                     : 140       :        :                   :         :           :                
+RESERVED                     : 141       :        :                   :         :           :                
+RESERVED                     : 142       :        :                   :         :           :                
+RESERVED                     : 143       :        :                   :         :           :                
+VCCIO                        : 144       : power  :                   : 3.3V    :           :                

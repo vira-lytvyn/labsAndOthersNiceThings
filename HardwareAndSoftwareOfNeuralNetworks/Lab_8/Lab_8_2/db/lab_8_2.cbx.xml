@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab_8_2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab_8_2|lpm_mult0:inst|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_p2n.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

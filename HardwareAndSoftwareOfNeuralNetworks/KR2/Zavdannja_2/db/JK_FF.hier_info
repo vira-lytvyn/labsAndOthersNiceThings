@@ -1,0 +1,9 @@
+|JK_FF
+T => temp~1.OUTPUTSELECT
+T => temp~0.OUTPUTSELECT
+Reset => temp~3.OUTPUTSELECT
+Clock_enable => temp~2.OUTPUTSELECT
+Clock => temp.CLK
+Output <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,152 @@
+|lab_8_3
+Q[4] <= lpm_divide0:inst.quotient[0]
+Q[5] <= lpm_divide0:inst.quotient[1]
+Q[6] <= lpm_divide0:inst.quotient[2]
+Q[7] <= lpm_divide0:inst.quotient[3]
+B[0] => lpm_divide0:inst.denom[0]
+B[1] => lpm_divide0:inst.denom[1]
+B[2] => lpm_divide0:inst.denom[2]
+B[3] => lpm_divide0:inst.denom[3]
+A[0] => lpm_divide0:inst.numer[0]
+A[1] => lpm_divide0:inst.numer[1]
+A[2] => lpm_divide0:inst.numer[2]
+A[3] => lpm_divide0:inst.numer[3]
+R[0] <= lpm_divide0:inst.remain[0]
+R[1] <= lpm_divide0:inst.remain[1]
+R[2] <= lpm_divide0:inst.remain[2]
+R[3] <= lpm_divide0:inst.remain[3]
+
+
+|lab_8_3|lpm_divide0:inst
+denom[0] => lpm_divide:lpm_divide_component.denom[0]
+denom[1] => lpm_divide:lpm_divide_component.denom[1]
+denom[2] => lpm_divide:lpm_divide_component.denom[2]
+denom[3] => lpm_divide:lpm_divide_component.denom[3]
+numer[0] => lpm_divide:lpm_divide_component.numer[0]
+numer[1] => lpm_divide:lpm_divide_component.numer[1]
+numer[2] => lpm_divide:lpm_divide_component.numer[2]
+numer[3] => lpm_divide:lpm_divide_component.numer[3]
+quotient[0] <= lpm_divide:lpm_divide_component.quotient[0]
+quotient[1] <= lpm_divide:lpm_divide_component.quotient[1]
+quotient[2] <= lpm_divide:lpm_divide_component.quotient[2]
+quotient[3] <= lpm_divide:lpm_divide_component.quotient[3]
+remain[0] <= lpm_divide:lpm_divide_component.remain[0]
+remain[1] <= lpm_divide:lpm_divide_component.remain[1]
+remain[2] <= lpm_divide:lpm_divide_component.remain[2]
+remain[3] <= lpm_divide:lpm_divide_component.remain[3]
+
+
+|lab_8_3|lpm_divide0:inst|lpm_divide:lpm_divide_component
+numer[0] => lpm_divide_lup:auto_generated.numer[0]
+numer[1] => lpm_divide_lup:auto_generated.numer[1]
+numer[2] => lpm_divide_lup:auto_generated.numer[2]
+numer[3] => lpm_divide_lup:auto_generated.numer[3]
+denom[0] => lpm_divide_lup:auto_generated.denom[0]
+denom[1] => lpm_divide_lup:auto_generated.denom[1]
+denom[2] => lpm_divide_lup:auto_generated.denom[2]
+denom[3] => lpm_divide_lup:auto_generated.denom[3]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+quotient[0] <= lpm_divide_lup:auto_generated.quotient[0]
+quotient[1] <= lpm_divide_lup:auto_generated.quotient[1]
+quotient[2] <= lpm_divide_lup:auto_generated.quotient[2]
+quotient[3] <= lpm_divide_lup:auto_generated.quotient[3]
+remain[0] <= lpm_divide_lup:auto_generated.remain[0]
+remain[1] <= lpm_divide_lup:auto_generated.remain[1]
+remain[2] <= lpm_divide_lup:auto_generated.remain[2]
+remain[3] <= lpm_divide_lup:auto_generated.remain[3]
+
+
+|lab_8_3|lpm_divide0:inst|lpm_divide:lpm_divide_component|lpm_divide_lup:auto_generated
+denom[0] => sign_div_unsign_7kh:divider.denominator[0]
+denom[1] => sign_div_unsign_7kh:divider.denominator[1]
+denom[2] => sign_div_unsign_7kh:divider.denominator[2]
+denom[3] => sign_div_unsign_7kh:divider.denominator[3]
+numer[0] => sign_div_unsign_7kh:divider.numerator[0]
+numer[1] => sign_div_unsign_7kh:divider.numerator[1]
+numer[2] => sign_div_unsign_7kh:divider.numerator[2]
+numer[3] => sign_div_unsign_7kh:divider.numerator[3]
+quotient[0] <= sign_div_unsign_7kh:divider.quotient[0]
+quotient[1] <= sign_div_unsign_7kh:divider.quotient[1]
+quotient[2] <= sign_div_unsign_7kh:divider.quotient[2]
+quotient[3] <= sign_div_unsign_7kh:divider.quotient[3]
+remain[0] <= sign_div_unsign_7kh:divider.remainder[0]
+remain[1] <= sign_div_unsign_7kh:divider.remainder[1]
+remain[2] <= sign_div_unsign_7kh:divider.remainder[2]
+remain[3] <= sign_div_unsign_7kh:divider.remainder[3]
+
+
+|lab_8_3|lpm_divide0:inst|lpm_divide:lpm_divide_component|lpm_divide_lup:auto_generated|sign_div_unsign_7kh:divider
+denominator[0] => alt_u_div_p2f:divider.denominator[0]
+denominator[1] => alt_u_div_p2f:divider.denominator[1]
+denominator[2] => alt_u_div_p2f:divider.denominator[2]
+denominator[3] => alt_u_div_p2f:divider.denominator[3]
+numerator[0] => alt_u_div_p2f:divider.numerator[0]
+numerator[1] => alt_u_div_p2f:divider.numerator[1]
+numerator[2] => alt_u_div_p2f:divider.numerator[2]
+numerator[3] => alt_u_div_p2f:divider.numerator[3]
+quotient[0] <= protect_quotient[0].DB_MAX_OUTPUT_PORT_TYPE
+quotient[1] <= protect_quotient[1].DB_MAX_OUTPUT_PORT_TYPE
+quotient[2] <= protect_quotient[2].DB_MAX_OUTPUT_PORT_TYPE
+quotient[3] <= protect_quotient[3].DB_MAX_OUTPUT_PORT_TYPE
+remainder[0] <= protect_remainder[0].DB_MAX_OUTPUT_PORT_TYPE
+remainder[1] <= protect_remainder[1].DB_MAX_OUTPUT_PORT_TYPE
+remainder[2] <= protect_remainder[2].DB_MAX_OUTPUT_PORT_TYPE
+remainder[3] <= protect_remainder[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_8_3|lpm_divide0:inst|lpm_divide:lpm_divide_component|lpm_divide_lup:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_p2f:divider
+denominator[0] => add_sub_unc:add_sub_0.datab[0]
+denominator[0] => add_sub_vnc:add_sub_1.datab[0]
+denominator[0] => op_1.IN8
+denominator[0] => op_2.IN10
+denominator[1] => sel[0].IN1
+denominator[1] => add_sub_vnc:add_sub_1.datab[1]
+denominator[1] => sel[4].IN1
+denominator[1] => sel[8].IN1
+denominator[1] => op_1.IN6
+denominator[1] => sel[12].IN1
+denominator[1] => op_2.IN8
+denominator[1] => sel[16].IN1
+denominator[2] => sel[1].IN1
+denominator[2] => sel[5].IN1
+denominator[2] => sel[9].IN1
+denominator[2] => op_1.IN4
+denominator[2] => sel[13].IN1
+denominator[2] => op_2.IN6
+denominator[2] => sel[17].IN1
+denominator[3] => sel[2].IN1
+denominator[3] => sel[6].IN1
+denominator[3] => sel[10].IN1
+denominator[3] => sel[14].IN1
+denominator[3] => op_2.IN4
+denominator[3] => sel[18].IN1
+numerator[0] => op_2.IN9
+numerator[1] => op_1.IN7
+numerator[2] => add_sub_vnc:add_sub_1.dataa[0]
+numerator[3] => add_sub_unc:add_sub_0.dataa[0]
+quotient[0] <= quotient_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+quotient[1] <= quotient_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+quotient[2] <= quotient_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+quotient[3] <= quotient_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+remainder[0] <= StageOut[12].DB_MAX_OUTPUT_PORT_TYPE
+remainder[1] <= StageOut[13].DB_MAX_OUTPUT_PORT_TYPE
+remainder[2] <= StageOut[14].DB_MAX_OUTPUT_PORT_TYPE
+remainder[3] <= StageOut[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_8_3|lpm_divide0:inst|lpm_divide:lpm_divide_component|lpm_divide_lup:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_p2f:divider|add_sub_unc:add_sub_0
+cout <= carry_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
+datab[0] => datab_node[0].IN0
+result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_8_3|lpm_divide0:inst|lpm_divide:lpm_divide_component|lpm_divide_lup:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_p2f:divider|add_sub_vnc:add_sub_1
+cout <= carry_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
+datab[0] => datab_node[0].IN0
+datab[1] => datab_node[1].IN0
+result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= sum_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

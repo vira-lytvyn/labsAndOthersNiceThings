@@ -1,0 +1,62 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+10
+770
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+74393
+# storage
+db|lab_6_3.(1).cnf
+db|lab_6_3.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|90sp2|quartus|libraries|others|maxplus2|74393.bdf
+415dec3bbba3ef25a706723b3dd1cd
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74393:inst
+}
+# macro_sequence
+
+# end
+# entity
+lab_6_3
+# storage
+db|lab_6_3.(0).cnf
+db|lab_6_3.(0).cnf
+# case_insensitive
+# source_file
+lab_6_3.bdf
+af553f79b4c0ec3a707ee2f47d98ba56
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

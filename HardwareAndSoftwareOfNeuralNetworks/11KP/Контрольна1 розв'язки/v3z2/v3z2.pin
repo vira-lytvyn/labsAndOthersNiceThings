@@ -1,0 +1,323 @@
+ -- Copyright (C) 1991-2009 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (3.3V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks (Bank 13, 14, 15, 16 and 17),
+ --           	    connect each pin marked GND* either individually through a 10k Ohm resistor
+ --           	    to GND or tie all pins together and connect through a single 10k Ohm resistor
+ --           	    to GND.
+ --           	    For non-transceiver I/O banks, connect each pin marked GND* directly to GND
+ --           	    or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ -- NON_MIGRATABLE: This pin cannot be migrated.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+CHIP  "v3z2"  ASSIGNED TO AN: EPM3256AFC256-7
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+NC                           : A1        :        :                   :         :           :                
+NC                           : A2        :        :                   :         :           :                
+GND                          : A3        : gnd    :                   :         :           :                
+QH                           : A4        : output : 3.3-V LVTTL       :         :           : N              
+QA                           : A5        : output : 3.3-V LVTTL       :         :           : N              
+NC                           : A6        :        :                   :         :           :                
+RESERVED                     : A7        :        :                   :         :           :                
+GND                          : A8        : gnd    :                   :         :           :                
+RESERVED                     : A9        :        :                   :         :           :                
+RESERVED                     : A10       :        :                   :         :           :                
+RESERVED                     : A11       :        :                   :         :           :                
+NC                           : A12       :        :                   :         :           :                
+NC                           : A13       :        :                   :         :           :                
+NC                           : A14       :        :                   :         :           :                
+NC                           : A15       :        :                   :         :           :                
+NC                           : A16       :        :                   :         :           :                
+NC                           : B1        :        :                   :         :           :                
+NC                           : B2        :        :                   :         :           :                
+VCCIO                        : B3        : power  :                   : 3.3V    :           :                
+QG                           : B4        : output : 3.3-V LVTTL       :         :           : N              
+VCCIO                        : B5        : power  :                   : 3.3V    :           :                
+RESERVED                     : B6        :        :                   :         :           :                
+RESERVED                     : B7        :        :                   :         :           :                
+RESERVED                     : B8        :        :                   :         :           :                
+VCCINT                       : B9        : power  :                   : 3.3V    :           :                
+GND                          : B10       : gnd    :                   :         :           :                
+RESERVED                     : B11       :        :                   :         :           :                
+RESERVED                     : B12       :        :                   :         :           :                
+RESERVED                     : B13       :        :                   :         :           :                
+RESERVED                     : B14       :        :                   :         :           :                
+NC                           : B15       :        :                   :         :           :                
+NC                           : B16       :        :                   :         :           :                
+NC                           : C1        :        :                   :         :           :                
+GND                          : C2        : gnd    :                   :         :           :                
+QB                           : C3        : output : 3.3-V LVTTL       :         :           : N              
+QC                           : C4        : output : 3.3-V LVTTL       :         :           : N              
+QF                           : C5        : output : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : C6        :        :                   :         :           :                
+RESERVED                     : C7        :        :                   :         :           :                
+VCCINT                       : C8        : power  :                   : 3.3V    :           :                
+GND                          : C9        : gnd    :                   :         :           :                
+RESERVED                     : C10       :        :                   :         :           :                
+RESERVED                     : C11       :        :                   :         :           :                
+RESERVED                     : C12       :        :                   :         :           :                
+RESERVED                     : C13       :        :                   :         :           :                
+VCCIO                        : C14       : power  :                   : 3.3V    :           :                
+NC                           : C15       :        :                   :         :           :                
+NC                           : C16       :        :                   :         :           :                
+NC                           : D1        :        :                   :         :           :                
+RESERVED                     : D2        :        :                   :         :           :                
+NC                           : D3        :        :                   :         :           :                
+TDI                          : D4        : input  : 3.3-V LVTTL       :         :           : N              
+QE                           : D5        : output : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : D6        :        :                   :         :           :                
+RESERVED                     : D7        :        :                   :         :           :                
+GND+                         : D8        :        :                   :         :           :                
+C                            : D9        : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : D10       :        :                   :         :           :                
+RESERVED                     : D11       :        :                   :         :           :                
+RESERVED                     : D12       :        :                   :         :           :                
+TDO                          : D13       : output : 3.3-V LVTTL       :         :           : N              
+GND                          : D14       : gnd    :                   :         :           :                
+NC                           : D15       :        :                   :         :           :                
+NC                           : D16       :        :                   :         :           :                
+RESERVED                     : E1        :        :                   :         :           :                
+RESERVED                     : E2        :        :                   :         :           :                
+RESERVED                     : E3        :        :                   :         :           :                
+RESERVED                     : E4        :        :                   :         :           :                
+QD                           : E5        : output : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : E6        :        :                   :         :           :                
+RESERVED                     : E7        :        :                   :         :           :                
+GND+                         : E8        :        :                   :         :           :                
+GND+                         : E9        :        :                   :         :           :                
+RESERVED                     : E10       :        :                   :         :           :                
+RESERVED                     : E11       :        :                   :         :           :                
+RESERVED                     : E12       :        :                   :         :           :                
+RESERVED                     : E13       :        :                   :         :           :                
+GND                          : E14       : gnd    :                   :         :           :                
+VCCIO                        : E15       : power  :                   : 3.3V    :           :                
+RESERVED                     : E16       :        :                   :         :           :                
+RESERVED                     : F1        :        :                   :         :           :                
+RESERVED                     : F2        :        :                   :         :           :                
+RESERVED                     : F3        :        :                   :         :           :                
+RESERVED                     : F4        :        :                   :         :           :                
+RESERVED                     : F5        :        :                   :         :           :                
+GND                          : F6        : gnd    :                   :         :           :                
+RESERVED                     : F7        :        :                   :         :           :                
+RESERVED                     : F8        :        :                   :         :           :                
+RESERVED                     : F9        :        :                   :         :           :                
+RESERVED                     : F10       :        :                   :         :           :                
+VCCIO                        : F11       : power  :                   : 3.3V    :           :                
+RESERVED                     : F12       :        :                   :         :           :                
+RESERVED                     : F13       :        :                   :         :           :                
+RESERVED                     : F14       :        :                   :         :           :                
+RESERVED                     : F15       :        :                   :         :           :                
+RESERVED                     : F16       :        :                   :         :           :                
+NC                           : G1        :        :                   :         :           :                
+RESERVED                     : G2        :        :                   :         :           :                
+VCCIO                        : G3        : power  :                   : 3.3V    :           :                
+RESERVED                     : G4        :        :                   :         :           :                
+RESERVED                     : G5        :        :                   :         :           :                
+RESERVED                     : G6        :        :                   :         :           :                
+VCCIO                        : G7        : power  :                   : 3.3V    :           :                
+VCCINT                       : G8        : power  :                   : 3.3V    :           :                
+GND                          : G9        : gnd    :                   :         :           :                
+GND                          : G10       : gnd    :                   :         :           :                
+RESERVED                     : G11       :        :                   :         :           :                
+RESERVED                     : G12       :        :                   :         :           :                
+RESERVED                     : G13       :        :                   :         :           :                
+RESERVED                     : G14       :        :                   :         :           :                
+VCCIO                        : G15       : power  :                   : 3.3V    :           :                
+NC                           : G16       :        :                   :         :           :                
+RESERVED                     : H1        :        :                   :         :           :                
+RESERVED                     : H2        :        :                   :         :           :                
+RESERVED                     : H3        :        :                   :         :           :                
+RESERVED                     : H4        :        :                   :         :           :                
+RESERVED                     : H5        :        :                   :         :           :                
+RESERVED                     : H6        :        :                   :         :           :                
+RESERVED                     : H7        :        :                   :         :           :                
+GND                          : H8        : gnd    :                   :         :           :                
+VCCIO                        : H9        : power  :                   : 3.3V    :           :                
+RESERVED                     : H10       :        :                   :         :           :                
+RESERVED                     : H11       :        :                   :         :           :                
+RESERVED                     : H12       :        :                   :         :           :                
+RESERVED                     : H13       :        :                   :         :           :                
+RESERVED                     : H14       :        :                   :         :           :                
+NC                           : H15       :        :                   :         :           :                
+NC                           : H16       :        :                   :         :           :                
+NC                           : J1        :        :                   :         :           :                
+RESERVED                     : J2        :        :                   :         :           :                
+RESERVED                     : J3        :        :                   :         :           :                
+RESERVED                     : J4        :        :                   :         :           :                
+RESERVED                     : J5        :        :                   :         :           :                
+TMS                          : J6        : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : J7        :        :                   :         :           :                
+VCCIO                        : J8        : power  :                   : 3.3V    :           :                
+GND                          : J9        : gnd    :                   :         :           :                
+RESERVED                     : J10       :        :                   :         :           :                
+TCK                          : J11       : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : J12       :        :                   :         :           :                
+RESERVED                     : J13       :        :                   :         :           :                
+RESERVED                     : J14       :        :                   :         :           :                
+RESERVED                     : J15       :        :                   :         :           :                
+RESERVED                     : J16       :        :                   :         :           :                
+NC                           : K1        :        :                   :         :           :                
+RESERVED                     : K2        :        :                   :         :           :                
+RESERVED                     : K3        :        :                   :         :           :                
+RESERVED                     : K4        :        :                   :         :           :                
+RESERVED                     : K5        :        :                   :         :           :                
+RESERVED                     : K6        :        :                   :         :           :                
+GND                          : K7        : gnd    :                   :         :           :                
+GND                          : K8        : gnd    :                   :         :           :                
+VCCINT                       : K9        : power  :                   : 3.3V    :           :                
+VCCIO                        : K10       : power  :                   : 3.3V    :           :                
+RESERVED                     : K11       :        :                   :         :           :                
+RESERVED                     : K12       :        :                   :         :           :                
+RESERVED                     : K13       :        :                   :         :           :                
+RESERVED                     : K14       :        :                   :         :           :                
+RESERVED                     : K15       :        :                   :         :           :                
+RESERVED                     : K16       :        :                   :         :           :                
+NC                           : L1        :        :                   :         :           :                
+NC                           : L2        :        :                   :         :           :                
+VCCIO                        : L3        : power  :                   : 3.3V    :           :                
+RESERVED                     : L4        :        :                   :         :           :                
+RESERVED                     : L5        :        :                   :         :           :                
+VCCIO                        : L6        : power  :                   : 3.3V    :           :                
+RESERVED                     : L7        :        :                   :         :           :                
+RESERVED                     : L8        :        :                   :         :           :                
+RESERVED                     : L9        :        :                   :         :           :                
+RESERVED                     : L10       :        :                   :         :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+RESERVED                     : L12       :        :                   :         :           :                
+RESERVED                     : L13       :        :                   :         :           :                
+RESERVED                     : L14       :        :                   :         :           :                
+RESERVED                     : L15       :        :                   :         :           :                
+RESERVED                     : L16       :        :                   :         :           :                
+NC                           : M1        :        :                   :         :           :                
+RESERVED                     : M2        :        :                   :         :           :                
+GND                          : M3        : gnd    :                   :         :           :                
+RESERVED                     : M4        :        :                   :         :           :                
+RESERVED                     : M5        :        :                   :         :           :                
+RESERVED                     : M6        :        :                   :         :           :                
+RESERVED                     : M7        :        :                   :         :           :                
+RESERVED                     : M8        :        :                   :         :           :                
+RESERVED                     : M9        :        :                   :         :           :                
+RESERVED                     : M10       :        :                   :         :           :                
+RESERVED                     : M11       :        :                   :         :           :                
+RESERVED                     : M12       :        :                   :         :           :                
+RESERVED                     : M13       :        :                   :         :           :                
+GND                          : M14       : gnd    :                   :         :           :                
+VCCIO                        : M15       : power  :                   : 3.3V    :           :                
+NC                           : M16       :        :                   :         :           :                
+NC                           : N1        :        :                   :         :           :                
+NC                           : N2        :        :                   :         :           :                
+RESERVED                     : N3        :        :                   :         :           :                
+RESERVED                     : N4        :        :                   :         :           :                
+RESERVED                     : N5        :        :                   :         :           :                
+RESERVED                     : N6        :        :                   :         :           :                
+RESERVED                     : N7        :        :                   :         :           :                
+RESERVED                     : N8        :        :                   :         :           :                
+RESERVED                     : N9        :        :                   :         :           :                
+RESERVED                     : N10       :        :                   :         :           :                
+RESERVED                     : N11       :        :                   :         :           :                
+RESERVED                     : N12       :        :                   :         :           :                
+RESERVED                     : N13       :        :                   :         :           :                
+NC                           : N14       :        :                   :         :           :                
+NC                           : N15       :        :                   :         :           :                
+NC                           : N16       :        :                   :         :           :                
+NC                           : P1        :        :                   :         :           :                
+NC                           : P2        :        :                   :         :           :                
+GND                          : P3        : gnd    :                   :         :           :                
+RESERVED                     : P4        :        :                   :         :           :                
+RESERVED                     : P5        :        :                   :         :           :                
+GND                          : P6        : gnd    :                   :         :           :                
+RESERVED                     : P7        :        :                   :         :           :                
+VCCINT                       : P8        : power  :                   : 3.3V    :           :                
+GND                          : P9        : gnd    :                   :         :           :                
+GND                          : P10       : gnd    :                   :         :           :                
+RESERVED                     : P11       :        :                   :         :           :                
+RESERVED                     : P12       :        :                   :         :           :                
+RESERVED                     : P13       :        :                   :         :           :                
+VCCIO                        : P14       : power  :                   : 3.3V    :           :                
+NC                           : P15       :        :                   :         :           :                
+NC                           : P16       :        :                   :         :           :                
+NC                           : R1        :        :                   :         :           :                
+GND                          : R2        : gnd    :                   :         :           :                
+GND                          : R3        : gnd    :                   :         :           :                
+RESERVED                     : R4        :        :                   :         :           :                
+RESERVED                     : R5        :        :                   :         :           :                
+RESERVED                     : R6        :        :                   :         :           :                
+RESERVED                     : R7        :        :                   :         :           :                
+RESERVED                     : R8        :        :                   :         :           :                
+RESERVED                     : R9        :        :                   :         :           :                
+RESERVED                     : R10       :        :                   :         :           :                
+RESERVED                     : R11       :        :                   :         :           :                
+RESERVED                     : R12       :        :                   :         :           :                
+RESERVED                     : R13       :        :                   :         :           :                
+NC                           : R14       :        :                   :         :           :                
+NC                           : R15       :        :                   :         :           :                
+NC                           : R16       :        :                   :         :           :                
+GND                          : T1        : gnd    :                   :         :           :                
+VCCIO                        : T2        : power  :                   : 3.3V    :           :                
+VCCIO                        : T3        : power  :                   : 3.3V    :           :                
+RESERVED                     : T4        :        :                   :         :           :                
+RESERVED                     : T5        :        :                   :         :           :                
+RESERVED                     : T6        :        :                   :         :           :                
+NC                           : T7        :        :                   :         :           :                
+GND                          : T8        : gnd    :                   :         :           :                
+RESERVED                     : T9        :        :                   :         :           :                
+NC                           : T10       :        :                   :         :           :                
+NC                           : T11       :        :                   :         :           :                
+RESERVED                     : T12       :        :                   :         :           :                
+RESERVED                     : T13       :        :                   :         :           :                
+NC                           : T14       :        :                   :         :           :                
+GND                          : T15       : gnd    :                   :         :           :                
+NC                           : T16       :        :                   :         :           :                
