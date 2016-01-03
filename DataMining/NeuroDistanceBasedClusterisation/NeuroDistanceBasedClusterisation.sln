@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuroDistanceBasedClusterisation", "NeuroWeb_KSI_Lab_6\NeuroDistanceBasedClusterisation.csproj", "{7E971DA2-89CA-4F30-A9E4-33715EF7F551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeurowebLibrary", "NeurowebLibrary\NeurowebLibrary.csproj", "{01A03B5E-1E37-403D-A9B5-C959642FF995}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E971DA2-89CA-4F30-A9E4-33715EF7F551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E971DA2-89CA-4F30-A9E4-33715EF7F551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E971DA2-89CA-4F30-A9E4-33715EF7F551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E971DA2-89CA-4F30-A9E4-33715EF7F551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A03B5E-1E37-403D-A9B5-C959642FF995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A03B5E-1E37-403D-A9B5-C959642FF995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A03B5E-1E37-403D-A9B5-C959642FF995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A03B5E-1E37-403D-A9B5-C959642FF995}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

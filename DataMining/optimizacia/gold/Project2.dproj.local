@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.328,=C:\Documents and Settings\fei-22\Мои документы\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.343,C:\Documents and Settings\fei-22\Мои документы\RAD Studio\Projects\Unit2.pas=D:\optimizacia\gold\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.343,C:\Documents and Settings\fei-22\Мои документы\RAD Studio\Projects\Unit2.dfm=D:\optimizacia\gold\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.327,C:\Documents and Settings\fei-22\Мои документы\RAD Studio\Projects\Project2.dproj=D:\optimizacia\gold\Project2.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.dfm,D:\2 курс 2 семестр\інтелектуальний аналіз даних\екстремум\Unit1.dfm=D:\2 курс 2 семестр\інтелектуальний аналіз даних\СОРТУВАННЯ\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,D:\2 курс 2 семестр\інтелектуальний аналіз даних\екстремум\Unit1.pas=D:\2 курс 2 семестр\інтелектуальний аналіз даних\СОРТУВАННЯ\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dproj,D:\2 курс 2 семестр\інтелектуальний аналіз даних\СОРТУВАННЯ\Project1.dproj=C:\Users\Іван\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,D:\2 курс 2 семестр\інтелектуальний аналіз даних\СОРТУВАННЯ\Unit1.dfm=C:\Users\Іван\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,D:\2 курс 2 семестр\інтелектуальний аналіз даних\СОРТУВАННЯ\Unit1.pas=C:\Users\Іван\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dproj,D:\2 курс 2 семестр\інтелектуальний аналіз даних\екстремум\Project1.dproj=D:\2 курс 2 семестр\інтелектуальний аналіз даних\СОРТУВАННЯ\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
