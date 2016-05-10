@@ -1,0 +1,7 @@
+Simple iterations: iterations = 38 x=  1.25331413731524E+000
+Method Newton: iterations = 5 x= -1.25331413731550E+000
+Method of Chebusheva: iterations  = 4 x= -1.25331413731550E+000
+Method of Hord: iterations  = 2 x= -1.25331413731550E+000
+Method of simple relaxation: iterations  = 38 x=  1.25331413731524E+000
+Method of Eytkin: iterations  = 5 x= -1.25331413731550E+000
+Method of back interpolation: iterations  = 5 x= -1.25331413731550E+000
