@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ElectronicLibrarian</class>
+ <widget class="QMainWindow" name="ElectronicLibrarian">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>614</width>
+    <height>469</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Electronic Librarian</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="SourseList">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>391</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
+    <property name="movable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="Books_tab">
+     <attribute name="title">
+      <string>Books</string>
+     </attribute>
+     <widget class="QTableWidget" name="BookList">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>386</width>
+        <height>173</height>
+       </rect>
+      </property>
+      <property name="locale">
+       <locale language="Ukrainian" country="Ukraine"/>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="rowCount">
+       <number>0</number>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>180</number>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>190</number>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>25</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Book</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Sourse</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Status</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="AddBooksSourse_button">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RemoveBooksSourse_button">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>220</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>Remove</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RemoveKeyword_button">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>220</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>Remove</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AddKeyword">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>10</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Investigate_Btn">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>220</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>Investigate</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="FindKeywordInDatabase_Btn">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Find</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="KeywordList">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>40</y>
+      <width>171</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="rowCount">
+     <number>0</number>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>120</number>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>120</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>25</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Keyword</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="ShowResults_Btn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>101</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Result</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="ResultList">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>591</width>
+      <height>104</height>
+     </rect>
+    </property>
+    <property name="locale">
+     <locale language="Ukrainian" country="Ukraine"/>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="rowCount">
+     <number>0</number>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>180</number>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>180</number>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>25</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Keyword</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Book</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Pages</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>614</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMain">
+    <property name="title">
+     <string>Main</string>
+    </property>
+    <widget class="QMenu" name="menuImport_spase">
+     <property name="title">
+      <string>import spase</string>
+     </property>
+     <widget class="QMenu" name="menuBook_page">
+      <property name="title">
+       <string>Book page</string>
+      </property>
+      <addaction name="actionChoose_format"/>
+      <addaction name="actionNumber_of_the_page"/>
+     </widget>
+     <addaction name="menuBook_page"/>
+     <addaction name="actionOnline_book"/>
+     <addaction name="actionInternet_pages"/>
+    </widget>
+    <addaction name="menuImport_spase"/>
+    <addaction name="actionSave_to"/>
+    <addaction name="actionSent_to"/>
+   </widget>
+   <widget class="QMenu" name="menuDatabase">
+    <property name="title">
+     <string>Database</string>
+    </property>
+    <widget class="QMenu" name="menuShow_list_of">
+     <property name="title">
+      <string>show list of </string>
+     </property>
+     <addaction name="actionDatabases"/>
+     <addaction name="actionKeywords_in_this_database"/>
+    </widget>
+    <widget class="QMenu" name="menuSort_by">
+     <property name="title">
+      <string>sort by</string>
+     </property>
+     <addaction name="actionKeywords"/>
+     <addaction name="actionNumbers"/>
+    </widget>
+    <addaction name="menuShow_list_of"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_database"/>
+    <addaction name="actionDelete"/>
+    <addaction name="separator"/>
+    <addaction name="menuSort_by"/>
+   </widget>
+   <widget class="QMenu" name="menuKeyword">
+    <property name="title">
+     <string>Keyword</string>
+    </property>
+    <widget class="QMenu" name="menuAdd_new">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="title">
+      <string>add new</string>
+     </property>
+     <addaction name="actionKeyword_4"/>
+     <addaction name="actionList_of_keywords"/>
+    </widget>
+    <widget class="QMenu" name="menuDetete">
+     <property name="title">
+      <string>detete </string>
+     </property>
+     <addaction name="actionKeyword_5"/>
+     <addaction name="actionList_of_keywords_2"/>
+    </widget>
+    <widget class="QMenu" name="menuCorrect">
+     <property name="title">
+      <string>correct </string>
+     </property>
+     <addaction name="actionKeyword_6"/>
+     <addaction name="actionList_of_keywords_3"/>
+    </widget>
+    <addaction name="menuAdd_new"/>
+    <addaction name="menuDetete"/>
+    <addaction name="menuCorrect"/>
+   </widget>
+   <widget class="QMenu" name="menuFind">
+    <property name="title">
+     <string>Find</string>
+    </property>
+    <widget class="QMenu" name="menuIn_books">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="title">
+      <string>in books</string>
+     </property>
+     <addaction name="actionKeyword"/>
+     <addaction name="actionWord_combinations"/>
+     <addaction name="actionSentens"/>
+    </widget>
+    <widget class="QMenu" name="menuIn_online_books">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="title">
+      <string>in online books</string>
+     </property>
+     <addaction name="actionKeyword_2"/>
+     <addaction name="actionWord_combinations_2"/>
+     <addaction name="actionSentens_2"/>
+    </widget>
+    <widget class="QMenu" name="menuIn_Internet">
+     <property name="title">
+      <string>in Internet</string>
+     </property>
+     <addaction name="actionKeyword_3"/>
+     <addaction name="actionWord_combinations_3"/>
+     <addaction name="actionSentens_3"/>
+    </widget>
+    <addaction name="menuIn_books"/>
+    <addaction name="separator"/>
+    <addaction name="menuIn_online_books"/>
+    <addaction name="separator"/>
+    <addaction name="menuIn_Internet"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionRecommended_sourse"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_program"/>
+    <addaction name="actionAbout_autor"/>
+   </widget>
+   <addaction name="menuMain"/>
+   <addaction name="menuDatabase"/>
+   <addaction name="menuKeyword"/>
+   <addaction name="menuFind"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionRecommended_sourse">
+   <property name="text">
+    <string>Recommended sourse</string>
+   </property>
+  </action>
+  <action name="actionAbout_program">
+   <property name="text">
+    <string>About program</string>
+   </property>
+  </action>
+  <action name="actionAbout_autor">
+   <property name="text">
+    <string>About autor</string>
+   </property>
+  </action>
+  <action name="actionKeyword">
+   <property name="text">
+    <string>keyword</string>
+   </property>
+  </action>
+  <action name="actionKeyword_2">
+   <property name="text">
+    <string>keyword</string>
+   </property>
+  </action>
+  <action name="actionKeyword_3">
+   <property name="text">
+    <string>keyword</string>
+   </property>
+  </action>
+  <action name="actionWord_combinations">
+   <property name="text">
+    <string>word combinations</string>
+   </property>
+  </action>
+  <action name="actionWord_combinations_2">
+   <property name="text">
+    <string>word combinations</string>
+   </property>
+  </action>
+  <action name="actionWord_combinations_3">
+   <property name="text">
+    <string>word combinations</string>
+   </property>
+  </action>
+  <action name="actionSentens">
+   <property name="text">
+    <string>sentens</string>
+   </property>
+  </action>
+  <action name="actionSentens_2">
+   <property name="text">
+    <string>sentens</string>
+   </property>
+  </action>
+  <action name="actionSentens_3">
+   <property name="text">
+    <string>sentens</string>
+   </property>
+  </action>
+  <action name="actionKeyword_4">
+   <property name="text">
+    <string>keyword</string>
+   </property>
+  </action>
+  <action name="actionKeyword_5">
+   <property name="text">
+    <string>keyword</string>
+   </property>
+  </action>
+  <action name="actionKeyword_6">
+   <property name="text">
+    <string>keyword</string>
+   </property>
+  </action>
+  <action name="actionList_of_keywords">
+   <property name="text">
+    <string>list of keywords</string>
+   </property>
+  </action>
+  <action name="actionList_of_keywords_2">
+   <property name="text">
+    <string>list of keywords</string>
+   </property>
+  </action>
+  <action name="actionList_of_keywords_3">
+   <property name="text">
+    <string>list of keywords</string>
+   </property>
+  </action>
+  <action name="actionAdd_database">
+   <property name="text">
+    <string>add database</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>delete </string>
+   </property>
+  </action>
+  <action name="actionDatabases">
+   <property name="text">
+    <string>databases</string>
+   </property>
+  </action>
+  <action name="actionKeywords_in_this_database">
+   <property name="text">
+    <string>keywords in this database</string>
+   </property>
+  </action>
+  <action name="actionKeywords">
+   <property name="text">
+    <string>keywords</string>
+   </property>
+  </action>
+  <action name="actionNumbers">
+   <property name="text">
+    <string>numbers</string>
+   </property>
+  </action>
+  <action name="actionSave_to">
+   <property name="text">
+    <string>save to</string>
+   </property>
+  </action>
+  <action name="actionSent_to">
+   <property name="text">
+    <string>sent to</string>
+   </property>
+  </action>
+  <action name="actionOnline_book">
+   <property name="text">
+    <string>Online book</string>
+   </property>
+  </action>
+  <action name="actionInternet_pages">
+   <property name="text">
+    <string>Internet pages</string>
+   </property>
+  </action>
+  <action name="actionChoose_format">
+   <property name="text">
+    <string>choose format</string>
+   </property>
+  </action>
+  <action name="actionNumber_of_the_page">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Book</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
