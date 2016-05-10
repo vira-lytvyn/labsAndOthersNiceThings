@@ -1,0 +1,176 @@
+object Form1: TForm1
+  Left = 217
+  Top = 373
+  Width = 776
+  Height = 485
+  Caption = 'Form1'
+  Color = clSkyBlue
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel
+    Left = 368
+    Top = 72
+    Width = 191
+    Height = 20
+    Caption = #209#242#238#226#225#229#246#252' '#226#179#235#252#237#232#245' '#247#235#229#237#179#226' '
+    Color = clGradientActiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 568
+    Top = 72
+    Width = 73
+    Height = 20
+    Caption = #208#238#231#226#39#255#231#238#234
+    Color = clGradientActiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 24
+    Top = 64
+    Width = 316
+    Height = 20
+    Caption = #194#226#229#228#179#242#252' '#240#238#231#236#179#240#237#179#241#242#252' '#242#224' '#229#235#229#236#229#237#242#232' '#236#224#242#240#232#246#179
+    Color = clGradientActiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+  end
+  object StringGrid2: TStringGrid
+    Left = 368
+    Top = 152
+    Width = 97
+    Height = 137
+    ColCount = 1
+    FixedCols = 0
+    RowCount = 7
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goTabs]
+    ParentColor = True
+    TabOrder = 1
+    RowHeights = (
+      24
+      24
+      24
+      24
+      24
+      24
+      24)
+  end
+  object StringGrid3: TStringGrid
+    Left = 568
+    Top = 152
+    Width = 97
+    Height = 137
+    ColCount = 1
+    FixedCols = 0
+    RowCount = 7
+    FixedRows = 0
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clInactiveCaption
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    RowHeights = (
+      24
+      20
+      24
+      24
+      24
+      24
+      24)
+  end
+  object Button1: TButton
+    Left = 120
+    Top = 352
+    Width = 100
+    Height = 25
+    Caption = #208#238#231#226#39#255#231#224#242#232
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object StringGrid1: TStringGrid
+    Left = 44
+    Top = 152
+    Width = 229
+    Height = 137
+    ColCount = 7
+    FixedCols = 0
+    RowCount = 7
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goTabs]
+    ParentColor = True
+    TabOrder = 0
+    RowHeights = (
+      24
+      24
+      24
+      24
+      24
+      24
+      24)
+  end
+  object Edit1: TEdit
+    Left = 72
+    Top = 104
+    Width = 65
+    Height = 21
+    ImeName = 'Ukrainian'
+    TabOrder = 4
+    OnChange = Edit1Change
+  end
+  object BitBtn1: TBitBtn
+    Left = 480
+    Top = 352
+    Width = 75
+    Height = 25
+    Caption = '& '#194#232#233#242#232
+    TabOrder = 5
+    Kind = bkClose
+  end
+  object Button2: TButton
+    Left = 296
+    Top = 352
+    Width = 90
+    Height = 25
+    Caption = #206#247#232#241#242#232#242#232
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 6
+    OnClick = Button2Click
+  end
+end

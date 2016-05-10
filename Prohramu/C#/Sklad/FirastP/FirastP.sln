@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirastP", "FirastP\FirastP.csproj", "{266DA36D-B5ED-46AA-810D-AC2920384A97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{266DA36D-B5ED-46AA-810D-AC2920384A97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266DA36D-B5ED-46AA-810D-AC2920384A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266DA36D-B5ED-46AA-810D-AC2920384A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266DA36D-B5ED-46AA-810D-AC2920384A97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,112 @@
+Turbo Assembler	 Version 2.0	    03/01/11 21:42:52	    Page 1
+LINE.ASM
+
+
+
+      1	0000			     MODEL   SMALL
+      2	0000			     STACK 256
+      3	0000			     DATASEG
+      4
+      5	0000			     CODESEG
+      6	0000			     start:
+      7	0000  B8 0013			     mov ax,0013h	;rozshurenia
+      8	0003  CD 10			     int 10h
+      9
+     10
+     11	0005  B9 013F			     mov cx,319	  ;x
+     12	0008  BA 0000			     mov dx,0	 ;y
+     13	000B			     draw:
+     14	000B  B0 0A			     mov al,10	  ;color
+     15	000D  B4 0C			     mov ah,0Ch
+     16	000F  CD 10			     int 10h
+     17	0011  E2 F8		     loop draw
+     18
+     19
+     20	0013  B9 013F			     mov cx,319	  ;x
+     21	0016  BA 00C7			     mov dx,199	  ;y
+     22	0019			     draw1:
+     23	0019  B0 0C			     mov al,12	  ;color
+     24	001B  B4 0C			     mov ah,0Ch
+     25	001D  CD 10			     int 10h
+     26	001F  E2 F8		     loop draw1
+     27
+     28
+     29	0021  BA 0001			     mov dx,1	;y
+     30	0024			     fest:
+     31	0024  B9 0001			     mov cx,1	;x
+     32	0027  B0 0A			     mov al,10	  ;color
+     33	0029  B4 0C			     mov ah,0Ch
+     34	002B  CD 10			     int 10h
+     35	002D  42			     inc dx
+     36	002E  81 FA 00C7		     cmp dx,199
+     37	0032  74 02		       je peres
+     38	0034  EB EE		       jmp fest
+     39	0036			     peres:
+     40
+     41
+     42	0036  BA 0001			     mov dx,1	;y
+     43	0039			     fest1:
+     44	0039  B9 0001			     mov cx,1	;x
+     45	003C  B9 013F			     mov cx,319
+     46	003F  B0 0A			     mov al,10	  ;color
+     47	0041  B4 0C			     mov ah,0Ch
+     48	0043  CD 10			     int 10h
+     49	0045  42			     inc dx
+     50	0046  81 FA 00C7		     cmp dx,199
+     51	004A  74 02		       je peres1
+     52	004C  EB EB		       jmp fest1
+     53	004E			     peres1:
+     54
+     55
+     56	004E			     ex:
+     57	004E  B4 01			     mov ah,1
+Turbo Assembler	 Version 2.0	    03/01/11 21:42:52	    Page 2
+LINE.ASM
+
+
+
+     58	0050  CD 16			     int 16h
+     59	0052  74 FA		     jz	ex
+     60
+     61	0054  B8 0003			     mov ax,0003h
+     62	0057  CD 10			     int 10h
+     63	0059  B4 4C			     mov ah,04Ch
+     64	005B  CD 21			     int 021h
+     65				     end start
+Turbo Assembler	 Version 2.0	    03/01/11 21:42:52	    Page 3
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "03/01/11"
+??FILENAME			  Text	 "LINE	  "
+??TIME				  Text	 "21:42:52"
+??VERSION			  Number 0200
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 LINE
+@MODEL				  Text	 2
+@WORDSIZE			  Text	 2
+DRAW				  Near	 _TEXT:000B
+DRAW1				  Near	 _TEXT:0019
+EX				  Near	 _TEXT:004E
+FEST				  Near	 _TEXT:0024
+FEST1				  Near	 _TEXT:0039
+PERES				  Near	 _TEXT:0036
+PERES1				  Near	 _TEXT:004E
+START				  Near	 _TEXT:0000
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  STACK				  16  0100 Para	  Stack	  STACK
+  _DATA				  16  0000 Word	  Public  DATA
+_TEXT				  16  005D Word	  Public  CODE
+

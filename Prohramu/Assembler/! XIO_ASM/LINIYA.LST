@@ -1,0 +1,118 @@
+Turbo Assembler	 Version 2.0	    03/01/11 21:43:37	    Page 1
+Liniya.asm
+
+
+
+      1	0000			     MODEL   SMALL
+      2	0000			     STACK 256
+      3	0000			     DATASEG
+      4
+      5	0000			     CODESEG
+      6	0000			     start:
+      7	0000  B8 0013			     mov ax,0013h
+      8	0003  CD 10			     int 10h
+      9	0005  B9 013F			     mov cx,319
+     10	0008  BA 0000			     mov dx,0
+     11
+     12	000B			     maljuvannja:
+     13	000B  B0 05			     mov al,5
+     14	000D  B4 0C			     mov ah,0Ch
+     15	000F  CD 10			     int 10h
+     16	0011  E2 F8		     loop maljuvannja
+     17	0013  B9 013F			     mov cx,319
+     18	0016  BA 00C7			     mov dx,199
+     19
+     20	0019			     maljuvannja_1:
+     21	0019  B0 05			     mov al,5
+     22	001B  B4 0C			     mov ah,0Ch
+     23	001D  CD 10			     int 10h
+     24	001F  E2 F8		     loop maljuvannja_1
+     25	0021  BA 0001			     mov dx,1
+     26
+     27	0024			     mitka_1:
+     28	0024  B9 0001			     mov cx,1
+     29
+     30	0027			     maljuvannja_2:
+     31	0027  B0 05			     mov al,5
+     32	0029  B4 0C			     mov ah,0Ch
+     33	002B  CD 10			     int 10h
+     34	002D  E2 F8		     loop maljuvannja_2
+     35	002F  42			     inc dx
+     36	0030  81 FA 00C7		     cmp dx,199
+     37
+     38	0034  74 02		       je peres
+     39	0036  E3 EC		       jcxz mitka_1
+     40
+     41	0038			     peres:
+     42	0038  BA 0001			     mov dx,1
+     43
+     44	003B			     mitka_2:
+     45	003B  B9 0001			     mov cx,1
+     46
+     47	003E			     maljuvannja_3:
+     48	003E  B0 05			     mov al,5
+     49	0040  B4 0C			     mov ah,0Ch
+     50	0042  CD 10			     int 10h
+     51	0044  E2 F8		     loop maljuvannja_3
+     52	0046  42			     inc dx
+     53	0047  81 FA 00C7		     cmp dx,199
+     54
+     55	004B  74 02		       je peres1
+     56	004D  E3 EC		       jcxz mitka_2
+     57
+Turbo Assembler	 Version 2.0	    03/01/11 21:43:37	    Page 2
+Liniya.asm
+
+
+
+     58	004F			     peres1:
+     59	004F			     ex:
+     60	004F  B4 01			     mov ah,1
+     61	0051  CD 16			     int 16h
+     62
+     63	0053  74 FA		     jz	ex
+     64	0055  B8 0003			     mov ax,0003h
+     65	0058  CD 10			     int 10h
+     66	005A  B4 4C			     mov ah,04Ch
+     67	005C  CD 21			     int 021h
+     68
+     69				     end start
+Turbo Assembler	 Version 2.0	    03/01/11 21:43:37	    Page 3
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "03/01/11"
+??FILENAME			  Text	 "Liniya  "
+??TIME				  Text	 "21:43:37"
+??VERSION			  Number 0200
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 LINIYA
+@MODEL				  Text	 2
+@WORDSIZE			  Text	 2
+EX				  Near	 _TEXT:004F
+MALJUVANNJA			  Near	 _TEXT:000B
+MALJUVANNJA_1			  Near	 _TEXT:0019
+MALJUVANNJA_2			  Near	 _TEXT:0027
+MALJUVANNJA_3			  Near	 _TEXT:003E
+MITKA_1				  Near	 _TEXT:0024
+MITKA_2				  Near	 _TEXT:003B
+PERES				  Near	 _TEXT:0038
+PERES1				  Near	 _TEXT:004F
+START				  Near	 _TEXT:0000
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  STACK				  16  0100 Para	  Stack	  STACK
+  _DATA				  16  0000 Word	  Public  DATA
+_TEXT				  16  005E Word	  Public  CODE
+

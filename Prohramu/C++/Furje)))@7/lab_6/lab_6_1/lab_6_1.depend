@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1216112083 source:/home/FEP-11/fep-11.3/fei-21/Lytvyn/lab_6/lab_6_1/main.cpp
+	<stdio.h>
+	<math.h>
+

@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{C08CDF59-0A21-498B-8C13-642650B74820}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Project1.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="C:\Documents and Settings\Admin\Мои документы\RAD Studio\Projects\XIO_PKG.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Project1">
+			<MSBuild Projects="Project1.dproj"/>
+		</Target>
+		<Target Name="Project1:Clean">
+			<MSBuild Targets="Clean" Projects="Project1.dproj"/>
+		</Target>
+		<Target Name="Project1:Make">
+			<MSBuild Targets="Make" Projects="Project1.dproj"/>
+		</Target>
+		<Target Name="XIO_PKG">
+			<MSBuild Projects="C:\Documents and Settings\Admin\Мои документы\RAD Studio\Projects\XIO_PKG.dproj"/>
+		</Target>
+		<Target Name="XIO_PKG:Clean">
+			<MSBuild Targets="Clean" Projects="C:\Documents and Settings\Admin\Мои документы\RAD Studio\Projects\XIO_PKG.dproj"/>
+		</Target>
+		<Target Name="XIO_PKG:Make">
+			<MSBuild Targets="Make" Projects="C:\Documents and Settings\Admin\Мои документы\RAD Studio\Projects\XIO_PKG.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Project1;XIO_PKG"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Project1:Clean;XIO_PKG:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Project1:Make;XIO_PKG:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

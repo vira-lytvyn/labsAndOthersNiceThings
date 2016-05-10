@@ -1,0 +1,82 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 601
+  ClientWidth = 736
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 48
+    Top = 114
+    Width = 14
+    Height = 24
+    Caption = 'X'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 136
+    Top = 114
+    Width = 13
+    Height = 24
+    Caption = 'Y'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object StringGrid1: TStringGrid
+    Left = 32
+    Top = 144
+    Width = 153
+    Height = 281
+    Color = 16720015
+    ColCount = 2
+    FixedCols = 0
+    RowCount = 50
+    FixedRows = 0
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clYellow
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    GradientEndColor = 12255326
+    GradientStartColor = 16720015
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goTabs]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object StringGrid2: TStringGrid
+    Left = 560
+    Top = 144
+    Width = 137
+    Height = 281
+    Enabled = False
+    FixedCols = 0
+    FixedRows = 0
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clYellow
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    GradientEndColor = 12255326
+    GradientStartColor = 16720015
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goTabs]
+    ParentFont = False
+    TabOrder = 1
+  end
+end

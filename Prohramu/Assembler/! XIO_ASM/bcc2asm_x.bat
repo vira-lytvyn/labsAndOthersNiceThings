@@ -1,0 +1,1 @@
+G:\BORLANDC\BIN\bcc.exe -S  -IG:\borlandc\include stdc2.cPP

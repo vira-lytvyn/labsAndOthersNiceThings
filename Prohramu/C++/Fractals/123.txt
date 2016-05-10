@@ -1,0 +1,3 @@
+Build
+  [C++ Warning] Unit1.cpp(81): W8018 Assigning int to TColor
+  [Linker Fatal Error] Fatal: Expected a file name: 
