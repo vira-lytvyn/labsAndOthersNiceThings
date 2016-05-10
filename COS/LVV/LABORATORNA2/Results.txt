@@ -1,0 +1,2 @@
+Syma imovirnostej poyavy koznoji litery = 0.997242647058824
+Syma vsih umovnyh imovirnostej litery = 0.993566176470592
