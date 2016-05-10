@@ -1,0 +1,5 @@
+float * Cel_Far ( float c, float f )
+{
+	f = ((c*9)/5)+32;
+	return f;
+}

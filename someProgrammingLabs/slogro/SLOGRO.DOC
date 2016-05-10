@@ -1,0 +1,28 @@
+
+
+Slogro & Slogro2
+By Devin Cook
+
+
+These two programs are implementations of the SLOGRO fractal process
+described in Scientific American - Dec 1988.
+
+Slogro.EXE is the standerd implementation of SLOGRO.
+
+Slogro2.EXE has is roughly the same process except that the main particle
+movement routine has been redone in assembly ( FRAC.ASM ), and an alteration
+has been done to the premise, whereby instead of the circle being a fixed
+radius, it is now a changing radius, starting at 10 pixels and working its
+way to 100.  This speeds things up but a factor of 20!  As the resting
+particles approach the radius, the circle is backed off, as to allow for
+a truly random process to still take place.
+
+The plotter routines were written for a Comscriber plotter, but could easily
+be altered to make a box on the paper at the relative location of the particle
+on any plotter.
+
+Finally the graphics are set up to run with a herc graphic card, but it should
+be fairly easy to alter it to work with any graphics system.
+
+
+

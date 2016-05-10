@@ -1,0 +1,6 @@
+var a, b, c : Integer;
+Begin
+A:= 3;
+B:= 10;
+C:= A+B;
+End.

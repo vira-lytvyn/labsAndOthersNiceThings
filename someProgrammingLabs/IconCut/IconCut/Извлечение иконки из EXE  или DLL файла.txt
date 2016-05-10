@@ -1,0 +1,10 @@
+var
+  MyIcon: TIcon;
+begin
+  MyIcon:=TIcon.Create;
+  try
+    MyIcon.Handle:=ExtractIcon(hInstance,PChar('MYPROG.EXE'),0);
+    // Здесь можно что-нибудь сделать с иконкой
+  finally
+    MyIcon.Free;
+end;

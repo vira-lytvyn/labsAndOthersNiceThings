@@ -1,0 +1,11 @@
+[OPTIONS]
+Contents file =SAPER.hhc
+Title=Сапер 2002
+[FILES]
+SAPER_01.htm
+SAPER_02.htm
+SAPER_03.htm
+SAPER_04.htm
+[MAP]
+#include SAPER.h
+
