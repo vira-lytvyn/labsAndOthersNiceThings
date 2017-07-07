@@ -1,0 +1,165 @@
+lab1_5_3.ER1                            	Sync   	lab1_2.ER1                              	
+                                        	Action    	                                        	
+________________________________	________	________________________________	
+
+lab1_5_3                                	In Sync   	lab1_2                                  	
+
+  Entities                              	In Sync   	  Entities                              	
+
+    E-mail                              	In Sync   	    E-mail                              	
+
+      Child Relationships               	In Sync   	      Child Relationships               	
+
+        адресується                     	In Sync   	        адресується                     	
+
+      Attributes                        	In Sync   	      Attributes                        	
+
+        e-mail                          	In Sync   	        e-mail                          	
+
+        ID (FK)                         	In Sync   	        ID (FK)                         	
+
+      Key Groups                        	In Sync   	      Key Groups                        	
+
+        Primary Key                     	In Sync   	        Primary Key                     	
+
+    Іноземна мова                       	In Sync   	    Іноземна мова                       	
+
+      Child Relationships               	In Sync   	      Child Relationships               	
+
+        знає                            	In Sync   	        знає                            	
+
+      Attributes                        	In Sync   	      Attributes                        	
+
+        Мова                            	In Sync   	        Мова                            	
+
+        ID (FK)                         	In Sync   	        ID (FK)                         	
+
+        Рівень володіння                	In Sync   	        Рівень володіння                	
+
+      Key Groups                        	In Sync   	      Key Groups                        	
+
+        Primary Key                     	In Sync   	        Primary Key                     	
+
+    Додаток до диплома                  	In Sync   	    Додаток до диплома                  	
+
+      Child Relationships               	In Sync   	      Child Relationships               	
+
+        здобуває                        	In Sync   	        здобуває                        	
+
+      Attributes                        	In Sync   	      Attributes                        	
+
+        Предмет                         	In Sync   	        Предмет                         	
+
+        ID (FK)                         	In Sync   	        ID (FK)                         	
+
+        Оцінка                          	In Sync   	        Оцінка                          	
+
+      Key Groups                        	In Sync   	      Key Groups                        	
+
+        Primary Key                     	In Sync   	        Primary Key                     	
+
+    Досвід роботи                       	In Sync   	    Досвід роботи                       	
+
+      Child Relationships               	In Sync   	      Child Relationships               	
+
+        володіє                         	In Sync   	        володіє                         	
+
+      Attributes                        	In Sync   	      Attributes                        	
+
+        Спеціальність                   	In Sync   	        Спеціальність                   	
+
+        Досвід                          	In Sync   	        Досвід                          	
+
+        Місце роботи                    	In Sync   	        Місце роботи                    	
+
+        ID (FK)                         	In Sync   	        ID (FK)                         	
+
+      Key Groups                        	In Sync   	      Key Groups                        	
+
+        Primary Key                     	In Sync   	        Primary Key                     	
+
+    Оцінка експертів                    	In Sync   	    Оцінка експертів                    	
+
+      Child Relationships               	In Sync   	      Child Relationships               	
+
+        отримує                         	In Sync   	        отримує                         	
+
+      Attributes                        	In Sync   	      Attributes                        	
+
+        Дисципліна                      	In Sync   	        Дисципліна                      	
+
+        ПІБ викладача                   	In Sync   	        ПІБ викладача                   	
+
+        ID (FK)                         	In Sync   	        ID (FK)                         	
+
+        Оцінка                          	In Sync   	        Оцінка                          	
+
+      Key Groups                        	In Sync   	      Key Groups                        	
+
+        Primary Key                     	In Sync   	        Primary Key                     	
+
+    Претендент                          	In Sync   	    Претендент                          	
+
+      Child Relationships               	In Sync   	      Child Relationships               	
+
+        визначає                        	In Sync   	        визначає                        	
+
+      Attributes                        	In Sync   	      Attributes                        	
+
+        ID                              	In Sync   	        ID                              	
+
+        ПІБ                             	In Sync   	        ПІБ                             	
+
+        Пароль                          	In Sync   	        Пароль                          	
+
+        Стать                           	In Sync   	        Стать                           	
+
+        Характеристика                  	In Sync   	        Характеристика                  	
+
+        Група (FK)                      	In Sync   	        Група (FK)                      	
+
+    Спеціальність                       	In Sync   	    Спеціальність                       	
+
+      Attributes                        	In Sync   	      Attributes                        	
+
+        Група                           	In Sync   	        Група                           	
+
+        Спеціальзація                   	In Sync   	        Спеціальзація                   	
+
+    Телефон                             	In Sync   	    Телефон                             	
+
+      Child Relationships               	In Sync   	      Child Relationships               	
+
+        має                             	In Sync   	        має                             	
+
+      Attributes                        	In Sync   	      Attributes                        	
+
+        ID (FK)                         	In Sync   	        ID (FK)                         	
+
+        Телефон                         	In Sync   	        Телефон                         	
+
+    Тест                                	In Sync   	    Тест                                	
+
+      Child Relationships               	In Sync   	      Child Relationships               	
+
+        проходить                       	In Sync   	        проходить                       	
+
+      Attributes                        	In Sync   	      Attributes                        	
+
+        Назва                           	In Sync   	        Назва                           	
+
+        ID (FK)                         	In Sync   	        ID (FK)                         	
+
+        Опис тесту                      	In Sync   	        Опис тесту                      	
+
+        Оцінка                          	In Sync   	        Оцінка                          	
+
+      Key Groups                        	In Sync   	      Key Groups                        	
+
+        Primary Key                     	In Sync   	        Primary Key                     	
+
+  Default Fonts and Colors     	In Sync   	  Default Fonts and Colors     	
+ Objects                                	          	 Objects                                	
+
+    Default Fonts & Colors              	In Sync   	    Default Fonts & Colors              	
+

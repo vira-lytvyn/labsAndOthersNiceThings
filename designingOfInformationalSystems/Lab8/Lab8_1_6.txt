@@ -1,0 +1,36 @@
+Arrow Name              	Entity Name             	Attribute Name          	
+________________________	________________________	________________________	
+
+Абітурієнти             	Abiturijent             	Fakultet                	
+
+                        	                        	ID galuz znan           	
+
+                        	                        	Kilkist                 	
+
+                        	                        	Naprjam                 	
+
+                        	                        	Specialnist             	
+
+Диплом                  	DerzZamovlennay         	ID galuz znan           	
+
+                        	                        	ID student              	
+
+                        	                        	ID zamovlennya          	
+
+                        	                        	Kilkist_bakalavriv      	
+
+                        	                        	Kilkist_magistriv       	
+
+                        	                        	Kilkist_mol_spec        	
+
+                        	                        	Kilkist_specialistiv    	
+
+Оцінки додатка до       	Atestatziya             	ID student              	
+диплому                 	                        	                        	
+
+                        	                        	Otsinka                 	
+
+                        	                        	PIB                     	
+
+                        	                        	Vidomist                	
+
