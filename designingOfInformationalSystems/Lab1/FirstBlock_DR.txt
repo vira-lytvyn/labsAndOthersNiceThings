@@ -1,0 +1,16 @@
+Report for Diagram: A-0, Розв'язок  квадратного  рівняння
+
+
+Activity Name: Розв'язок  квадратного  рівняння
+Activity Status: WORKING
+Activity Number: A0
+Object Type: Activity
+Activity Author: Vira Lytvyn
+
+Link Name: Персональний комп'ютер
+
+Link Name: Дисплейний режим
+
+Link Name: a, b, c
+
+Link Name: s, x (x1, x2)

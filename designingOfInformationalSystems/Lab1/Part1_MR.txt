@@ -1,0 +1,14 @@
+
+Model Name: quadratic equation
+Definition: Навчальна модель, яка описує процес розвязування квадратних рівнянь
+Scope: Основні математичні задачі
+Viewpoint: Учень середньої школи
+Time Frame: (AS-IS)
+Status: WORKING
+Purpose: Моделювати процес знаходження кореня або коренів квадратного рівняння
+Source: Методичні вказівки до лабораторної роботи №1
+Набуті знання про розв'язування рівнянь
+Author Name: Vira Lytvyn
+Creation Date: 23.02.2013
+System Last Revision Date: 16.03.2013
+User Last Revision Date: 16.03.2013

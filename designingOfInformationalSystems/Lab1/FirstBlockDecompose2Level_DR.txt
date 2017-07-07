@@ -1,0 +1,26 @@
+Report for Diagram: A2, Знайти розв'язок
+
+
+Activity Name: Знайти D
+Activity Number: A21
+
+Activity Name: Знайти n
+Activity Number: A22
+
+Activity Name: Знайти  числовий розв'язок
+Activity Number: A23
+
+Activity Name: Знайти  символьний  розв'язок
+Activity Number: A24
+
+Link Name: a, b, c
+
+Link Name: s, x (x1, x2)
+
+Link Name: процесор
+
+Link Name: s
+
+Link Name: n
+
+Link Name: D

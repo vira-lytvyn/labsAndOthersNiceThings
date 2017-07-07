@@ -1,0 +1,27 @@
+Report for Diagram: A0, Розв'язок  квадратного  рівняння
+
+
+Activity Name: Ввід даних 
+Activity Number: A1
+
+Activity Name: Знайти розв'язок
+Activity Number: A2
+
+Activity Name: Вивід даних
+Activity Number: A3
+
+Link Name: Персональний комп'ютер
+
+Link Name: Дисплейний режим
+
+Link Name: a, b, c
+
+Link Name: s, x (x1, x2)
+
+Link Name: Вхідна формула
+
+Link Name: Вихідна формула
+
+Link Name: термінал
+
+Link Name: процесор

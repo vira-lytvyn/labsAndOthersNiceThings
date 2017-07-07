@@ -1,0 +1,14 @@
+Model Inconsistencies:
+ 
+Diagram A0:  Розв'язок  квадратного  рівняння
+      Activity "Знайти розв'язок" has no Control
+ 
+Diagram A2:  Знайти розв'язок
+      Activity "Знайти D" has no Control
+      Activity "Знайти n" has no Control
+      Activity "Знайти  числовий розв'язок" has no Control
+      Activity "Знайти  символьний  розв'язок" has no Control
+ 
+Diagram A23:  Знайти  числовий розв'язок
+      Activity "Знайти х" has no Control
+      Activity "Знайти х1, х2" has no Control

@@ -1,0 +1,24 @@
+Report for Diagram: A23, Знайти  числовий розв'язок
+
+
+Activity Name: Знайти х
+Activity Number: A231
+
+Activity Name: Знайти х1, х2
+Activity Number: A232
+
+Link Name: a, b, c
+
+Link Name: s, x (x1, x2)
+
+Link Name: процесор
+
+Link Name: n
+
+Link Name: D
+
+Link Name: x
+
+Link Name: b, c
+
+Link Name: x1, x2

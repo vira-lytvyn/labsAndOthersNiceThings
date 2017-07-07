@@ -1,0 +1,120 @@
+
+Arrow Name: x
+Joined Into: s, x (x1, x2)
+Arrow Source: «найти х
+Arrow Source Type: Output
+
+Arrow Name: a, b, c
+Branches Into: b, c
+Arrow Source: { Border }
+Arrow Source Type: Input
+Arrow Dest.: ¬в≥д даних 
+Arrow Dest. Type: Input
+
+Arrow Source: ¬в≥д даних 
+Arrow Source Type: Output
+Arrow Dest.: «найти D
+Arrow Dest. Type: Input
+
+Arrow Dest.: «найти n
+Arrow Dest. Type: Input
+
+Arrow Dest.: «найти х1, х2
+Arrow Dest. Type: Input
+
+Arrow Name: b, c
+Branches From: a, b, c
+Arrow Dest.: «найти х
+Arrow Dest. Type: Input
+
+Arrow Name: D
+Arrow Source: «найти D
+Arrow Source Type: Output
+Arrow Dest.: «найти х1, х2
+Arrow Dest. Type: Input
+
+Arrow Name: n
+Arrow Source: «найти n
+Arrow Source Type: Output
+Arrow Dest.: «найти  символьний  розв'€зок
+Arrow Dest. Type: Input
+
+Arrow Dest.: «найти х
+Arrow Dest. Type: Input
+
+Arrow Dest.: «найти х1, х2
+Arrow Dest. Type: Input
+
+Arrow Name: s
+Joined Into: s, x (x1, x2)
+Arrow Source: «найти  символьний  розв'€зок
+Arrow Source Type: Output
+
+Arrow Name: s, x (x1, x2)
+Joined From: s
+Arrow Source: ¬ив≥д даних
+Arrow Source Type: Output
+Arrow Dest.: { Border }
+Arrow Dest. Type: Output
+
+Joined From: x
+Arrow Dest.: ¬ив≥д даних
+Arrow Dest. Type: Input
+
+Joined From: x1, x2
+
+Arrow Name: x1, x2
+Joined Into: s, x (x1, x2)
+Arrow Source: «найти х1, х2
+Arrow Source Type: Output
+
+Arrow Name: ¬их≥дна формула
+Branches From: ƒисплейний режим
+Arrow Dest.: ¬ив≥д даних
+Arrow Dest. Type: Control
+
+Arrow Name: ¬х≥дна формула
+Branches From: ƒисплейний режим
+Arrow Dest.: ¬в≥д даних 
+Arrow Dest. Type: Control
+
+Arrow Name: ƒисплейний режим
+Branches Into: ¬х≥дна формула
+Arrow Source: { Border }
+Arrow Source Type: Control
+
+Branches Into: ¬их≥дна формула
+
+Arrow Name: ѕерсональний комп'ютер
+Branches Into: терм≥нал
+Arrow Source: { Border }
+Arrow Source Type: Mechanism
+
+Branches Into: терм≥нал
+
+Arrow Name: процесор
+Branches From: терм≥нал
+Arrow Dest.: «найти D
+Arrow Dest. Type: Mechanism
+
+Arrow Dest.: «найти n
+Arrow Dest. Type: Mechanism
+
+Arrow Dest.: «найти  символьний  розв'€зок
+Arrow Dest. Type: Mechanism
+
+Arrow Dest.: «найти х
+Arrow Dest. Type: Mechanism
+
+Arrow Dest.: «найти х1, х2
+Arrow Dest. Type: Mechanism
+
+Arrow Name: терм≥нал
+Branches Into: процесор
+Branches From: ѕерсональний комп'ютер
+Arrow Dest.: ¬в≥д даних 
+Arrow Dest. Type: Mechanism
+
+Branches From: ѕерсональний комп'ютер
+Arrow Dest.: ¬ив≥д даних
+Arrow Dest. Type: Mechanism

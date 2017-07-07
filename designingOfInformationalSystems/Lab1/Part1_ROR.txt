@@ -1,0 +1,97 @@
+
+Activity Name: Розв'язок  квадратного  рівняння
+Activity Number: A0
+Activity Status: WORKING
+Object Type: Activity
+Input Name: a, b, c
+Control Name: Дисплейний режим
+Output Name: s, x (x1, x2)
+Mechanism Name: Персональний комп'ютер
+
+Activity Name: Ввід даних 
+Activity Number:   A1
+Activity Status: WORKING
+Object Type: Activity
+Input Name: a, b, c
+Control Name: Вхідна формула
+Output Name: a, b, c
+Mechanism Name: термінал
+
+Activity Name: Знайти розв'язок
+Activity Number:   A2
+Activity Status: WORKING
+Object Type: Activity
+Input Name: a, b, c
+Output Name: s, x (x1, x2)
+Mechanism Name: процесор
+
+Activity Name: Знайти D
+Activity Number:     A21
+Activity Status: WORKING
+Object Type: Activity
+Input Name: a, b, c
+Output Name: D
+Mechanism Name: процесор
+
+Output Name: Untitled Output 4
+
+Activity Name: Знайти n
+Activity Number:     A22
+Activity Status: WORKING
+Object Type: Activity
+Input Name: a, b, c
+Output Name: n
+Mechanism Name: процесор
+
+Input Name: Untitled Input 4
+
+Activity Name: Знайти  числовий розв'язок
+Activity Number:     A23
+Activity Status: WORKING
+Object Type: Activity
+Input Name: D
+Output Name: s, x (x1, x2)
+Mechanism Name: процесор
+
+Input Name: a, b, c
+
+Input Name: n
+
+Activity Name: Знайти х
+Activity Number:       A231
+Activity Status: WORKING
+Object Type: Activity
+Input Name: n
+Output Name: x
+Mechanism Name: процесор
+
+Input Name: b, c
+
+Activity Name: Знайти х1, х2
+Activity Number:       A232
+Activity Status: WORKING
+Object Type: Activity
+Input Name: a, b, c
+Output Name: x1, x2
+Mechanism Name: процесор
+
+Input Name: n
+
+Input Name: D
+
+Activity Name: Знайти  символьний  розв'язок
+Activity Number:     A24
+Activity Status: WORKING
+Object Type: Activity
+Input Name: n
+Output Name: s
+Mechanism Name: процесор
+
+Activity Name: Вивід даних
+Activity Number:   A3
+Activity Status: WORKING
+Object Type: Activity
+Input Name: s, x (x1, x2)
+Control Name: Вихідна формула
+Output Name: s, x (x1, x2)
+Mechanism Name: термінал
